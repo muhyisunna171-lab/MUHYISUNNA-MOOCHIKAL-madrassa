@@ -1,44 +1,47 @@
-# Muhyissunna Secondary Madrasa (മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ)
-### المدرسة محي السنة الثانوية - വളാഞ്ചേരി മൂച്ചിക്കൽ (Valanchery Moochikkal)
+# Muhyissunna Secondary Madrasa
+### المدرسة محي السنة الثانوية - Valanchery Moochikkal, Kerala
 
-Official modern and responsive website for **Muhyissunna Secondary Madrasa**, an established Islamic educational institution in Valanchery Moochikkal, Malappuram, Kerala, India.
+Official modern, responsive website for **Muhyissunna Secondary Madrasa**, an esteemed Islamic educational institution located in Valanchery Moochikkal, Malappuram, Kerala, India.
 
-- **Affiliation:** Under Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB)
+- **Affiliation:** Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB)
 - **SKIMVB Reg No:** 171/1957
 - **W.A.K.F No:** 2048/1961
-- **Established:** 1957 (69+ Years of Legacy)
+- **Established:** 1957 (69+ Years of Educational Legacy)
+- **Classes Offered:** Standard 1 to Standard 10 (Classes 1 - 10)
+- **Faculty:** 6 Dedicated Muallims (including Headmaster / Sadr Muallim)
 
 ---
 
 ## 🌟 Key Features
 
 1. **Direct Headmaster WhatsApp Integration:**
-   - Instant click-to-chat with Sadr Muallim (+91 9633090637) via floating button, header, and contact sections.
+   - Instant click-to-chat with the Headmaster (+91 9633090637) via floating button, header, and inquiry sections.
    - Pre-formatted messages for admissions and general inquiries.
 
 2. **Samastha Online Admission Portal:**
    - One-click redirection to the official Samastha admission portal (`https://online.samastha.info/admission.php`).
-   - Quick inquiry form with instant WhatsApp forwarding.
 
-3. **Multilingual Typography & Serene Islamic UI:**
-   - Arabic (`Amiri`), Malayalam (`Noto Sans Malayalam`), and English (`Inter`).
-   - Tailored Islamic deep green (`#064e3b`) and gold accent color scheme.
+3. **Classes 1 to 10 Curriculum:**
+   - Strictly follows the Samastha Kerala Islam Matha Vidyabhyasa Board syllabus for Standards 1 through 10.
 
-4. **Dynamic Notice Ticker:**
+4. **Faculty Department:**
+   - Highlighting the 6 dedicated Muallims across Primary and Secondary departments.
+
+5. **Dynamic Announcement Ticker:**
    - Live announcement ticker for exam results, admission updates, and official circulars with hover-to-pause.
 
-5. **Campus & Events Gallery:**
+6. **Campus & Events Gallery:**
    - Interactive photo gallery with full-screen Lightbox viewer.
 
-6. **Fully Responsive:**
-   - Mobile-first, tablet, and desktop optimized design using Tailwind CSS.
+7. **Clean English Typography & Serene Islamic Theme:**
+   - Elegant, uncluttered English interface with Islamic green and warm gold accents.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── index.html       # Main responsive website
+├── index.html       # Main website file
 ├── server.js        # Optional local Node.js static server
 ├── images/          # Campus photos, logo, and event assets
 │   ├── logo.jpg
@@ -55,7 +58,7 @@ Official modern and responsive website for **Muhyissunna Secondary Madrasa**, an
 
 ## 🚀 How to Run Locally
 
-Simply double-click `index.html` to open it in any web browser, or run the local Node server:
+Double-click `index.html` to open it in any web browser, or start the local Node server:
 
 ```bash
 node server.js
@@ -66,17 +69,14 @@ Then visit: `http://localhost:3000`
 
 ## 🌐 Deploying to GitHub Pages
 
-1. Push this repository to GitHub:
-   ```bash
-   git remote add origin https://github.com/muhyisunna171-lab/MUHYISUNNA-MOOCHIKAL-madrassa.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. In your GitHub repository:
-   - Go to **Settings** > **Pages**.
-   - Under **Branch**, select `main` and root `/`.
-   - Click **Save**.
-   - Your website will be live worldwide within minutes!
+```bash
+git add .
+git commit -m "Update site to English, classes 1-10, 6 teachers"
+git push -u origin main
+```
+In your repository settings:
+- Go to **Settings** > **Pages**.
+- Set branch to `main` and root `/`, then save.
 
 ---
 © 1957 - 2026 Muhyissunna Secondary Madrasa, Valanchery Moochikkal. All Rights Reserved.
