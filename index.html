@@ -142,11 +142,11 @@
                 <span class="flex items-center gap-1.5"><i class="fas fa-award text-accent"></i> SKIMVB Reg No: 171/1957 | WAKF No: 2048/1961</span>
             </div>
             <div class="flex items-center gap-5">
-                <a href="tel:+919633090637" class="hover:text-accent transition flex items-center gap-1.5">
-                    <i class="fas fa-phone-alt text-accent"></i> +91 9633090637 (Headmaster)
+                <a href="tel:+919633090637" class="hover:text-accent transition flex items-center gap-1.5 sync-hm-phone-link">
+                    <i class="fas fa-phone-alt text-accent"></i> <span class="sync-hm-phone">+91 9633090637</span> (<span class="sync-hm-name">Headmaster</span>)
                 </a>
                 <span class="text-gray-600">|</span>
-                <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum,%20I%20am%20contacting%20from%20Muhyissunna%20Madrasa%20Website." target="_blank" class="hover:text-green-400 transition flex items-center gap-1.5 text-green-300 font-semibold">
+                <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum,%20I%20am%20contacting%20from%20Muhyissunna%20Madrasa%20Website." target="_blank" class="hover:text-green-400 transition flex items-center gap-1.5 text-green-300 font-semibold sync-hm-wa-link">
                     <i class="fab fa-whatsapp text-green-400 text-sm"></i> WhatsApp Desk
                 </a>
                 <span class="text-gray-600">|</span>
@@ -166,7 +166,7 @@
             <span class="mx-6 text-accent">★</span> 
             Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) Public Examination Results Announced.
             <span class="mx-6 text-accent">★</span> 
-            For admission assistance, directly contact Headmaster (Sadr Muallim) at +91 9633090637.
+            <span id="sync-hm-ticker">For admission assistance, directly contact Headmaster (<span class="sync-hm-name">Usthad K.V. Abdul Latheef Faizy</span>) at <span class="sync-hm-phone">+91 9633090637</span>.</span>
         </div>
     </div>
 
@@ -192,9 +192,10 @@
                 </a>
 
                 <!-- Desktop Navigation Menu -->
-                <nav class="hidden lg:flex items-center gap-5">
+                <nav class="hidden lg:flex items-center gap-4 xl:gap-5">
                     <a href="#home" class="text-gray-700 hover:text-primary font-semibold text-sm transition">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-primary font-semibold text-sm transition">About Us</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-semibold text-sm transition">About</a>
+                    <a href="#management" class="text-gray-700 hover:text-primary font-semibold text-sm transition">Management</a>
                     <a href="#academics" class="text-gray-700 hover:text-primary font-semibold text-sm transition">Academics</a>
                     <a href="#faculty" class="text-gray-700 hover:text-primary font-semibold text-sm transition">Faculty</a>
                     <a href="#gallery" class="text-gray-700 hover:text-primary font-semibold text-sm transition">Gallery</a>
@@ -203,7 +204,7 @@
                     <!-- Direct WhatsApp Button -->
                     <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20know%20more%20about%20Muhyissunna%20Secondary%20Madrasa." 
                        target="_blank" 
-                       class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-full font-semibold text-xs transition shadow flex items-center gap-1.5">
+                       class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full font-semibold text-xs transition shadow flex items-center gap-1.5 sync-hm-wa-link">
                         <i class="fab fa-whatsapp text-sm"></i>
                         <span>WhatsApp</span>
                     </a>
@@ -219,7 +220,7 @@
 
                     <!-- Prominent Admin Portal Login Button -->
                     <button onclick="openAdminModal()" 
-                            class="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 hover:border-amber-400 px-3.5 py-2 rounded-full font-bold text-xs transition shadow-sm flex items-center gap-1.5 group"
+                            class="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 hover:border-amber-400 px-3 py-2 rounded-full font-bold text-xs transition shadow-sm flex items-center gap-1.5 group"
                             title="Administrator Login Portal">
                         <i class="fas fa-user-shield text-amber-600 group-hover:text-amber-700"></i>
                         <span>Admin</span>
@@ -232,7 +233,7 @@
                         <i class="fas fa-user-shield text-amber-600"></i>
                         <span>Admin</span>
                     </button>
-                    <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" target="_blank" class="text-emerald-600 p-2 text-xl" title="Chat on WhatsApp">
+                    <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" target="_blank" class="text-emerald-600 p-2 text-xl sync-hm-wa-link" title="Chat on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="text-gray-700 hover:text-primary p-2 focus:outline-none">
@@ -247,8 +248,9 @@
             <div class="px-4 pt-3 pb-6 space-y-2">
                 <a href="#home" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Home</a>
                 <a href="#about" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">About Us</a>
+                <a href="#management" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Management Committee (5 Dignitaries)</a>
                 <a href="#academics" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Academics (Classes 1 - 10)</a>
-                <a href="#faculty" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Faculty & Muallims</a>
+                <a href="#faculty" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Faculty & Muallims (6)</a>
                 <a href="#gallery" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Photo Gallery</a>
                 <a href="#contact" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Contact Us</a>
                 
@@ -259,9 +261,9 @@
                     </a>
                     <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20inquiring%20about%20Madrasa%20admissions." 
                        target="_blank" 
-                       class="w-full text-center bg-emerald-600 text-white px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow">
+                       class="w-full text-center bg-emerald-600 text-white px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow sync-hm-wa-link">
                         <i class="fab fa-whatsapp text-lg"></i>
-                        <span>Chat with Headmaster (+91 9633090637)</span>
+                        <span>Chat with Headmaster: <span class="sync-hm-name">Sadr Muallim</span> (<span class="sync-hm-phone">+91 9633090637</span>)</span>
                     </a>
                     <!-- Admin Login in Mobile Drawer -->
                     <button onclick="openAdminModal(); document.getElementById('mobile-menu').classList.remove('open');" 
@@ -328,7 +330,7 @@
                 <!-- WhatsApp Direct Chat CTA with Headmaster -->
                 <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20would%20like%20more%20information%20about%20Muhyissunna%20Madrasa." 
                    target="_blank" 
-                   class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-full font-bold text-base transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2.5">
+                   class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-full font-bold text-base transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2.5 sync-hm-wa-link">
                     <i class="fab fa-whatsapp text-2xl"></i>
                     <span>Chat with Headmaster</span>
                 </a>
@@ -457,22 +459,45 @@
                     <!-- Direct Contact Banner -->
                     <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fas fa-user-tie"></i>
+                            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0 overflow-hidden border border-emerald-300">
+                                <img id="about-hm-photo" src="images/logo.jpg" alt="Headmaster" class="w-full h-full object-cover hidden">
+                                <i id="about-hm-icon" class="fas fa-user-tie"></i>
                             </div>
                             <div>
                                 <p class="text-xs text-emerald-800 font-bold uppercase">Headmaster (Sadr Muallim)</p>
-                                <p class="text-sm font-bold text-gray-900">Phone & WhatsApp: +91 9633090637</p>
+                                <p class="text-sm font-bold text-gray-900"><span class="sync-hm-name">Usthad K.V. Abdul Latheef Faizy</span> • <span class="sync-hm-phone">+91 9633090637</span></p>
                             </div>
                         </div>
-                        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20contacting%20you%20regarding%20Muhyissunna%20Madrasa." 
+                        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" 
                            target="_blank" 
-                           class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow transition">
+                           class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow transition sync-hm-wa-link">
                             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                         </a>
                     </div>
 
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXECUTIVE MANAGEMENT COMMITTEE (5 KEY PERSONS) ==================== -->
+    <section id="management" class="py-20 bg-white border-t border-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
+                    Leadership & Governance
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                    Executive Management Committee
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    Honoring the esteemed governing dignitaries steering Muhyissunna Secondary Madrasa towards excellence in Islamic education, institutional progress, and community service.
+                </p>
+            </div>
+
+            <!-- Dynamic Management Grid (5 Key Dignitaries) -->
+            <div id="management-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Populated dynamically from localStorage/default data via renderManagement() -->
             </div>
         </div>
     </section>
@@ -577,69 +602,9 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Headmaster Feature Card -->
-                <div class="bg-white rounded-2xl p-8 border-2 border-primary/30 shadow-lg relative flex flex-col justify-between">
-                    <span class="absolute -top-3.5 right-6 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
-                        Leadership
-                    </span>
-                    <div>
-                        <div class="w-20 h-20 bg-emerald-100 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-5 shadow-inner">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 text-center mb-1">Headmaster</h3>
-                        <p class="text-accent font-semibold text-sm text-center mb-4">Sadr Muallim</p>
-                        <p class="text-gray-600 text-sm text-center leading-relaxed mb-6">
-                            Overseeing institutional discipline, academic administration, syllabus compliance, and student guidance.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 flex flex-col gap-2">
-                        <a href="tel:+919633090637" class="text-xs text-gray-700 font-semibold flex items-center justify-center gap-2 hover:text-primary transition">
-                            <i class="fas fa-phone text-accent"></i> +91 9633090637
-                        </a>
-                        <a href="https://wa.me/919633090637" target="_blank" class="text-xs bg-emerald-600 text-white font-bold py-2 px-3 rounded-lg text-center hover:bg-emerald-700 transition flex items-center justify-center gap-1.5">
-                            <i class="fab fa-whatsapp"></i> WhatsApp Contact
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Secondary Classes Faculty Card -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-20 h-20 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center text-3xl mx-auto mb-5 shadow-inner">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 text-center mb-1">Secondary Department</h3>
-                        <p class="text-emerald-700 font-semibold text-sm text-center mb-4">Classes 6 to 10 Muallims</p>
-                        <p class="text-gray-600 text-sm text-center leading-relaxed mb-6">
-                            Experienced teachers specializing in Fiqh, advanced Thajweed, Aqeedah, Arabic grammar, and board public exam preparations.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 text-center">
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            SKIMVB Certified Educators
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Primary Classes Faculty Card -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-20 h-20 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center text-3xl mx-auto mb-5 shadow-inner">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 text-center mb-1">Primary Department</h3>
-                        <p class="text-emerald-700 font-semibold text-sm text-center mb-4">Classes 1 to 5 Muallims</p>
-                        <p class="text-gray-600 text-sm text-center leading-relaxed mb-6">
-                            Caring instructors focused on foundational Quran reading, daily Duas, basic Islamic etiquette, and ethical development.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 text-center">
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            Personalized Student Attention
-                        </span>
-                    </div>
-                </div>
+            <!-- Dynamic Faculty Grid (6 Dedicated Muallims) -->
+            <div id="faculty-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Populated dynamically from localStorage/default data via renderFaculty() -->
             </div>
         </div>
     </section>
@@ -708,25 +673,26 @@
                     <!-- Headmaster Direct Card -->
                     <div class="bg-gradient-to-br from-emerald-900 to-primary text-white p-7 rounded-2xl shadow-xl border border-emerald-700">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-emerald-500/30 border-2 border-emerald-300 flex items-center justify-center text-2xl text-amber-300 flex-shrink-0">
-                                <i class="fas fa-user-tie"></i>
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/30 border-2 border-emerald-300 flex items-center justify-center text-2xl text-amber-300 flex-shrink-0 overflow-hidden">
+                                <img id="contact-hm-photo" src="images/logo.jpg" alt="Headmaster" class="w-full h-full object-cover hidden">
+                                <i id="contact-hm-icon" class="fas fa-user-tie"></i>
                             </div>
                             <div>
                                 <span class="bg-amber-400 text-gray-950 text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">Headmaster (Sadr Muallim)</span>
-                                <h3 class="text-xl font-bold mt-1 text-white">Direct Office Line</h3>
-                                <p class="text-emerald-200 text-sm font-semibold">+91 9633090637</p>
+                                <h3 class="text-xl font-bold mt-1 text-white sync-hm-name">Usthad K.V. Abdul Latheef Faizy</h3>
+                                <p class="text-emerald-200 text-sm font-semibold sync-hm-phone">+91 9633090637</p>
                             </div>
                         </div>
                         <p class="text-emerald-100 text-xs mb-6 leading-relaxed">
                             Reach out to the Headmaster directly on WhatsApp or phone call for admission guidance, certificates, and student records.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="tel:+919633090637" class="flex-1 bg-white/20 hover:bg-white text-white hover:text-primary px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2">
+                            <a href="tel:+919633090637" class="flex-1 bg-white/20 hover:bg-white text-white hover:text-primary px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2 sync-hm-phone-link">
                                 <i class="fas fa-phone-alt"></i> Call Office
                             </a>
-                            <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20contacting%20you%20from%20Muhyissunna%20Madrasa%20website." 
+                            <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" 
                                target="_blank" 
-                               class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2 shadow-md">
+                               class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2 shadow-md sync-hm-wa-link">
                                 <i class="fab fa-whatsapp text-base"></i> WhatsApp Chat
                             </a>
                         </div>
@@ -817,7 +783,7 @@
                                 <!-- Send via WhatsApp to Headmaster (+91 9633090637) -->
                                 <button type="button" onclick="sendContactViaWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow flex items-center justify-center gap-2 text-sm">
                                     <i class="fab fa-whatsapp text-lg"></i>
-                                    <span>Send via WhatsApp (+91 9633090637)</span>
+                                    <span>Send via WhatsApp (<span class="sync-hm-phone">+91 9633090637</span>)</span>
                                 </button>
                                 
                                 <button type="submit" id="submit-btn" class="bg-primary hover:bg-primaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow text-sm flex items-center justify-center gap-2">
@@ -943,10 +909,11 @@
                     </p>
                     <div class="bg-white/5 p-3.5 rounded-lg border border-white/10 mb-4">
                         <p class="text-xs text-amber-300 font-bold mb-1">Headmaster (Sadr Muallim):</p>
-                        <a href="tel:+919633090637" class="text-sm font-bold text-white hover:text-accent transition flex items-center gap-1.5">
-                            <i class="fas fa-phone-alt text-xs text-accent"></i> +91 9633090637
+                        <p class="text-xs text-gray-300 font-medium mb-1 sync-hm-name">Usthad K.V. Abdul Latheef Faizy</p>
+                        <a href="tel:+919633090637" class="text-sm font-bold text-white hover:text-accent transition flex items-center gap-1.5 sync-hm-phone-link">
+                            <i class="fas fa-phone-alt text-xs text-accent"></i> <span class="sync-hm-phone">+91 9633090637</span>
                         </a>
-                        <a href="https://wa.me/919633090637" target="_blank" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 mt-1.5">
+                        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" target="_blank" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 mt-1.5 sync-hm-wa-link">
                             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                         </a>
                     </div>
@@ -984,20 +951,20 @@
         </button>
     </div>
 
-    <!-- Floating WhatsApp Button (+91 9633090637) -->
+    <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
-        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20contacting%20you%20from%20Muhyissunna%20Madrasa%20website." 
+        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" 
            target="_blank" 
            id="whatsapp-badge"
-           class="hidden sm:flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-full shadow-2xl border border-gray-200 text-xs font-bold hover:text-emerald-700 transition transform hover:scale-105">
+           class="hidden sm:flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-full shadow-2xl border border-gray-200 text-xs font-bold hover:text-emerald-700 transition transform hover:scale-105 sync-hm-wa-link">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>Chat with Headmaster (+91 9633090637)</span>
+            <span>Chat with Headmaster: <span class="sync-hm-name">Sadr Muallim</span> (<span class="sync-hm-phone">+91 9633090637</span>)</span>
         </a>
 
-        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20contacting%20you%20from%20Muhyissunna%20Madrasa%20website." 
+        <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" 
            target="_blank" 
            aria-label="Chat on WhatsApp with Headmaster" 
-           class="w-16 h-16 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl whatsapp-pulse transition transform hover:scale-110">
+           class="w-16 h-16 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl whatsapp-pulse transition transform hover:scale-110 sync-hm-wa-link">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -1070,16 +1037,22 @@
                     </button>
                 </div>
 
-                <!-- Tabs: Upload vs Manage/Delete vs Logo -->
-                <div class="flex border-b border-gray-200">
-                    <button id="tab-btn-gallery" onclick="switchAdminTab('gallery')" class="py-2.5 px-3 sm:px-4 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5">
-                        <i class="fas fa-plus-circle text-emerald-600"></i> Upload Photo
+                <!-- Tabs: Upload vs Manage/Delete vs Management vs Faculty vs Logo -->
+                <div class="flex border-b border-gray-200 overflow-x-auto">
+                    <button id="tab-btn-gallery" onclick="switchAdminTab('gallery')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-plus-circle text-emerald-600"></i> Add Photo
                     </button>
-                    <button id="tab-btn-manage" onclick="switchAdminTab('manage')" class="py-2.5 px-3 sm:px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5">
-                        <i class="fas fa-trash-alt text-red-500"></i> Manage Photos (<span id="admin-photo-count">0</span>)
+                    <button id="tab-btn-manage" onclick="switchAdminTab('manage')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-trash-alt text-red-500"></i> Photos (<span id="admin-photo-count">0</span>)
                     </button>
-                    <button id="tab-btn-logo" onclick="switchAdminTab('logo')" class="py-2.5 px-3 sm:px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5">
-                        <i class="fas fa-camera text-blue-500"></i> Update Logo
+                    <button id="tab-btn-management" onclick="switchAdminTab('management')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-users-cog text-amber-600"></i> Management (5)
+                    </button>
+                    <button id="tab-btn-faculty" onclick="switchAdminTab('faculty')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-chalkboard-teacher text-emerald-700"></i> Faculty (6)
+                    </button>
+                    <button id="tab-btn-logo" onclick="switchAdminTab('logo')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-camera text-blue-500"></i> Logo
                     </button>
                 </div>
 
@@ -1145,6 +1118,47 @@
 
                     <div id="admin-photo-list" class="space-y-2.5 max-h-80 overflow-y-auto pr-1">
                         <!-- Populated dynamically with all active gallery photos -->
+                    </div>
+                </div>
+
+                <!-- Tab 3: Management Committee (5 Dignitaries) -->
+                <div id="admin-tab-management" class="hidden space-y-4">
+                    <div class="flex items-center justify-between bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs">
+                        <div>
+                            <h5 class="font-bold text-amber-950">Executive Management Committee (5 Dignitaries)</h5>
+                            <p class="text-[11px] text-amber-800">Upload photos, update names, designations, phone numbers, and WhatsApp numbers.</p>
+                        </div>
+                        <button type="button" onclick="resetManagementToDefaults()" class="text-xs text-amber-900 hover:text-amber-950 underline font-semibold">
+                            Reset Defaults
+                        </button>
+                    </div>
+
+                    <div id="admin-management-list" class="space-y-4 max-h-96 overflow-y-auto pr-1">
+                        <!-- Populated dynamically via renderAdminManagementList() -->
+                    </div>
+                </div>
+
+                <!-- Tab 4: Faculty & Muallims (6 Teachers) -->
+                <div id="admin-tab-faculty" class="hidden space-y-4">
+                    <div class="bg-emerald-50 border border-emerald-200 p-3.5 rounded-lg text-xs text-emerald-950">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-sync-alt text-emerald-600 mt-0.5"></i>
+                                <div>
+                                    <h5 class="font-bold">Faculty & Muallims (6 Certified Educators)</h5>
+                                    <p class="text-[11px] text-emerald-800 mt-0.5">
+                                        <strong>Universal Sadr Muallim Sync:</strong> Updating the Headmaster (Teacher #1) will automatically synchronize his name, phone, and WhatsApp contact everywhere across the entire website!
+                                    </p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="resetFacultyToDefaults()" class="text-xs text-emerald-900 hover:text-emerald-950 underline font-semibold flex-shrink-0">
+                                Reset Defaults
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="admin-faculty-list" class="space-y-4 max-h-96 overflow-y-auto pr-1">
+                        <!-- Populated dynamically via renderAdminFacultyList() -->
                     </div>
                 </div>
 
@@ -1236,7 +1250,19 @@
                             `*Topic:* ${encodeURIComponent(subject)}%0A` +
                             `*Message:* ${encodeURIComponent(note)}`;
 
-            const whatsappUrl = `https://wa.me/919633090637?text=${message}`;
+            let waNum = '919633090637';
+            try {
+                if(typeof getFacultyData === 'function') {
+                    const faculty = getFacultyData();
+                    if(faculty && faculty[0]) {
+                        waNum = (faculty[0].wa || faculty[0].phone || '919633090637').replace(/[^0-9]/g, '');
+                    }
+                }
+            } catch(e) {
+                console.error(e);
+            }
+
+            const whatsappUrl = `https://wa.me/${waNum}?text=${message}`;
             window.open(whatsappUrl, '_blank');
         }
 
@@ -1531,34 +1557,33 @@
         }
 
         function switchAdminTab(tab) {
-            const tabGallery = document.getElementById('admin-tab-gallery');
-            const tabManage = document.getElementById('admin-tab-manage');
-            const tabLogo = document.getElementById('admin-tab-logo');
-            const btnGallery = document.getElementById('tab-btn-gallery');
-            const btnManage = document.getElementById('tab-btn-manage');
-            const btnLogo = document.getElementById('tab-btn-logo');
+            const tabs = {
+                gallery: { el: document.getElementById('admin-tab-gallery'), btn: document.getElementById('tab-btn-gallery') },
+                manage: { el: document.getElementById('admin-tab-manage'), btn: document.getElementById('tab-btn-manage') },
+                management: { el: document.getElementById('admin-tab-management'), btn: document.getElementById('tab-btn-management') },
+                faculty: { el: document.getElementById('admin-tab-faculty'), btn: document.getElementById('tab-btn-faculty') },
+                logo: { el: document.getElementById('admin-tab-logo'), btn: document.getElementById('tab-btn-logo') }
+            };
 
-            tabGallery.classList.add('hidden');
-            if(tabManage) tabManage.classList.add('hidden');
-            tabLogo.classList.add('hidden');
+            const activeClass = "py-2.5 px-3 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5 whitespace-nowrap";
+            const inactiveClass = "py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap";
 
-            const activeClass = "py-2.5 px-3 sm:px-4 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5";
-            const inactiveClass = "py-2.5 px-3 sm:px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5";
+            Object.keys(tabs).forEach(k => {
+                if(tabs[k].el) tabs[k].el.classList.add('hidden');
+                if(tabs[k].btn) tabs[k].btn.className = inactiveClass;
+            });
 
-            btnGallery.className = inactiveClass;
-            if(btnManage) btnManage.className = inactiveClass;
-            btnLogo.className = inactiveClass;
+            if(tabs[tab]) {
+                if(tabs[tab].el) tabs[tab].el.classList.remove('hidden');
+                if(tabs[tab].btn) tabs[tab].btn.className = activeClass;
+            }
 
-            if(tab === 'gallery') {
-                tabGallery.classList.remove('hidden');
-                btnGallery.className = activeClass;
-            } else if(tab === 'manage') {
-                if(tabManage) tabManage.classList.remove('hidden');
-                if(btnManage) btnManage.className = activeClass;
+            if(tab === 'manage') {
                 renderAdminPhotoList();
-            } else if(tab === 'logo') {
-                tabLogo.classList.remove('hidden');
-                btnLogo.className = activeClass;
+            } else if(tab === 'management') {
+                renderAdminManagementList();
+            } else if(tab === 'faculty') {
+                renderAdminFacultyList();
             }
         }
 
@@ -1787,10 +1812,632 @@
             }
         }
 
+        // ==================== EXECUTIVE MANAGEMENT & FACULTY DATA ====================
+        const DEFAULT_MANAGEMENT = [
+            {
+                id: 'mgmt-1',
+                role: 'President',
+                name: 'Janab C. Muhammed Haji',
+                phone: '+91 9447123456',
+                wa: '919447123456',
+                photo: '',
+                desc: 'Guiding institutional development and moral leadership.'
+            },
+            {
+                id: 'mgmt-2',
+                role: 'General Secretary',
+                name: 'Janab K.V. Abdul Kareem',
+                phone: '+91 9847234567',
+                wa: '919847234567',
+                photo: '',
+                desc: 'Overseeing administrative affairs and community coordination.'
+            },
+            {
+                id: 'mgmt-3',
+                role: 'Treasurer',
+                name: 'Janab P. Hamza Haji',
+                phone: '+91 9446345678',
+                wa: '919446345678',
+                photo: '',
+                desc: 'Managing financial audits, donations, and institutional accounts.'
+            },
+            {
+                id: 'mgmt-4',
+                role: 'Vice President',
+                name: 'Janab M. Alavi Master',
+                phone: '+91 9745456789',
+                wa: '919745456789',
+                photo: '',
+                desc: 'Supporting strategic governance and academic mentorship.'
+            },
+            {
+                id: 'mgmt-5',
+                role: 'Joint Secretary',
+                name: 'Janab T. Musthafa',
+                phone: '+91 9645567890',
+                wa: '919645567890',
+                photo: '',
+                desc: 'Assisting executive secretariat operations and community events.'
+            }
+        ];
+
+        const DEFAULT_FACULTY = [
+            {
+                id: 'fac-1',
+                isHeadmaster: true,
+                name: 'Usthad K.V. Abdul Latheef Faizy',
+                role: 'Headmaster (Sadr Muallim)',
+                classes: 'Classes 9 & 10 (Thajweed & Fiqh)',
+                phone: '+91 9633090637',
+                wa: '919633090637',
+                photo: '',
+                desc: 'Directing spiritual instruction, syllabus implementation, and student discipline.'
+            },
+            {
+                id: 'fac-2',
+                isHeadmaster: false,
+                name: 'Usthad K. Mujeeb Rahman Darimi',
+                role: 'Senior Muallim',
+                classes: 'Classes 7 & 8 (Aqeedah & Thareekh)',
+                phone: '+91 9745123456',
+                wa: '919745123456',
+                photo: '',
+                desc: 'Teaching theology, Islamic history, and foundational Arabic grammar.'
+            },
+            {
+                id: 'fac-3',
+                isHeadmaster: false,
+                name: 'Usthad P. Shamsuddin Faizy',
+                role: 'Senior Muallim',
+                classes: 'Classes 5 & 6 (Holy Quran & Thafseer)',
+                phone: '+91 9846234567',
+                wa: '919846234567',
+                photo: '',
+                desc: 'Guiding Quran recitation, meaning analysis, and moral sciences.'
+            },
+            {
+                id: 'fac-4',
+                isHeadmaster: false,
+                name: 'Usthad M. Abdul Salam Baqavi',
+                role: 'Muallim',
+                classes: 'Classes 3 & 4 (Akhlaq & Arabic)',
+                phone: '+91 9633345678',
+                wa: '919633345678',
+                photo: '',
+                desc: 'Nurturing good manners, daily supplications, and reading fluency.'
+            },
+            {
+                id: 'fac-5',
+                isHeadmaster: false,
+                name: 'Usthad T. Sayyid Alavi Thangal',
+                role: 'Muallim',
+                classes: 'Classes 1 & 2 (Dheeniyath & Hifz)',
+                phone: '+91 9447456789',
+                wa: '919447456789',
+                photo: '',
+                desc: 'Introducing foundational alphabets, basic thajweed, and character habits.'
+            },
+            {
+                id: 'fac-6',
+                isHeadmaster: false,
+                name: 'Usthad A. Noufal Wafy',
+                role: 'Muallim & Cultural In-charge',
+                classes: 'Junior Classes & Literary Club',
+                phone: '+91 9567567890',
+                wa: '919567567890',
+                photo: '',
+                desc: 'Mentoring student public speaking, Meelad fest competitions, and arts.'
+            }
+        ];
+
+        function getManagementData() {
+            try {
+                const stored = localStorage.getItem('madrasa_management_data');
+                if(stored) {
+                    const parsed = JSON.parse(stored);
+                    if(Array.isArray(parsed) && parsed.length === 5) return parsed;
+                }
+            } catch(e) {
+                console.error("Error reading management data:", e);
+            }
+            return JSON.parse(JSON.stringify(DEFAULT_MANAGEMENT));
+        }
+
+        function saveManagementData(data) {
+            localStorage.setItem('madrasa_management_data', JSON.stringify(data));
+        }
+
+        function getFacultyData() {
+            try {
+                const stored = localStorage.getItem('madrasa_faculty_data');
+                if(stored) {
+                    const parsed = JSON.parse(stored);
+                    if(Array.isArray(parsed) && parsed.length === 6) return parsed;
+                }
+            } catch(e) {
+                console.error("Error reading faculty data:", e);
+            }
+            return JSON.parse(JSON.stringify(DEFAULT_FACULTY));
+        }
+
+        function saveFacultyData(data) {
+            localStorage.setItem('madrasa_faculty_data', JSON.stringify(data));
+        }
+
+        // ==================== UNIVERSAL SADR MUALLIM (HEADMASTER) SYNC ====================
+        function syncHeadmasterData(sadr) {
+            if(!sadr) return;
+
+            const name = sadr.name || 'Usthad K.V. Abdul Latheef Faizy';
+            const phone = sadr.phone || '+91 9633090637';
+            const cleanPhoneNum = phone.replace(/[^0-9+]/g, '');
+            const cleanWaNum = (sadr.wa || sadr.phone || '919633090637').replace(/[^0-9]/g, '');
+
+            // 1. All text occurrences with class .sync-hm-name
+            document.querySelectorAll('.sync-hm-name').forEach(el => {
+                el.textContent = name;
+            });
+
+            // 2. All phone text occurrences with class .sync-hm-phone
+            document.querySelectorAll('.sync-hm-phone').forEach(el => {
+                el.textContent = phone;
+            });
+
+            // 3. All direct telephone call links with class .sync-hm-phone-link
+            document.querySelectorAll('.sync-hm-phone-link').forEach(el => {
+                el.href = 'tel:' + cleanPhoneNum;
+            });
+
+            // 4. All direct WhatsApp chat links with class .sync-hm-wa-link
+            document.querySelectorAll('.sync-hm-wa-link').forEach(el => {
+                try {
+                    const currentHref = el.getAttribute('href') || '';
+                    let textParam = "Assalamu%20Alaikum";
+                    if(currentHref.includes('text=')) {
+                        const qIndex = currentHref.indexOf('text=');
+                        if(qIndex !== -1) {
+                            textParam = currentHref.substring(qIndex + 5);
+                        }
+                    }
+                    el.href = `https://wa.me/${cleanWaNum}?text=${textParam}`;
+                } catch(e) {
+                    el.href = `https://wa.me/${cleanWaNum}?text=Assalamu%20Alaikum`;
+                }
+            });
+
+            // 5. Update Headmaster photo in About and Contact sections
+            const aboutHmPhoto = document.getElementById('about-hm-photo');
+            const aboutHmIcon = document.getElementById('about-hm-icon');
+            if(aboutHmPhoto) {
+                if(sadr.photo) {
+                    aboutHmPhoto.src = sadr.photo;
+                    aboutHmPhoto.classList.remove('hidden');
+                    if(aboutHmIcon) aboutHmIcon.classList.add('hidden');
+                } else {
+                    aboutHmPhoto.classList.add('hidden');
+                    if(aboutHmIcon) aboutHmIcon.classList.remove('hidden');
+                }
+            }
+
+            const contactHmPhoto = document.getElementById('contact-hm-photo');
+            const contactHmIcon = document.getElementById('contact-hm-icon');
+            if(contactHmPhoto) {
+                if(sadr.photo) {
+                    contactHmPhoto.src = sadr.photo;
+                    contactHmPhoto.classList.remove('hidden');
+                    if(contactHmIcon) contactHmIcon.classList.add('hidden');
+                } else {
+                    contactHmPhoto.classList.add('hidden');
+                    if(contactHmIcon) contactHmIcon.classList.remove('hidden');
+                }
+            }
+        }
+
+        // ==================== RENDER PUBLIC MANAGEMENT (5 DIGNITARIES) ====================
+        function renderManagement() {
+            const grid = document.getElementById('management-grid');
+            if(!grid) return;
+
+            const members = getManagementData();
+            grid.innerHTML = '';
+
+            members.forEach((member, index) => {
+                const cleanPhone = (member.phone || '').replace(/[^0-9+]/g, '');
+                const cleanWa = (member.wa || member.phone || '').replace(/[^0-9]/g, '');
+                const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=d97706&color=ffffff&size=256&font-size=0.33&bold=true`;
+                const photoSrc = member.photo || fallbackAvatar;
+
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl p-5 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between text-center group hover:-translate-y-1";
+                card.innerHTML = `
+                    <div>
+                        <!-- Role Badge -->
+                        <div class="inline-block bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-sm">
+                            ${member.role}
+                        </div>
+
+                        <!-- Member Photo -->
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-2xl overflow-hidden border-2 border-amber-300/80 shadow-md mb-4 bg-gray-50 group-hover:scale-105 transition duration-300">
+                            <img src="${photoSrc}" alt="${member.name}" onerror="this.src='${fallbackAvatar}'" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Name & Details -->
+                        <h4 class="font-bold text-gray-900 text-base leading-snug mb-1 group-hover:text-primary transition">${member.name}</h4>
+                        <p class="text-xs text-gray-500 mb-3">${member.desc || 'Executive Committee Member'}</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-gray-100">
+                        <p class="text-xs font-bold text-gray-800 mb-3 flex items-center justify-center gap-1.5">
+                            <i class="fas fa-phone-alt text-[11px] text-accent"></i>
+                            <span>${member.phone}</span>
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="tel:${cleanPhone}" class="bg-gray-100 hover:bg-primary hover:text-white text-gray-700 py-2 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm" title="Direct Phone Call">
+                                <i class="fas fa-phone-alt text-[10px]"></i>
+                                <span>Call</span>
+                            </a>
+                            <a href="https://wa.me/${cleanWa}?text=Assalamu%20Alaikum" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 shadow-sm" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp text-xs"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // ==================== RENDER PUBLIC FACULTY (6 MUALLIMS) ====================
+        function renderFaculty() {
+            const grid = document.getElementById('faculty-grid');
+            if(!grid) return;
+
+            const faculty = getFacultyData();
+            grid.innerHTML = '';
+
+            faculty.forEach((teacher, index) => {
+                const isHm = (index === 0 || teacher.isHeadmaster);
+                const cleanPhone = (teacher.phone || '').replace(/[^0-9+]/g, '');
+                const cleanWa = (teacher.wa || teacher.phone || '').replace(/[^0-9]/g, '');
+                const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(teacher.name)}&background=064e3b&color=fbbf24&size=256&font-size=0.33&bold=true`;
+                const photoSrc = teacher.photo || fallbackAvatar;
+
+                const card = document.createElement('div');
+                card.className = `bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border flex flex-col justify-between group hover:-translate-y-1 ${isHm ? 'border-2 border-emerald-600 ring-2 ring-emerald-500/20 md:col-span-2 lg:col-span-1' : 'border-gray-100'}`;
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Header Bar for Card -->
+                        <div class="${isHm ? 'bg-gradient-to-r from-emerald-800 to-primary text-white' : 'bg-gray-50 border-b border-gray-100 text-gray-700'} px-5 py-2.5 flex items-center justify-between text-xs font-bold">
+                            <span class="flex items-center gap-1.5">
+                                <i class="${isHm ? 'fas fa-star text-amber-400' : 'fas fa-chalkboard-teacher text-emerald-600'}"></i>
+                                ${teacher.role}
+                            </span>
+                            <span class="${isHm ? 'bg-amber-400 text-gray-950 px-2 py-0.5 rounded-full text-[10px] font-extrabold' : 'text-gray-500 text-[11px]'}">
+                                ${isHm ? 'HEADMASTER' : 'Teacher #' + (index + 1)}
+                            </span>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-20 h-20 rounded-2xl overflow-hidden border-2 ${isHm ? 'border-emerald-500 shadow-md' : 'border-gray-200 shadow-sm'} bg-gray-50 flex-shrink-0 group-hover:scale-105 transition duration-300">
+                                    <img src="${photoSrc}" alt="${teacher.name}" onerror="this.src='${fallbackAvatar}'" class="w-full h-full object-cover">
+                                </div>
+                                <div class="min-w-0">
+                                    <h4 class="font-bold text-gray-900 text-lg leading-tight group-hover:text-primary transition truncate">${teacher.name}</h4>
+                                    <p class="text-xs font-semibold text-emerald-700 mt-1 flex items-center gap-1">
+                                        <i class="fas fa-book-reader text-[11px]"></i>
+                                        <span class="truncate">${teacher.classes}</span>
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1 leading-snug line-clamp-2">${teacher.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0">
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+                            <div class="text-xs">
+                                <span class="text-gray-400 block text-[10px] uppercase font-bold">Direct Line</span>
+                                <strong class="text-gray-800 text-xs">${teacher.phone}</strong>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <a href="tel:${cleanPhone}" class="w-9 h-9 rounded-lg bg-gray-100 hover:bg-primary text-gray-700 hover:text-white transition flex items-center justify-center shadow-sm" title="Call ${teacher.name}">
+                                    <i class="fas fa-phone-alt text-xs"></i>
+                                </a>
+                                <a href="https://wa.me/${cleanWa}?text=Assalamu%20Alaikum" target="_blank" class="w-9 h-9 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center justify-center shadow-sm" title="WhatsApp ${teacher.name}">
+                                    <i class="fab fa-whatsapp text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // ==================== ADMIN EDIT FOR MANAGEMENT ====================
+        function renderAdminManagementList() {
+            const container = document.getElementById('admin-management-list');
+            if(!container) return;
+
+            const members = getManagementData();
+            container.innerHTML = '';
+
+            members.forEach((member, index) => {
+                const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=d97706&color=ffffff&size=256&font-size=0.33&bold=true`;
+                const photoSrc = member.photo || fallbackAvatar;
+
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 rounded-xl border border-gray-200 shadow-sm space-y-3";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-xs">
+                                ${index + 1}
+                            </span>
+                            <h5 class="font-bold text-gray-900 text-xs uppercase">${member.role}</h5>
+                        </div>
+                        <span class="text-[10px] bg-amber-50 text-amber-800 px-2 py-0.5 rounded font-bold border border-amber-200">Management Member #${index + 1}</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                        <div class="sm:col-span-3 flex flex-col items-center gap-2 text-center">
+                            <img id="admin-mgmt-preview-${index}" src="${photoSrc}" alt="${member.name}" class="w-16 h-16 rounded-xl object-cover border border-amber-300 shadow-sm bg-gray-50">
+                            <label class="cursor-pointer bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-1 rounded transition">
+                                <i class="fas fa-camera mr-1"></i> Change Photo
+                                <input type="file" accept="image/*" class="hidden" onchange="handleAdminMemberPhotoUpload(event, ${index})">
+                            </label>
+                        </div>
+
+                        <div class="sm:col-span-9 space-y-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Designation / Role</label>
+                                    <input type="text" id="admin-mgmt-role-${index}" value="${member.role}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Full Name</label>
+                                    <input type="text" id="admin-mgmt-name-${index}" value="${member.name}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none font-semibold">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Phone Number</label>
+                                    <input type="tel" id="admin-mgmt-phone-${index}" value="${member.phone}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">WhatsApp Number</label>
+                                    <input type="tel" id="admin-mgmt-wa-${index}" value="${member.wa || ''}" placeholder="e.g. 919847234567" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-gray-100 flex justify-end">
+                        <button type="button" onclick="saveManagementMember(${index})" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition shadow flex items-center gap-1.5">
+                            <i class="fas fa-check"></i>
+                            <span>Save Member #${index + 1}</span>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function handleAdminMemberPhotoUpload(event, index) {
+            const file = event.target.files && event.target.files[0];
+            if(!file) return;
+
+            try {
+                const base64Img = await compressImage(file, 400, 0.85);
+                const preview = document.getElementById(`admin-mgmt-preview-${index}`);
+                if(preview) preview.src = base64Img;
+                
+                const members = getManagementData();
+                members[index].photo = base64Img;
+                saveManagementData(members);
+                renderManagement();
+                alert(`Photo updated for Management Member #${index + 1}!`);
+            } catch(e) {
+                console.error("Photo upload error:", e);
+                alert("Failed to process photo.");
+            }
+        }
+
+        function saveManagementMember(index) {
+            const members = getManagementData();
+            const role = document.getElementById(`admin-mgmt-role-${index}`).value.trim();
+            const name = document.getElementById(`admin-mgmt-name-${index}`).value.trim();
+            const phone = document.getElementById(`admin-mgmt-phone-${index}`).value.trim();
+            const wa = document.getElementById(`admin-mgmt-wa-${index}`).value.trim();
+
+            if(!name || !role) {
+                alert("Please provide both name and designation.");
+                return;
+            }
+
+            members[index].role = role;
+            members[index].name = name;
+            members[index].phone = phone;
+            members[index].wa = wa || phone;
+
+            saveManagementData(members);
+            renderManagement();
+            alert(`Management Member #${index + 1} (${name}) saved successfully!`);
+        }
+
+        function resetManagementToDefaults() {
+            if(!confirm("Reset all 5 Executive Management Committee members back to default details?")) return;
+            localStorage.removeItem('madrasa_management_data');
+            renderManagement();
+            renderAdminManagementList();
+            alert("Default Management Committee members restored.");
+        }
+
+        // ==================== ADMIN EDIT FOR FACULTY ====================
+        function renderAdminFacultyList() {
+            const container = document.getElementById('admin-faculty-list');
+            if(!container) return;
+
+            const faculty = getFacultyData();
+            container.innerHTML = '';
+
+            faculty.forEach((teacher, index) => {
+                const isHm = (index === 0 || teacher.isHeadmaster);
+                const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(teacher.name)}&background=064e3b&color=fbbf24&size=256&font-size=0.33&bold=true`;
+                const photoSrc = teacher.photo || fallbackAvatar;
+
+                const card = document.createElement('div');
+                card.className = `bg-white p-4 rounded-xl border shadow-sm space-y-3 ${isHm ? 'border-2 border-emerald-600 ring-2 ring-emerald-500/20' : 'border-gray-200'}`;
+                card.innerHTML = `
+                    <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full ${isHm ? 'bg-emerald-700 text-amber-300' : 'bg-gray-100 text-gray-800'} flex items-center justify-center font-bold text-xs">
+                                ${index + 1}
+                            </span>
+                            <h5 class="font-bold text-gray-900 text-xs uppercase">${teacher.role}</h5>
+                        </div>
+                        ${isHm ? `
+                            <span class="text-[10px] bg-emerald-100 text-emerald-900 font-extrabold px-2 py-0.5 rounded border border-emerald-300 flex items-center gap-1">
+                                <i class="fas fa-sync-alt text-[9px]"></i> UNIVERSAL SITE SYNC
+                            </span>
+                        ` : `
+                            <span class="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-bold">Teacher #${index + 1}</span>
+                        `}
+                    </div>
+
+                    ${isHm ? `
+                        <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-[11px] text-amber-900 flex items-center gap-2">
+                            <i class="fas fa-bullhorn text-amber-600 flex-shrink-0"></i>
+                            <span><strong>Universal Sync Notice:</strong> Editing the Headmaster (Sadr Muallim) here will automatically update his name, phone, and WhatsApp link across every section of the website!</span>
+                        </div>
+                    ` : ''}
+
+                    <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                        <div class="sm:col-span-3 flex flex-col items-center gap-2 text-center">
+                            <img id="admin-fac-preview-${index}" src="${photoSrc}" alt="${teacher.name}" class="w-16 h-16 rounded-xl object-cover border ${isHm ? 'border-emerald-500' : 'border-gray-300'} shadow-sm bg-gray-50">
+                            <label class="cursor-pointer bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 text-[10px] font-bold px-2 py-1 rounded transition">
+                                <i class="fas fa-camera mr-1"></i> Change Photo
+                                <input type="file" accept="image/*" class="hidden" onchange="handleAdminFacultyPhotoUpload(event, ${index})">
+                            </label>
+                        </div>
+
+                        <div class="sm:col-span-9 space-y-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Designation</label>
+                                    <input type="text" id="admin-fac-role-${index}" value="${teacher.role}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Full Name</label>
+                                    <input type="text" id="admin-fac-name-${index}" value="${teacher.name}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none font-semibold">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Classes Handled</label>
+                                    <input type="text" id="admin-fac-classes-${index}" value="${teacher.classes || ''}" placeholder="e.g. Classes 9 & 10" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">Phone Number</label>
+                                    <input type="tel" id="admin-fac-phone-${index}" value="${teacher.phone}" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-gray-500 mb-0.5">WhatsApp Number</label>
+                                    <input type="tel" id="admin-fac-wa-${index}" value="${teacher.wa || ''}" placeholder="e.g. 919633090637" class="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-gray-100 flex justify-end">
+                        <button type="button" onclick="saveFacultyMember(${index})" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition shadow flex items-center gap-1.5">
+                            <i class="fas fa-check"></i>
+                            <span>Save Teacher #${index + 1}${isHm ? ' (Sadr Muallim)' : ''}</span>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function handleAdminFacultyPhotoUpload(event, index) {
+            const file = event.target.files && event.target.files[0];
+            if(!file) return;
+
+            try {
+                const base64Img = await compressImage(file, 400, 0.85);
+                const preview = document.getElementById(`admin-fac-preview-${index}`);
+                if(preview) preview.src = base64Img;
+                
+                const faculty = getFacultyData();
+                faculty[index].photo = base64Img;
+                saveFacultyData(faculty);
+                renderFaculty();
+                if(index === 0) {
+                    syncHeadmasterData(faculty[0]);
+                }
+                alert(`Photo updated for Teacher #${index + 1}!`);
+            } catch(e) {
+                console.error("Photo upload error:", e);
+                alert("Failed to process photo.");
+            }
+        }
+
+        function saveFacultyMember(index) {
+            const faculty = getFacultyData();
+            const role = document.getElementById(`admin-fac-role-${index}`).value.trim();
+            const name = document.getElementById(`admin-fac-name-${index}`).value.trim();
+            const classes = document.getElementById(`admin-fac-classes-${index}`).value.trim();
+            const phone = document.getElementById(`admin-fac-phone-${index}`).value.trim();
+            const wa = document.getElementById(`admin-fac-wa-${index}`).value.trim();
+
+            if(!name || !role) {
+                alert("Please provide both name and designation.");
+                return;
+            }
+
+            faculty[index].role = role;
+            faculty[index].name = name;
+            faculty[index].classes = classes;
+            faculty[index].phone = phone;
+            faculty[index].wa = wa || phone;
+
+            saveFacultyData(faculty);
+            renderFaculty();
+
+            if(index === 0) {
+                syncHeadmasterData(faculty[0]);
+                alert(`Sadr Muallim (${name}) updated! All references across the entire website have been synchronized.`);
+            } else {
+                alert(`Teacher #${index + 1} (${name}) saved successfully!`);
+            }
+        }
+
+        function resetFacultyToDefaults() {
+            if(!confirm("Reset all 6 Faculty Muallims back to default details?")) return;
+            localStorage.removeItem('madrasa_faculty_data');
+            renderFaculty();
+            renderAdminFacultyList();
+            syncHeadmasterData(DEFAULT_FACULTY[0]);
+            alert("Default Faculty Muallims restored and Sadr Muallim synchronized.");
+        }
+
         // Initial Page Boot
         window.addEventListener('DOMContentLoaded', () => {
             initCustomLogo();
             renderGallery();
+            renderManagement();
+            renderFaculty();
+            const faculty = getFacultyData();
+            if(faculty && faculty[0]) {
+                syncHeadmasterData(faculty[0]);
+            }
         });
     </script>
 </body>
