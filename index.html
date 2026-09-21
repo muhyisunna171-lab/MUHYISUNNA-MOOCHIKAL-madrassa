@@ -1332,7 +1332,7 @@
             const fileInput = document.getElementById('contact-file');
             
             // Google Apps Script Web App URL
-            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIFabYyNe7mglcCq_4hNim3ZTRkPXTYTiz974iiZm96me2o10ggAEtbWolzts_Nkzc/exec"; 
+            const SCRIPT_URL = getScriptUrl(); 
             
             msgBox.classList.add('hidden');
             errorBox.classList.add('hidden');
@@ -1872,6 +1872,8 @@
             const savedLogo = localStorage.getItem('madrasa_custom_logo');
             if(savedLogo) {
                 applyCustomLogo(savedLogo);
+            } else {
+                applyCustomLogo('https://lh3.googleusercontent.com/d/1ybMi9VQvEAxzG2lplxKfgKxbWLRNR4_f');
             }
         }
 
@@ -1928,23 +1930,23 @@
             {
                 id: 'fac-1',
                 isHeadmaster: true,
-                name: 'Usthad K.V. Abdul Latheef Faizy',
+                name: 'Usthad MOHAMED SHAFEEQUE WAFY',
                 role: 'Headmaster (Sadr Muallim)',
-                classes: 'Classes 9 & 10 (Thajweed & Fiqh)',
+                classes: 'Classes 7 & 8 (All SUB)',
                 phone: '+91 9633090637',
                 wa: '919633090637',
-                photo: '',
+                photo: 'https://lh3.googleusercontent.com/d/1ts97p3kDjBqty8KlEMt6tddIlkDHuqCR',
                 desc: 'Directing spiritual instruction, syllabus implementation, and student discipline.'
             },
             {
                 id: 'fac-2',
                 isHeadmaster: false,
-                name: 'Usthad K. Mujeeb Rahman Darimi',
+                name: 'Usthad USMAN FAIZY C',
                 role: 'Senior Muallim',
-                classes: 'Classes 7 & 8 (Aqeedah & Thareekh)',
-                phone: '+91 9745123456',
-                wa: '919745123456',
-                photo: '',
+                classes: 'Classes 4 & 10 (ALL SUB)',
+                phone: '+91 8281822876',
+                wa: '+91 8281822876',
+                photo: 'https://lh3.googleusercontent.com/d/11N8-VgeitNQhS5Q4O16e7t6t7jGntnun',
                 desc: 'Teaching theology, Islamic history, and foundational Arabic grammar.'
             },
             {
@@ -2498,8 +2500,15 @@
         }
 
         // ==================== GOOGLE DRIVE CLOUD SYNC LOGIC ====================
+        const LIVE_DEFAULT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz3c8tFo2VAQRNbJKyTaaeeLMV5ZE6USk5aCjSVXePUEyl0j1naby-ZZo8PUYK8HO13/exec";
+
         function getScriptUrl() {
-            return localStorage.getItem('madrasa_apps_script_url') || "https://script.google.com/macros/s/AKfycbxIFabYyNe7mglcCq_4hNim3ZTRkPXTYTiz974iiZm96me2o10ggAEtbWolzts_Nkzc/exec";
+            const saved = localStorage.getItem('madrasa_apps_script_url');
+            if(saved && saved.includes('AKfycbxIFabYyNe7mglcCq_4hNim3ZTRkPXTYTiz974iiZm96me2o10ggAEtbWolzts_Nkzc')) {
+                localStorage.setItem('madrasa_apps_script_url', LIVE_DEFAULT_SCRIPT_URL);
+                return LIVE_DEFAULT_SCRIPT_URL;
+            }
+            return saved || LIVE_DEFAULT_SCRIPT_URL;
         }
 
         function saveCustomScriptUrl() {
