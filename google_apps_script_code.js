@@ -45,6 +45,7 @@ function getDatabaseFile() {
     const initialData = {
       updatedAt: new Date().toISOString(),
       logo: null,
+      campusPhoto: null,
       customGallery: [],
       deletedDefaultPhotos: [],
       management: null,
@@ -66,6 +67,7 @@ function readDatabase() {
     return {
       updatedAt: new Date().toISOString(),
       logo: null,
+      campusPhoto: null,
       customGallery: [],
       deletedDefaultPhotos: [],
       management: null,
@@ -173,6 +175,10 @@ function doPost(e) {
         // Process Logo
         if (payload.data.logo !== undefined) {
           db.logo = saveBase64ImageToDrive(payload.data.logo, "madrasa_logo.jpg");
+        }
+        // Process Campus Building Photo
+        if (payload.data.campusPhoto !== undefined) {
+          db.campusPhoto = saveBase64ImageToDrive(payload.data.campusPhoto, "campus_building.jpg");
         }
         // Process Gallery
         if (payload.data.customGallery !== undefined) {
@@ -295,6 +301,7 @@ function doPost(e) {
       if (cat === 'management') db.management = null;
       if (cat === 'faculty') db.faculty = null;
       if (cat === 'logo') db.logo = null;
+      if (cat === 'campus') db.campusPhoto = null;
       if (cat === 'gallery') {
         db.customGallery = [];
         db.deletedDefaultPhotos = [];
@@ -303,6 +310,18 @@ function doPost(e) {
       return ContentService.createTextOutput(JSON.stringify({
         status: 'success',
         message: cat + ' reset to defaults in Google Drive'
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // 7. Save Campus Building Photo
+    if (action === 'saveCampusPhoto') {
+      const db = readDatabase();
+      db.campusPhoto = saveBase64ImageToDrive(payload.campusPhoto, "campus_building.jpg");
+      writeDatabase(db);
+      return ContentService.createTextOutput(JSON.stringify({
+        status: 'success',
+        message: 'Campus photo saved to Google Drive',
+        campusPhoto: db.campusPhoto
       })).setMimeType(ContentService.MimeType.JSON);
     }
 

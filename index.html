@@ -390,12 +390,19 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 
                 <!-- Campus Image & Badge -->
-                <div class="lg:col-span-5 relative">
+                <div class="lg:col-span-5 relative group">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <img src="images/gallery-campus.jpg" 
+                        <img id="about-campus-image"
+                             src="images/gallery-campus.jpg" 
                              alt="Muhyissunna Madrasa Campus" 
                              onerror="this.src='images/students_classroom_1789984554126.jpg'" 
-                             class="rounded-2xl shadow-2xl object-cover w-full h-[440px] border-4 border-white">
+                             class="rounded-2xl shadow-2xl object-cover w-full h-[440px] border-4 border-white transition duration-300">
+                        
+                        <!-- Floating Admin Quick-Change Button (Visible when logged in) -->
+                        <button id="about-campus-admin-badge" onclick="openCampusPhotoModal()" class="hidden absolute top-4 right-4 bg-emerald-700/90 hover:bg-emerald-800 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg border border-white/50 backdrop-blur transition flex items-center gap-1.5 z-10 cursor-pointer">
+                            <i class="fas fa-camera text-amber-300"></i>
+                            <span>Change Photo</span>
+                        </button>
                         
                         <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl border-4 border-white">
                             <h4 class="text-3xl md:text-4xl font-extrabold text-amber-400">1957</h4>
@@ -1051,6 +1058,9 @@
                     <button id="tab-btn-faculty" onclick="switchAdminTab('faculty')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                         <i class="fas fa-chalkboard-teacher text-emerald-700"></i> Faculty (6)
                     </button>
+                    <button id="tab-btn-campus" onclick="switchAdminTab('campus')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-landmark text-amber-500"></i> Campus Photo
+                    </button>
                     <button id="tab-btn-logo" onclick="switchAdminTab('logo')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                         <i class="fas fa-camera text-blue-500"></i> Logo
                     </button>
@@ -1188,6 +1198,49 @@
                                 Save New Logo
                             </button>
                             <button type="button" onclick="restoreDefaultLogo()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-lg text-xs transition">
+                                Reset Default
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tab: Campus / About Photo Update -->
+                <div id="admin-tab-campus" class="hidden space-y-4">
+                    <div class="bg-amber-50 border border-amber-200 p-3.5 rounded-xl text-xs text-amber-950">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-landmark text-amber-600 mt-0.5"></i>
+                            <div>
+                                <h5 class="font-bold">Madrasa Campus & Building Photo (About Section)</h5>
+                                <p class="text-[11px] text-amber-800 mt-0.5">
+                                    Upload a new photo of the Madrasa building or campus. It will immediately appear in the <strong>About Our Institution</strong> section on the homepage with the 1957 founding badge and SKIMVB affiliation card.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 flex flex-col sm:flex-row items-center gap-4">
+                        <div class="w-full sm:w-48 h-32 rounded-xl overflow-hidden border-2 border-emerald-500 shadow-md bg-white flex-shrink-0">
+                            <img id="admin-campus-preview" src="images/gallery-campus.jpg" alt="Active Campus Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-1 text-center sm:text-left">
+                            <span class="inline-block bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded text-[10px]">Active Building Photo</span>
+                            <h5 class="font-bold text-gray-900 text-xs">Featured in About Section</h5>
+                            <p class="text-[11px] text-gray-500">Preview of the current image displayed on the website.</p>
+                        </div>
+                    </div>
+
+                    <form id="admin-campus-form" onsubmit="handleCampusPhotoUpload(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Choose New Campus Image *</label>
+                            <input type="file" id="campus-file" accept="image/*" required onchange="previewCampusFile(event)" class="w-full text-xs text-gray-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-primary file:text-white hover:file:bg-primaryLight cursor-pointer">
+                        </div>
+
+                        <div class="flex gap-2">
+                            <button type="submit" id="btn-save-campus-photo" class="flex-1 bg-primary hover:bg-primaryLight text-white font-bold py-2.5 rounded-lg text-xs transition shadow flex items-center justify-center gap-2">
+                                <i class="fas fa-save"></i>
+                                <span>Save New Campus Photo</span>
+                            </button>
+                            <button type="button" onclick="restoreDefaultCampusPhoto()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2.5 px-3 rounded-lg text-xs transition">
                                 Reset Default
                             </button>
                         </div>
@@ -1599,6 +1652,7 @@
                 errBox.classList.add('hidden');
                 document.getElementById('admin-login-form').reset();
                 renderGallery(); // Show admin delete buttons on page
+                updateCampusAdminUI(); // Show quick change badge on campus image
                 showDashboard();
             } else {
                 errBox.classList.remove('hidden');
@@ -1608,6 +1662,7 @@
         function handleAdminLogout() {
             sessionStorage.removeItem('madrasa_admin_auth');
             renderGallery(); // Hide admin delete buttons from page
+            updateCampusAdminUI(); // Hide quick change badge on campus image
             showLoginForm();
         }
 
@@ -1617,6 +1672,7 @@
                 manage: { el: document.getElementById('admin-tab-manage'), btn: document.getElementById('tab-btn-manage') },
                 management: { el: document.getElementById('admin-tab-management'), btn: document.getElementById('tab-btn-management') },
                 faculty: { el: document.getElementById('admin-tab-faculty'), btn: document.getElementById('tab-btn-faculty') },
+                campus: { el: document.getElementById('admin-tab-campus'), btn: document.getElementById('tab-btn-campus') },
                 logo: { el: document.getElementById('admin-tab-logo'), btn: document.getElementById('tab-btn-logo') },
                 cloud: { el: document.getElementById('admin-tab-cloud'), btn: document.getElementById('tab-btn-cloud') }
             };
@@ -1640,6 +1696,10 @@
                 renderAdminManagementList();
             } else if(tab === 'faculty') {
                 renderAdminFacultyList();
+            } else if(tab === 'campus') {
+                const cur = localStorage.getItem('madrasa_campus_photo') || DEFAULT_CAMPUS_PHOTO;
+                const p = document.getElementById('admin-campus-preview');
+                if(p) p.src = cur;
             } else if(tab === 'cloud') {
                 updateCloudSyncUI();
             }
@@ -1874,6 +1934,120 @@
                 applyCustomLogo(savedLogo);
             } else {
                 applyCustomLogo('https://lh3.googleusercontent.com/d/1ybMi9VQvEAxzG2lplxKfgKxbWLRNR4_f');
+            }
+        }
+
+        // ==================== CAMPUS / ABOUT PHOTO UPDATE LOGIC ====================
+        const DEFAULT_CAMPUS_PHOTO = 'images/gallery-campus.jpg';
+
+        function previewCampusFile(e) {
+            const preview = document.getElementById('admin-campus-preview');
+            if(e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    if(preview) preview.src = event.target.result;
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        }
+
+        async function handleCampusPhotoUpload(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('campus-file');
+            if(!fileInput.files || fileInput.files.length === 0) {
+                alert("Please select a photo of the Madrasa building/campus.");
+                return;
+            }
+
+            const uploadBtn = document.getElementById('btn-save-campus-photo');
+            if(uploadBtn) {
+                uploadBtn.disabled = true;
+                uploadBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-1"></i> Saving & Syncing to Drive...`;
+            }
+
+            try {
+                // High-definition compression
+                const base64Img = await compressImage(fileInput.files[0], 1200, 0.85);
+                localStorage.setItem('madrasa_campus_photo', base64Img);
+                applyCampusPhoto(base64Img);
+
+                // Direct upload to Google Drive target folder (1NLxIHWHHQKt5VobieD24FEa1sl6zu9sX)
+                const url = getScriptUrl();
+                let driveUrl = null;
+                if(url && !url.includes("YOUR_WEB_APP_URL")) {
+                    try {
+                        const res = await fetch(url, {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                file: base64Img,
+                                filename: 'campus_building_' + Date.now() + '.jpg',
+                                mimeType: 'image/jpeg'
+                            })
+                        });
+                        const data = await res.json();
+                        if(data && (data.downloadUrl || data.fileUrl)) {
+                            driveUrl = data.downloadUrl || data.fileUrl;
+                            localStorage.setItem('madrasa_campus_photo', driveUrl);
+                            applyCampusPhoto(driveUrl);
+                        }
+                    } catch(errDrive) {
+                        console.warn("Direct drive upload notice:", errDrive);
+                    }
+                    syncToCloud('saveCampusPhoto', { campusPhoto: driveUrl || base64Img });
+                }
+
+                alert("Madrasa Campus Photo updated successfully across the website!");
+            } catch(err) {
+                console.error("Campus photo error:", err);
+                alert("Failed to update campus photo.");
+            } finally {
+                if(uploadBtn) {
+                    uploadBtn.disabled = false;
+                    uploadBtn.innerHTML = `<i class="fas fa-save mr-1"></i> Save New Campus Photo`;
+                }
+            }
+        }
+
+        function restoreDefaultCampusPhoto() {
+            if(!confirm("Reset Campus photo back to default?")) return;
+            localStorage.removeItem('madrasa_campus_photo');
+            applyCampusPhoto(DEFAULT_CAMPUS_PHOTO);
+            const preview = document.getElementById('admin-campus-preview');
+            if(preview) preview.src = DEFAULT_CAMPUS_PHOTO;
+            syncToCloud('resetCategory', { category: 'campus' });
+            alert("Default campus photo restored.");
+        }
+
+        function applyCampusPhoto(src) {
+            const img = document.getElementById('about-campus-image');
+            const preview = document.getElementById('admin-campus-preview');
+            if(img) img.src = src;
+            if(preview) preview.src = src;
+        }
+
+        function initCampusPhoto() {
+            const saved = localStorage.getItem('madrasa_campus_photo');
+            if(saved) {
+                applyCampusPhoto(saved);
+            }
+            updateCampusAdminUI();
+        }
+
+        function updateCampusAdminUI() {
+            const badge = document.getElementById('about-campus-admin-badge');
+            if(badge) {
+                if(sessionStorage.getItem('madrasa_admin_auth') === 'true') {
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
+                }
+            }
+        }
+
+        function openCampusPhotoModal() {
+            openAdminModal();
+            if(sessionStorage.getItem('madrasa_admin_auth') === 'true') {
+                switchAdminTab('campus');
             }
         }
 
@@ -2563,6 +2737,7 @@
             try {
                 const fullData = {
                     logo: localStorage.getItem('madrasa_custom_logo') || null,
+                    campusPhoto: localStorage.getItem('madrasa_campus_photo') || null,
                     customGallery: getCustomGallery(),
                     deletedDefaultPhotos: getRemovedDefaultPhotoIds(),
                     management: getManagementData(),
@@ -2652,6 +2827,11 @@
                         applyCustomLogo(data.logo);
                         hasUpdated = true;
                     }
+                    if(data.campusPhoto) {
+                        localStorage.setItem('madrasa_campus_photo', data.campusPhoto);
+                        applyCampusPhoto(data.campusPhoto);
+                        hasUpdated = true;
+                    }
                     if(data.customGallery && Array.isArray(data.customGallery)) {
                         localStorage.setItem('madrasa_custom_gallery', JSON.stringify(data.customGallery));
                         hasUpdated = true;
@@ -2697,6 +2877,7 @@
         // Initial Page Boot
         window.addEventListener('DOMContentLoaded', () => {
             initCustomLogo();
+            initCampusPhoto();
             renderGallery();
             renderManagement();
             renderFaculty();
