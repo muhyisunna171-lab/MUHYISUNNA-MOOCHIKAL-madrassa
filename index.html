@@ -170,10 +170,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
-                <!-- Institution Logo & Brand -->
+                <!-- Institution Logo & Brand (Stable Layout) -->
                 <a href="#home" class="flex items-center gap-3 md:gap-4">
                     <div class="relative flex-shrink-0">
-                        <img src="images/logo.jpg" 
+                        <img id="header-logo" 
+                             src="images/logo.jpg" 
                              alt="Muhyissunna Madrasa Logo" 
                              onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
                              class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full shadow-md border-2 border-primary/20 bg-white">
@@ -274,7 +275,7 @@
                     SKIMVB Reg No: 171/1957
                 </span>
             </div>
-            
+
             <!-- English Main Heading -->
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg mb-4">
                 MUHYISSUNNA <br class="hidden sm:inline">
@@ -554,7 +555,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Headmaster Feature Card (Spans 1 or highlight) -->
+                <!-- Headmaster Feature Card -->
                 <div class="bg-white rounded-2xl p-8 border-2 border-primary/30 shadow-lg relative flex flex-col justify-between">
                     <span class="absolute -top-3.5 right-6 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
                         Leadership
@@ -564,7 +565,7 @@
                             <i class="fas fa-user-tie"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 text-center mb-1">Headmaster</h3>
-                        <p class="text-accent font-semibold text-sm text-center mb-4">Sadr Muallim (പ്രധാനാധ്യാപകൻ)</p>
+                        <p class="text-accent font-semibold text-sm text-center mb-4">Sadr Muallim</p>
                         <p class="text-gray-600 text-sm text-center leading-relaxed mb-6">
                             Overseeing institutional discipline, academic administration, syllabus compliance, and student guidance.
                         </p>
@@ -620,120 +621,31 @@
         </div>
     </section>
 
-    <!-- Photo Gallery Section -->
+    <!-- Photo Gallery Section (Life & Activities at Muhyissunna) -->
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
-                    Campus Gallery
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
+                        Campus Gallery
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
+                        Life & Activities at Muhyissunna
+                    </h2>
+                    <p class="text-gray-600 text-base">
+                        Snapshots of campus infrastructure, classroom sessions, celebrations, and achievements.
+                    </p>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                    Life & Activities at Muhyissunna
-                </h2>
-                <p class="text-gray-600 text-base">
-                    Snapshots of campus infrastructure, classroom sessions, celebrations, and achievements.
-                </p>
+                <div class="flex items-center gap-2">
+                    <span id="gallery-count-badge" class="bg-emerald-50 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full border border-emerald-200">
+                        Showing All Photos
+                    </span>
+                </div>
             </div>
 
-            <!-- Gallery Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Item 1: Campus Building -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/gallery-campus.jpg', 'Muhyissunna Madrasa Campus Complex')">
-                    <img src="images/gallery-campus.jpg" 
-                         alt="Madrasa Campus Complex" 
-                         onerror="this.src='images/hero_banner_1789984541854.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Campus</span>
-                        <h4 class="text-white font-bold text-lg">Educational Complex</h4>
-                        <p class="text-gray-300 text-xs">Main madrasa building at Valanchery Moochikkal.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Item 2: Classroom & Learning -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/gallery-classroom.jpg', 'Students Studying in Classroom')">
-                    <img src="images/gallery-classroom.jpg" 
-                         alt="Students Studying" 
-                         onerror="this.src='images/students_classroom_1789984554126.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Academics</span>
-                        <h4 class="text-white font-bold text-lg">Classroom Learning</h4>
-                        <p class="text-gray-300 text-xs">Students engaged in Quran recitation and Deeni studies.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Item 3: Meelad / Festo -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/gallery-event.jpg', 'Meeladunnabi & Arts Festo Celebration')">
-                    <img src="images/gallery-event.jpg" 
-                         alt="Meelad Celebration" 
-                         onerror="this.src='images/gallery_event_1789984585933.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Celebration</span>
-                        <h4 class="text-white font-bold text-lg">Meelad Festo & Events</h4>
-                        <p class="text-gray-300 text-xs">Student cultural programs and annual celebrations.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Item 4: Prize Distribution Ceremony -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/gallery-prize.jpg', 'Academic Excellence & Prize Distribution')">
-                    <img src="images/gallery-prize.jpg" 
-                         alt="Prize Distribution" 
-                         onerror="this.src='images/gallery-campus.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Achievements</span>
-                        <h4 class="text-white font-bold text-lg">Prize Distribution</h4>
-                        <p class="text-gray-300 text-xs">Honoring top performers in board examinations and fests.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Item 5: Community & Rallies -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/gallery-event.jpg', 'Students Social Awareness & Rallies')">
-                    <img src="images/gallery-event.jpg" 
-                         alt="Students Event" 
-                         onerror="this.src='images/gallery_event_1789984585933.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Community</span>
-                        <h4 class="text-white font-bold text-lg">Social Awareness Rally</h4>
-                        <p class="text-gray-300 text-xs">Students participating in moral and social initiatives.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Item 6: Heritage & Legacy -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100" onclick="openLightbox('images/hero.jpg', 'Heritage of Muhyissunna Madrasa Since 1957')">
-                    <img src="images/hero.jpg" 
-                         alt="Madrasa Heritage" 
-                         onerror="this.src='images/hero_banner_1789984541854.jpg'" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Heritage</span>
-                        <h4 class="text-white font-bold text-lg">Legacy Since 1957</h4>
-                        <p class="text-gray-300 text-xs">Serving the Moochikkal community for nearly seven decades.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
+            <!-- Dynamic Gallery Grid Container -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Populated dynamically via JavaScript: Latest uploaded photo is projected first -->
             </div>
         </div>
     </section>
@@ -829,10 +741,10 @@
 
                 </div>
 
-                <!-- Inquiry Form & Map (7 cols) -->
+                <!-- Inquiry Form with File Upload & Map (7 cols) -->
                 <div class="lg:col-span-7 space-y-6">
                     
-                    <!-- Quick Message Form -->
+                    <!-- Quick Message Form with Attachment (Google Drive via Apps Script) -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-gray-100 gap-3">
                             <div>
@@ -871,6 +783,13 @@
                                 <textarea id="contact-message" rows="3" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm" placeholder="How can we help you?"></textarea>
                             </div>
 
+                            <!-- Optional Attachment File Input -->
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Attach Photo/Document (Optional)</label>
+                                <input type="file" id="contact-file" accept="image/*,.pdf,.doc,.docx" class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none bg-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-bold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition">
+                                <p class="text-[10px] text-gray-400 mt-1">Max size: 3MB. Uploads save directly to Madrasa Google Drive.</p>
+                            </div>
+
                             <div class="flex flex-col sm:flex-row gap-3 pt-2">
                                 <!-- Send via WhatsApp to Headmaster (+91 9633090637) -->
                                 <button type="button" onclick="sendContactViaWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow flex items-center justify-center gap-2 text-sm">
@@ -878,14 +797,19 @@
                                     <span>Send via WhatsApp (+91 9633090637)</span>
                                 </button>
                                 
-                                <button type="submit" class="bg-primary hover:bg-primaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow text-sm">
-                                    Submit Online
+                                <button type="submit" id="submit-btn" class="bg-primary hover:bg-primaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow text-sm flex items-center justify-center gap-2">
+                                    <span id="submit-text">Submit Online</span>
+                                    <i id="submit-spinner" class="fas fa-spinner fa-spin hidden"></i>
                                 </button>
                             </div>
                         </form>
 
                         <div id="contact-success" class="hidden mt-4 bg-emerald-50 border border-emerald-300 text-emerald-800 px-4 py-3 rounded-lg text-sm">
                             <strong class="font-bold">Thank you!</strong> Your inquiry has been recorded. Our office will get back to you shortly.
+                        </div>
+
+                        <div id="contact-error" class="hidden mt-4 bg-red-50 border border-red-300 text-red-800 px-4 py-3 rounded-lg text-sm">
+                            <strong class="font-bold">Error!</strong> Something went wrong while uploading. Please try again or use WhatsApp.
                         </div>
                     </div>
 
@@ -920,7 +844,8 @@
                 <!-- Brand Info -->
                 <div class="flex flex-col items-start">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo.jpg" 
+                        <img id="footer-logo"
+                             src="images/logo.jpg" 
                              alt="Footer Logo" 
                              onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
                              class="h-16 w-16 bg-white rounded-full p-1 object-contain shadow-md border-2 border-accent">
@@ -1006,18 +931,26 @@
 
             </div>
 
-            <!-- Copyright -->
+            <!-- Copyright & Bottom Admin Access -->
             <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-3">
                 <p>&copy; 1957 - <script>document.write(new Date().getFullYear())</script> Muhyissunna Secondary Madrasa, Valanchery Moochikkal. All Rights Reserved.</p>
-                <p class="text-gray-400 flex items-center gap-1">
-                    Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (Reg No: 171/1957)</span> | WAKF (2048/1961)
-                </p>
+                <div class="flex items-center gap-4">
+                    <p class="text-gray-400 flex items-center gap-1">
+                        Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (171/1957)</span> | WAKF (2048/1961)
+                    </p>
+                    <span class="text-gray-600">|</span>
+                    <!-- Admin Login Button at the end of the site -->
+                    <button onclick="openAdminModal()" class="text-gray-400 hover:text-amber-400 transition flex items-center gap-1.5 font-medium py-1 px-2.5 rounded hover:bg-white/5 border border-white/10">
+                        <i class="fas fa-user-shield text-[11px] text-amber-400"></i>
+                        <span>Admin Portal</span>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button (+91 9633090637) -->
-    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
         <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum%20Headmaster,%20I%20am%20contacting%20you%20from%20Muhyissunna%20Madrasa%20website." 
            target="_blank" 
            id="whatsapp-badge"
@@ -1034,9 +967,170 @@
         </a>
     </div>
 
-    <!-- JavaScript Interactive Logic -->
+    <!-- ==================== ADMIN PORTAL MODAL ==================== -->
+    <div id="admin-modal" class="modal hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden border border-gray-100 flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="bg-primaryDark text-white px-6 py-4 flex justify-between items-center border-b border-primary/40">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-amber-400 text-gray-950 flex items-center justify-center font-bold text-sm shadow">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-base tracking-tight">Madrasa Administrator Portal</h3>
+                        <p class="text-xs text-emerald-200">Muhyissunna Secondary Madrasa Moochikkal</p>
+                    </div>
+                </div>
+                <button onclick="closeAdminModal()" class="text-gray-300 hover:text-white text-2xl leading-none">&times;</button>
+            </div>
+
+            <!-- Login View (Shown when not authenticated) -->
+            <div id="admin-login-view" class="p-8">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-emerald-50 text-primary rounded-full flex items-center justify-center text-2xl mx-auto mb-3 border border-emerald-100">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Admin Authentication</h4>
+                    <p class="text-xs text-gray-500 mt-1">Please enter your administrative credentials to continue.</p>
+                </div>
+
+                <form id="admin-login-form" onsubmit="handleAdminLogin(event)" class="space-y-4 max-w-sm mx-auto">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Username</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fas fa-user text-sm"></i></span>
+                            <input type="text" id="admin-username" required class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="admin">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Password</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fas fa-key text-sm"></i></span>
+                            <input type="password" id="admin-password" required class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="••••">
+                        </div>
+                    </div>
+
+                    <div id="admin-login-error" class="hidden text-xs text-red-600 bg-red-50 p-2.5 rounded-lg border border-red-200">
+                        <i class="fas fa-exclamation-triangle mr-1"></i> Invalid username or password. Please try again.
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary hover:bg-primaryLight text-white font-bold py-2.5 rounded-lg transition duration-200 shadow text-sm flex items-center justify-center gap-2">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Dashboard View (Shown after login) -->
+            <div id="admin-dashboard-view" class="hidden flex-1 overflow-y-auto p-6 space-y-6">
+                <!-- User Status Banner -->
+                <div class="flex items-center justify-between bg-emerald-50 border border-emerald-200 px-4 py-3 rounded-xl">
+                    <div class="flex items-center gap-2 text-xs text-emerald-900 font-semibold">
+                        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                        <span>Logged in as <strong>Administrator (admin)</strong></span>
+                    </div>
+                    <button onclick="handleAdminLogout()" class="text-xs text-red-600 hover:text-red-700 font-bold flex items-center gap-1">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+
+                <!-- Tabs: Logo vs Gallery -->
+                <div class="flex border-b border-gray-200">
+                    <button id="tab-btn-gallery" onclick="switchAdminTab('gallery')" class="py-2.5 px-4 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-2">
+                        <i class="fas fa-images"></i> Add Gallery Photos
+                    </button>
+                    <button id="tab-btn-logo" onclick="switchAdminTab('logo')" class="py-2.5 px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-2">
+                        <i class="fas fa-camera"></i> Update Logo
+                    </button>
+                </div>
+
+                <!-- Tab 1: Gallery Upload -->
+                <div id="admin-tab-gallery" class="space-y-5">
+                    <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-900">
+                        <i class="fas fa-star text-amber-600 mr-1"></i> <strong>Projection Feature:</strong> The most recently uploaded photo will automatically be featured and projected at the top/front of the <em>Life & Activities at Muhyissunna</em> gallery!
+                    </div>
+
+                    <form id="admin-gallery-form" onsubmit="handleGalleryUpload(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Select Photo *</label>
+                            <input type="file" id="gal-file" accept="image/*" required class="w-full text-xs text-gray-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-primary file:text-white hover:file:bg-primaryLight">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Photo Title *</label>
+                                <input type="text" id="gal-title" required class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="e.g. Annual Fest 2026">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Category *</label>
+                                <select id="gal-category" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none bg-white">
+                                    <option value="Celebration">Celebration (ആഘോഷം)</option>
+                                    <option value="Campus">Campus & Building</option>
+                                    <option value="Academics">Academics & Classroom</option>
+                                    <option value="Achievements">Achievements & Prizes</option>
+                                    <option value="Community">Community & Rallies</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Short Description *</label>
+                            <textarea id="gal-desc" rows="2" required class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Brief details about the event/photo..."></textarea>
+                        </div>
+
+                        <button type="submit" id="gal-upload-btn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-xs transition shadow flex items-center justify-center gap-2">
+                            <i class="fas fa-upload"></i>
+                            <span>Upload & Project to Gallery</span>
+                        </button>
+                    </form>
+
+                    <!-- List of Uploaded Photos by Admin -->
+                    <div class="pt-4 border-t border-gray-200">
+                        <h5 class="text-xs font-bold text-gray-800 uppercase tracking-wider mb-3">Custom Uploaded Photos</h5>
+                        <div id="admin-photo-list" class="space-y-2 max-h-48 overflow-y-auto">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Logo Update -->
+                <div id="admin-tab-logo" class="hidden space-y-4">
+                    <p class="text-xs text-gray-600">Upload a new circular/square emblem logo. The logo will immediately update across the header, footer, and brand sections.</p>
+                    
+                    <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <img id="admin-logo-preview" src="images/logo.jpg" alt="Current Logo" class="w-16 h-16 rounded-full object-contain bg-white border border-gray-300 p-1">
+                        <div>
+                            <p class="text-xs font-bold text-gray-800">Current Active Logo</p>
+                            <p class="text-[11px] text-gray-500">Will be saved to local storage on save.</p>
+                        </div>
+                    </div>
+
+                    <form id="admin-logo-form" onsubmit="handleLogoUpload(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Choose New Logo Image *</label>
+                            <input type="file" id="logo-file" accept="image/*" required onchange="previewLogoFile(event)" class="w-full text-xs text-gray-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-primary file:text-white hover:file:bg-primaryLight">
+                        </div>
+
+                        <div class="flex gap-2">
+                            <button type="submit" class="flex-1 bg-primary hover:bg-primaryLight text-white font-bold py-2 rounded-lg text-xs transition shadow">
+                                Save New Logo
+                            </button>
+                            <button type="button" onclick="restoreDefaultLogo()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-3 rounded-lg text-xs transition">
+                                Reset Default
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
-        // Mobile Navigation Toggle
+        // ------------------ Mobile Navigation ------------------
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -1044,7 +1138,6 @@
             mobileMenu.classList.toggle('open');
         });
 
-        // Close mobile menu on clicking any navigation link
         const navLinks = mobileMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1052,7 +1145,7 @@
             });
         });
 
-        // Gallery Lightbox
+        // ------------------ Lightbox Logic ------------------
         function openLightbox(imgSrc, caption) {
             const modal = document.getElementById('lightbox-modal');
             const img = document.getElementById('lightbox-img');
@@ -1070,14 +1163,13 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close Lightbox when clicking outside image
         document.getElementById('lightbox-modal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeLightbox();
             }
         });
 
-        // WhatsApp Direct Sender for Contact Form
+        // ------------------ Contact Form & Google Apps Script ------------------
         function sendContactViaWhatsApp() {
             const name = document.getElementById('contact-name').value.trim() || 'Visitor';
             const phone = document.getElementById('contact-phone').value.trim() || 'Not specified';
@@ -1094,19 +1186,442 @@
             window.open(whatsappUrl, '_blank');
         }
 
-        // Regular Contact Form Submit Handler
-        function handleContactSubmit(e) {
+        async function handleContactSubmit(e) {
             e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitSpinner = document.getElementById('submit-spinner');
             const msgBox = document.getElementById('contact-success');
-            msgBox.classList.remove('hidden');
+            const errorBox = document.getElementById('contact-error');
+            const fileInput = document.getElementById('contact-file');
+            
+            // Google Apps Script Web App URL
+            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIFabYyNe7mglcCq_4hNim3ZTRkPXTYTiz974iiZm96me2o10ggAEtbWolzts_Nkzc/exec"; 
+            
+            msgBox.classList.add('hidden');
+            errorBox.classList.add('hidden');
+            
+            submitBtn.disabled = true;
+            submitText.innerText = "Uploading...";
+            submitSpinner.classList.remove('hidden');
 
-            setTimeout(() => {
+            try {
+                let fileData = null;
+                
+                // If a file is selected, read and encode
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    if(file.size > 3 * 1024 * 1024) { // 3MB Limit
+                        alert("File size must be less than 3MB.");
+                        resetButton();
+                        return;
+                    }
+                    
+                    fileData = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve({
+                            file: reader.result,
+                            filename: document.getElementById('contact-name').value + "_" + file.name,
+                            mimeType: file.type
+                        });
+                        reader.onerror = error => reject(error);
+                        reader.readAsDataURL(file);
+                    });
+                    
+                    // Post to Google Apps Script
+                    if(SCRIPT_URL !== "YOUR_WEB_APP_URL_HERE") {
+                        const response = await fetch(SCRIPT_URL, {
+                            method: "POST",
+                            body: JSON.stringify(fileData)
+                        });
+                        const result = await response.json();
+                        
+                        if(result.status !== "success") {
+                            throw new Error("Upload failed");
+                        }
+                    } else {
+                        await new Promise(r => setTimeout(r, 1200)); 
+                    }
+                }
+
+                msgBox.classList.remove('hidden');
                 document.getElementById('contact-form').reset();
+                
                 setTimeout(() => {
                     msgBox.classList.add('hidden');
                 }, 5000);
-            }, 500);
+
+            } catch (error) {
+                console.error("Upload error:", error);
+                errorBox.classList.remove('hidden');
+            } finally {
+                resetButton();
+            }
+
+            function resetButton() {
+                submitBtn.disabled = false;
+                submitText.innerText = "Submit Online";
+                submitSpinner.classList.add('hidden');
+            }
         }
+
+        // ==================== DYNAMIC GALLERY WITH PROJECTED LATEST UPLOAD ====================
+        const DEFAULT_GALLERY = [
+            {
+                id: 'def-1',
+                title: 'Educational Complex',
+                category: 'Campus',
+                desc: 'Main madrasa building at Valanchery Moochikkal.',
+                image: 'images/gallery-campus.jpg'
+            },
+            {
+                id: 'def-2',
+                title: 'Classroom Learning',
+                category: 'Academics',
+                desc: 'Students engaged in Quran recitation and Deeni studies.',
+                image: 'images/gallery-classroom.jpg'
+            },
+            {
+                id: 'def-3',
+                title: 'Meelad Festo & Events',
+                category: 'Celebration',
+                desc: 'Student cultural programs and annual celebrations.',
+                image: 'images/gallery-event.jpg'
+            },
+            {
+                id: 'def-4',
+                title: 'Prize Distribution',
+                category: 'Achievements',
+                desc: 'Honoring top performers in board examinations and fests.',
+                image: 'images/gallery-prize.jpg'
+            },
+            {
+                id: 'def-5',
+                title: 'Social Awareness Rally',
+                category: 'Community',
+                desc: 'Students participating in moral and social initiatives.',
+                image: 'images/gallery-event.jpg'
+            },
+            {
+                id: 'def-6',
+                title: 'Legacy Since 1957',
+                category: 'Heritage',
+                desc: 'Serving the Moochikkal community for nearly seven decades.',
+                image: 'images/hero.jpg'
+            }
+        ];
+
+        function getCustomGallery() {
+            try {
+                return JSON.parse(localStorage.getItem('madrasa_custom_gallery')) || [];
+            } catch(e) {
+                return [];
+            }
+        }
+
+        function saveCustomGallery(items) {
+            localStorage.setItem('madrasa_custom_gallery', JSON.stringify(items));
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            if(!grid) return;
+
+            const customItems = getCustomGallery(); // Ordered newest first
+            const allItems = [...customItems, ...DEFAULT_GALLERY];
+
+            grid.innerHTML = '';
+
+            allItems.forEach((item, index) => {
+                const isLatestProjected = (index === 0 && customItems.length > 0);
+                
+                const card = document.createElement('div');
+                card.className = `group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-100 transition duration-300 transform hover:-translate-y-1 ${isLatestProjected ? 'ring-4 ring-amber-400 sm:col-span-2' : ''}`;
+                
+                card.onclick = () => openLightbox(item.image, item.title + ' - ' + item.desc);
+
+                card.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" onerror="this.src='images/hero.jpg'" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    
+                    ${isLatestProjected ? `
+                        <div class="absolute top-4 left-4 z-10 bg-amber-500 text-gray-950 font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
+                            <i class="fas fa-bullhorn text-[10px]"></i>
+                            <span>LATEST UPLOAD (പ്രൊജക്റ്റഡ്)</span>
+                        </div>
+                    ` : ''}
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">${item.category}</span>
+                        <h4 class="text-white font-bold text-lg leading-tight mt-0.5">${item.title}</h4>
+                        <p class="text-gray-300 text-xs mt-1 leading-relaxed">${item.desc}</p>
+                    </div>
+
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition shadow">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            // Update admin list
+            renderAdminPhotoList();
+        }
+
+        // ==================== ADMIN PORTAL LOGIC ====================
+        function openAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            const isAuth = sessionStorage.getItem('madrasa_admin_auth') === 'true';
+
+            if(isAuth) {
+                showDashboard();
+            } else {
+                showLoginForm();
+            }
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('admin-modal').addEventListener('click', function(e) {
+            if(e.target === this) {
+                closeAdminModal();
+            }
+        });
+
+        function showLoginForm() {
+            document.getElementById('admin-login-view').classList.remove('hidden');
+            document.getElementById('admin-dashboard-view').classList.add('hidden');
+            document.getElementById('admin-login-error').classList.add('hidden');
+        }
+
+        function showDashboard() {
+            document.getElementById('admin-login-view').classList.add('hidden');
+            document.getElementById('admin-dashboard-view').classList.remove('hidden');
+            renderAdminPhotoList();
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const u = document.getElementById('admin-username').value.trim();
+            const p = document.getElementById('admin-password').value.trim();
+            const errBox = document.getElementById('admin-login-error');
+
+            // Exact credentials requested: username = admin, password = 171
+            if(u === 'admin' && p === '171') {
+                sessionStorage.setItem('madrasa_admin_auth', 'true');
+                errBox.classList.add('hidden');
+                document.getElementById('admin-login-form').reset();
+                showDashboard();
+            } else {
+                errBox.classList.remove('hidden');
+            }
+        }
+
+        function handleAdminLogout() {
+            sessionStorage.removeItem('madrasa_admin_auth');
+            showLoginForm();
+        }
+
+        function switchAdminTab(tab) {
+            const tabGallery = document.getElementById('admin-tab-gallery');
+            const tabLogo = document.getElementById('admin-tab-logo');
+            const btnGallery = document.getElementById('tab-btn-gallery');
+            const btnLogo = document.getElementById('tab-btn-logo');
+
+            if(tab === 'gallery') {
+                tabGallery.classList.remove('hidden');
+                tabLogo.classList.add('hidden');
+                btnGallery.className = "py-2.5 px-4 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-2";
+                btnLogo.className = "py-2.5 px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-2";
+            } else {
+                tabGallery.classList.add('hidden');
+                tabLogo.classList.remove('hidden');
+                btnLogo.className = "py-2.5 px-4 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-2";
+                btnGallery.className = "py-2.5 px-4 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-2";
+            }
+        }
+
+        // Image compression helper (keeps localStorage lightweight & fast)
+        function compressImage(file, maxWidth = 1000, quality = 0.8) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        let w = img.width;
+                        let h = img.height;
+                        if(w > maxWidth) {
+                            h = Math.round((h * maxWidth) / w);
+                            w = maxWidth;
+                        }
+                        canvas.width = w;
+                        canvas.height = h;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, w, h);
+                        resolve(canvas.toDataURL('image/jpeg', quality));
+                    };
+                    img.onerror = err => reject(err);
+                };
+                reader.onerror = err => reject(err);
+            });
+        }
+
+        // Handle Gallery Photo Upload
+        async function handleGalleryUpload(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('gal-file');
+            const titleInput = document.getElementById('gal-title');
+            const catInput = document.getElementById('gal-category');
+            const descInput = document.getElementById('gal-desc');
+            const uploadBtn = document.getElementById('gal-upload-btn');
+
+            if(!fileInput.files || fileInput.files.length === 0) {
+                alert("Please select a photo file.");
+                return;
+            }
+
+            uploadBtn.disabled = true;
+            uploadBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-1"></i> Processing Photo...`;
+
+            try {
+                const base64Img = await compressImage(fileInput.files[0], 1100, 0.82);
+                
+                const newPhoto = {
+                    id: 'custom-' + Date.now(),
+                    title: titleInput.value.trim(),
+                    category: catInput.value,
+                    desc: descInput.value.trim(),
+                    image: base64Img,
+                    date: new Date().toLocaleDateString()
+                };
+
+                // Add to start of array so it is projected at the front!
+                const current = getCustomGallery();
+                current.unshift(newPhoto);
+                saveCustomGallery(current);
+
+                renderGallery();
+                document.getElementById('admin-gallery-form').reset();
+                alert("Photo uploaded successfully! It is now projected at the top of the gallery.");
+            } catch(err) {
+                console.error("Upload error:", err);
+                alert("Failed to upload photo. Please check image size.");
+            } finally {
+                uploadBtn.disabled = false;
+                uploadBtn.innerHTML = `<i class="fas fa-upload mr-1"></i> Upload & Project to Gallery`;
+            }
+        }
+
+        // Render photo list in admin panel
+        function renderAdminPhotoList() {
+            const container = document.getElementById('admin-photo-list');
+            if(!container) return;
+
+            const customItems = getCustomGallery();
+            if(customItems.length === 0) {
+                container.innerHTML = `<p class="text-xs text-gray-400 italic">No custom uploaded photos yet. Default gallery images are displayed.</p>`;
+                return;
+            }
+
+            container.innerHTML = '';
+            customItems.forEach(item => {
+                const row = document.createElement('div');
+                row.className = "flex items-center justify-between p-2.5 bg-gray-50 border border-gray-200 rounded-lg text-xs gap-3";
+                row.innerHTML = `
+                    <div class="flex items-center gap-2.5 overflow-hidden">
+                        <img src="${item.image}" alt="${item.title}" class="w-10 h-10 rounded object-cover flex-shrink-0 border border-gray-200">
+                        <div class="truncate">
+                            <strong class="text-gray-900 block truncate">${item.title}</strong>
+                            <span class="text-[11px] text-gray-500">${item.category} • ${item.date || 'Recent'}</span>
+                        </div>
+                    </div>
+                    <button onclick="deleteCustomPhoto('${item.id}')" class="text-red-600 hover:text-red-700 p-1 font-bold text-xs" title="Delete Photo">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function deleteCustomPhoto(id) {
+            if(!confirm("Are you sure you want to remove this photo from the gallery?")) return;
+            let current = getCustomGallery();
+            current = current.filter(item => item.id !== id);
+            saveCustomGallery(current);
+            renderGallery();
+        }
+
+        // ==================== LOGO UPDATE LOGIC ====================
+        function previewLogoFile(e) {
+            const preview = document.getElementById('admin-logo-preview');
+            if(e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    preview.src = event.target.result;
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        }
+
+        async function handleLogoUpload(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('logo-file');
+            if(!fileInput.files || fileInput.files.length === 0) {
+                alert("Please select a logo file.");
+                return;
+            }
+
+            try {
+                const base64Logo = await compressImage(fileInput.files[0], 400, 0.9);
+                localStorage.setItem('madrasa_custom_logo', base64Logo);
+                applyCustomLogo(base64Logo);
+                alert("Madrasa Logo updated successfully across the website!");
+            } catch(err) {
+                console.error("Logo error:", err);
+                alert("Failed to update logo.");
+            }
+        }
+
+        function restoreDefaultLogo() {
+            if(!confirm("Reset logo back to default?")) return;
+            localStorage.removeItem('madrasa_custom_logo');
+            applyCustomLogo('images/logo.jpg');
+            document.getElementById('admin-logo-preview').src = 'images/logo.jpg';
+            alert("Default logo restored.");
+        }
+
+        function applyCustomLogo(src) {
+            const hLogo = document.getElementById('header-logo');
+            const fLogo = document.getElementById('footer-logo');
+            const pLogo = document.getElementById('admin-logo-preview');
+            if(hLogo) hLogo.src = src;
+            if(fLogo) fLogo.src = src;
+            if(pLogo) pLogo.src = src;
+        }
+
+        function initCustomLogo() {
+            const savedLogo = localStorage.getItem('madrasa_custom_logo');
+            if(savedLogo) {
+                applyCustomLogo(savedLogo);
+            }
+        }
+
+        // Initial Page Boot
+        window.addEventListener('DOMContentLoaded', () => {
+            initCustomLogo();
+            renderGallery();
+        });
     </script>
 </body>
 </html>
