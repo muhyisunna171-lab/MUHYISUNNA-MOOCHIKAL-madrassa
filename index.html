@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhyissunna Secondary Madrasa | Valanchery Moochikkal</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Official website of Muhyissunna Secondary Madrasa, Valanchery Moochikkal, Kerala. Estd 1957. Affiliated with Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#064e3b',       // Deep Islamic Green
+                        primaryLight: '#047857',  // Emerald Green
+                        primaryDark: '#022c22',   // Very Dark Green
+                        accent: '#d97706',        // Gold/Sand yellow
+                        accentHover: '#b45309',   // Deep Gold
+                        gold: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                        malayalam: ['Noto Sans Malayalam', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #064e3b; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #047857; 
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ticker Animation */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: #064e3b;
+            color: white;
+            padding: 9px 0;
+        }
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            padding-right: 100%;
+            animation: ticker 32s linear infinite;
+        }
+        .ticker-move:hover {
+            animation-play-state: paused;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* WhatsApp Floating Button Pulse Effect */
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        .whatsapp-pulse {
+            animation: pulse-green 2s infinite;
+        }
+
+        /* Islamic Pattern Overlay */
+        .islamic-pattern {
+            background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Modal Backdrop */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .modal:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Top Info Bar -->
+    <div class="bg-primaryDark text-gray-200 text-xs py-2 px-4 border-b border-primary/40 hidden sm:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-accent"></i> Valanchery Moochikkal, Malappuram, Kerala</span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-certificate text-accent"></i> SKIMVB: 171/1957 | WAKF: 2048/1961</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+919633090637" class="hover:text-accent transition flex items-center gap-1">
+                    <i class="fas fa-phone-alt text-accent"></i> +91 9633090637 (സദർ മുഅല്ലിം)
+                </a>
+                <span class="text-gray-500">|</span>
+                <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയെക്കുറിച്ച്%20അറിയാൻ%20ആഗ്രഹിക്കുന്നു." target="_blank" class="hover:text-green-400 transition flex items-center gap-1 text-green-300 font-semibold">
+                    <i class="fab fa-whatsapp text-green-400"></i> WhatsApp Helpdesk
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Ticker -->
+    <div class="ticker-wrap text-sm border-b border-primaryLight shadow-inner">
+        <div class="ticker-move">
+            <span class="font-bold text-accent mx-3 bg-white/10 px-2 py-0.5 rounded"><i class="fas fa-bullhorn mr-1.5"></i> പ്രധാന അറിയിപ്പ്:</span> 
+            <span class="font-malayalam font-medium">2026-2027 അധ്യയന വർഷത്തേക്കുള്ള പ്രവേശനം ആരംഭിച്ചിരിക്കുന്നു. കൂടുതൽ വിവരങ്ങൾക്ക് ഓഫീസുമായോ സദർ മുഅല്ലിമുമായോ ബന്ധപ്പെടുക.</span>
+            <span class="mx-6 text-accent">★</span> 
+            <span class="font-semibold text-accent">LATEST UPDATE:</span> Admissions open for Academic Year 2026-2027. Contact Office / Sadr Muallim (+91 9633090637).
+            <span class="mx-6 text-accent">★</span>
+            <span class="font-malayalam">സമസ്ത കേരള ഇസ്ലാം മത വിദ്യാഭ്യാസ ബോർഡ് പൊതുപരീക്ഷാ ഫലങ്ങൾ പ്രഖ്യാപിച്ചു.</span>
+            <span class="mx-6 text-accent">★</span>
+            SKIMVB Board Public Examination Results announced.
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo & Institution Name -->
+                <a href="#home" class="flex items-center gap-3 md:gap-4 group">
+                    <div class="relative">
+                        <img src="images/logo.jpg" 
+                             alt="Muhyissunna Madrasa Logo" 
+                             onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
+                             class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full shadow-md border-2 border-primary/20 group-hover:scale-105 transition duration-300 bg-white">
+                        <span class="absolute -bottom-1 -right-1 bg-accent text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full border border-white">1957</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-arabic text-primary text-xl md:text-2xl font-bold leading-tight" dir="rtl">المدرسة محي السنة الثانوية</span>
+                        <span class="font-extrabold text-gray-900 text-base md:text-lg lg:text-xl tracking-tight uppercase">Muhyissunna Secondary Madrasa</span>
+                        <span class="font-malayalam text-emerald-800 text-xs md:text-sm font-bold">മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ, വളാഞ്ചേരി മൂച്ചിക്കൽ</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">About Us</a>
+                    <a href="#academics" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">Academics</a>
+                    <a href="#admissions" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">Admissions</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-semibold text-sm xl:text-base transition">Contact</a>
+                    
+                    <!-- Quick WhatsApp Link Button -->
+                    <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയിലെ%20അഡ്മിഷനെക്കുറിച്ച്%20അറിയാൻ%20താൽപ്പര്യപ്പെടുന്നു." 
+                       target="_blank" 
+                       class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold text-sm transition shadow flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-base"></i>
+                        <span>വാട്സാപ്പ്</span>
+                    </a>
+
+                    <!-- Admissions CTA Button -->
+                    <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight text-white px-5 py-2.5 rounded-full font-bold text-sm transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1.5">
+                        <i class="fas fa-graduation-cap text-accent"></i>
+                        <span>അഡ്മിഷൻ (Apply Online)</span>
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും" target="_blank" class="text-emerald-600 p-2 text-xl" title="Chat on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="text-gray-700 hover:text-primary p-2 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-2">
+                <a href="#home" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Home (ഹോം)</a>
+                <a href="#about" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">About Us (ഞങ്ങളെക്കുറിച്ച്)</a>
+                <a href="#academics" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Academics (പഠനം & സിലബസ്)</a>
+                <a href="#admissions" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Admissions (പ്രവേശനം)</a>
+                <a href="#gallery" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Gallery (ഫോട്ടോ ഗാലറി)</a>
+                <a href="#contact" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Contact Us (ബന്ധപ്പെടുക)</a>
+                
+                <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+                    <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയിലെ%20വിവരങ്ങൾക്കായി%20ബന്ധപ്പെടുന്നു." 
+                       target="_blank" 
+                       class="w-full text-center bg-emerald-600 text-white px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>പ്രധാനാധ്യാപകനുമായി വാട്സാപ്പിൽ സംസാരിക്കാം</span>
+                    </a>
+                    <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-primary text-white px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow">
+                        <i class="fas fa-graduation-cap text-accent"></i>
+                        <span>ഓൺലൈൻ അഡ്മിഷൻ (Samastha Portal)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[640px] md:h-[82vh] flex items-center justify-center text-white">
+        <!-- Background Image with Dark Emerald Overlay -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden">
+            <img src="images/hero.jpg" 
+                 alt="Muhyissunna Madrasa Campus" 
+                 onerror="this.src='images/hero_banner_1789984541854.jpg'"
+                 class="w-full h-full object-cover object-center scale-105 filter brightness-90 transition duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-900/85 to-primaryDark/80"></div>
+            <div class="absolute inset-0 islamic-pattern opacity-40"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto py-16">
+            
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
+                <span class="bg-accent text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-extrabold tracking-wider uppercase shadow-md">
+                    ESTD 1957 • 69+ YEARS OF EXCELLENCE
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-emerald-100 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">
+                    SKIMVB Reg: 171/1957
+                </span>
+            </div>
+            
+            <!-- Titles in 3 Languages -->
+            <div class="mb-5">
+                <div class="font-arabic text-2xl md:text-4xl text-amber-300 font-bold mb-2 drop-shadow-md" dir="rtl">
+                    المدرسة محي السنة الثانوية
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg mb-2">
+                    MUHYISSUNNA <br class="hidden sm:inline">
+                    <span class="text-amber-400">SECONDARY MADRASA</span>
+                </h1>
+                <div class="font-malayalam text-lg sm:text-2xl text-emerald-100 font-bold tracking-wide drop-shadow">
+                    മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ, വളാഞ്ചേരി മൂച്ചിക്കൽ
+                </div>
+            </div>
+            
+            <!-- Affiliation & Details -->
+            <div class="max-w-2xl mx-auto mb-8 bg-black/30 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                <p class="text-sm md:text-base text-amber-200 font-semibold uppercase tracking-wider mb-1">
+                    <i class="fas fa-award mr-1.5"></i> UNDER SAMASTHA KERALA ISLAM MATHA VIDYABHYASA BOARD
+                </p>
+                <p class="text-xs md:text-sm text-gray-300 font-medium">
+                    W.A.K.F No: 2048/1961 &nbsp;|&nbsp; SKIMVB Reg No: 171/1957 &nbsp;|&nbsp; Valanchery Moochikkal
+                </p>
+            </div>
+            
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <!-- Admissions CTA -->
+                <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-accent hover:bg-accentHover text-white px-8 py-3.5 rounded-full font-bold text-base md:text-lg transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fas fa-graduation-cap text-xl"></i>
+                    <span>അഡ്മിഷൻ (Online Admission)</span>
+                    <i class="fas fa-external-link-alt text-xs ml-1 opacity-80"></i>
+                </a>
+
+                <!-- WhatsApp Direct Chat CTA with Headmaster -->
+                <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയെക്കുറിച്ചുള്ള%20കൂടുതൽ%20വിവരങ്ങൾക്കായി%20ബന്ധപ്പെടുന്നു." 
+                   target="_blank" 
+                   class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-full font-bold text-base md:text-lg transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2.5">
+                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                    <span>വാട്സാപ്പിൽ സന്ദേശമയക്കാം</span>
+                </a>
+                
+                <!-- Discover Legacy -->
+                <a href="#about" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/40 text-white hover:bg-white hover:text-primary px-7 py-3.5 rounded-full font-bold text-base md:text-lg transition duration-300 shadow-lg">
+                    ചരിത്രം (History)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="py-10 bg-white relative z-20 -mt-10 mx-4 sm:mx-6 lg:mx-auto max-w-6xl rounded-2xl shadow-2xl border border-gray-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 px-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div class="pt-4 md:pt-0">
+                <div class="w-14 h-14 mx-auto mb-3 bg-amber-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-inner">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">69+</h3>
+                <p class="text-gray-600 font-bold text-sm mt-1">വർഷത്തെ പാരമ്പര്യം</p>
+                <p class="text-xs text-gray-400 font-medium uppercase">Years of Legacy (1957)</p>
+            </div>
+            
+            <div class="pt-4 md:pt-0">
+                <div class="w-14 h-14 mx-auto mb-3 bg-emerald-50 rounded-full flex items-center justify-center text-primaryLight text-2xl shadow-inner">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">1500+</h3>
+                <p class="text-gray-600 font-bold text-sm mt-1">വിദ്യാർത്ഥികൾ</p>
+                <p class="text-xs text-gray-400 font-medium uppercase">Active & Alumni Students</p>
+            </div>
+            
+            <div class="pt-4 md:pt-0">
+                <div class="w-14 h-14 mx-auto mb-3 bg-amber-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-inner">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">20+</h3>
+                <p class="text-gray-600 font-bold text-sm mt-1">പരിചയസമ്പന്നരായ മുഅല്ലിംകൾ</p>
+                <p class="text-xs text-gray-400 font-medium uppercase">Dedicated Muallims</p>
+            </div>
+            
+            <div class="pt-4 md:pt-0">
+                <div class="w-14 h-14 mx-auto mb-3 bg-emerald-50 rounded-full flex items-center justify-center text-primaryLight text-2xl shadow-inner">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">100%</h3>
+                <p class="text-gray-600 font-bold text-sm mt-1">സമസ്ത സിലബസ്</p>
+                <p class="text-xs text-gray-400 font-medium uppercase">SKIMVB Recognized</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Image side (5 cols) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <img src="images/gallery-campus.jpg" 
+                             alt="Muhyissunna Madrasa Campus" 
+                             onerror="this.src='images/students_classroom_1789984554126.jpg'" 
+                             class="rounded-2xl shadow-2xl object-cover w-full h-[440px] border-4 border-white">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl border-4 border-white">
+                            <h4 class="text-3xl md:text-4xl font-extrabold text-amber-400">1957</h4>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-100">ആരംഭിച്ച വർഷം (Estd)</p>
+                        </div>
+
+                        <!-- Secondary Mini Badge -->
+                        <div class="absolute -top-4 -left-4 bg-white text-gray-900 p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-lg flex items-center justify-center font-bold">
+                                <i class="fas fa-quran"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">അംഗീകാരം</p>
+                                <p class="text-sm font-bold text-gray-800">SKIMVB Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text side (7 cols) -->
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-12 h-1 bg-accent"></div>
+                        <h2 class="text-accent font-bold uppercase tracking-wider text-sm">About Muhyissunna Madrasa</h2>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        ആധ്യാത്മിക വെളിച്ചം പകരുന്ന <br>
+                        <span class="text-primary font-malayalam">ആറ് പതിറ്റാണ്ടിൻ്റെ പാരമ്പര്യം</span>
+                    </h3>
+                    
+                    <p class="text-gray-700 mb-5 leading-relaxed text-base md:text-lg text-justify font-malayalam">
+                        1957-ൽ വളാഞ്ചേരി മൂച്ചിക്കലിൽ സ്ഥാപിതമായ <strong>മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ</strong>, സമസ്ത കേരള ഇസ്ലാം മത വിദ്യാഭ്യാസ ബോർഡിൻ്റെ (SKIMVB) കീഴിൽ പ്രവർത്തിക്കുന്ന പ്രമുഖ ഇസ്ലാമിക വിദ്യാഭ്യാസ സ്ഥാപനമാണ്. വിശുദ്ധ ഖുർആൻ പാരായണം, തജ്‌വീദ്, ഫിഖ്ഹ്, അഖീദ, ഇസ്ലാമിക ചരിത്രം എന്നിവയിൽ ഉന്നത നിലവാരമുള്ള ദീനീ ശിക്ഷണം നൽകി ഉത്തമ തലമുറയെ വാർത്തെടുക്കുകയാണ് ലക്ഷ്യം.
+                    </p>
+                    
+                    <p class="text-gray-600 mb-8 leading-relaxed text-base text-justify">
+                        For over 69 years, our institution has stood as an enduring lighthouse of moral guidance and Deeni knowledge in Malappuram. Through structured religious learning, ethical formation, and student cultural wings, we empower young minds with piety and societal responsibility.
+                    </p>
+
+                    <!-- Vision & Mission -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-primary">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900">ലക്ഷ്യങ്ങൾ (Our Vision)</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 font-malayalam">ഇസ്ലാമിക മൂല്യങ്ങളിൽ അധിഷ്ഠിതമായ ഉത്തമ സംസ്കാരവും ആത്മീയ ബോധവുമുള്ള തലമുറയെ വളർത്തിയെടുക്കുക.</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-accent">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center text-accent font-bold">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900">ദൗത്യം (Our Mission)</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 font-malayalam">സമസ്ത ബോർഡിൻ്റെ മാർഗ്ഗനിർദ്ദേശങ്ങൾക്ക് വിധേയമായി സമഗ്രവും ചിട്ടയുള്ളതുമായ ദീനീ വിദ്യാഭ്യാസം പകർന്നു നൽകുക.</p>
+                        </div>
+                    </div>
+
+                    <!-- Direct Sadr Muallim Desk Callout -->
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-emerald-800 font-bold uppercase">പ്രധാനാധ്യാപകന്റെ ഓഫീസ് (Headmaster)</p>
+                                <p class="text-sm font-bold text-gray-900 font-malayalam">സദർ മുഅല്ലിം: +91 9633090637</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും%20സദർ%20മുഅല്ലിം,%20മദ്രസയുമായി%20ബന്ധപ്പെട്ട%20വിവരങ്ങൾക്കായി%20മെസ്സേജ്%20അയക്കുന്നു." 
+                           target="_blank" 
+                           class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow transition">
+                            <i class="fab fa-whatsapp"></i> വാട്സാപ്പിൽ ബന്ധപ്പെടാം
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics & Syllabus Section -->
+    <section id="academics" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
+                    Academic Excellence
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                    സമസ്ത സിലബസ് അടിസ്ഥാനമാക്കിയുള്ള പഠനക്രമം
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    We strictly follow the syllabus set by the Samastha Kerala Islam Matha Vidyabhyasa Board, ensuring comprehensive Islamic moral education.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Academic Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-accent transition shadow-lg">
+                            <i class="fas fa-book-quran"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">SKIMVB പാഠ്യപദ്ധതി</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed font-malayalam">
+                            വിശുദ്ധ ഖുർആൻ പാരായണം, തജ്‌വീദ്, ഫിഖ്ഹ്, അഖീദ, അഖ്‌ലാഖ്, താരീഖ് (ചരിത്രം), ലിസാനുൽ ഖുർആൻ (അറബിക്) എന്നീ വിഷയങ്ങളിൽ ബോർഡിൻ്റെ ആധികാരിക പാഠപുസ്തകങ്ങൾ.
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-gray-600 space-y-2 pt-4 border-t border-gray-200">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> ആധികാരിക സമസ്ത പാഠപുസ്തകങ്ങൾ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> ബോർഡ് തല പൊതുപരീക്ഷകൾ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> നിരന്തര മൂല്യനിർണ്ണയ രീതി</li>
+                    </ul>
+                </div>
+
+                <!-- Academic Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-accent transition shadow-lg">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">ക്ലാസ് ഘടന (Class Levels)</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed font-malayalam">
+                            പ്രാഥമിക ഘട്ടം മുതൽ സെക്കണ്ടറി തലം വരെയുള്ള വ്യവസ്ഥാപിതമായ ബാച്ചുകൾ. കുട്ടികളുടെ പ്രായത്തിനനുസരിച്ചുള്ള പ്രത്യേക ശിക്ഷണം.
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-gray-600 space-y-2 pt-4 border-t border-gray-200">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> പ്രീ-പ്രൈമറി: LKG & UKG</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> പ്രൈമറി തലം: ക്ലാസ് 1 മുതൽ 5 വരെ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> സെക്കണ്ടറി തലം: ക്ലാസ് 6 മുതൽ 10 വരെ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> പ്രഭാത / സായാഹ്ന ഷിഫ്റ്റുകൾ</li>
+                    </ul>
+                </div>
+
+                <!-- Academic Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-accent transition shadow-lg">
+                            <i class="fas fa-star-and-crescent"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">കലാ-സാഹിത്യ പ്രവർത്തനങ്ങൾ</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed font-malayalam">
+                            വിദ്യാർത്ഥികളുടെ സർഗ്ഗവാസനകൾ പരിപോഷിപ്പിക്കുന്നതിനായി SKSSF Twalaba, ബാലവേദി യൂണിറ്റുകൾ, മീലാദ് ഫെസ്റ്റുകൾ, സാഹിത്യ മത്സരങ്ങൾ.
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-gray-600 space-y-2 pt-4 border-t border-gray-200">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> നബിദിന കലാപരിപാടികൾ & ഫെസ്റ്റോ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> പ്രസംഗ, ഖുർആൻ പാരായണ മത്സരങ്ങൾ</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-2"></i> ബോധവൽക്കരണ റാലികൾ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-20 bg-emerald-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 islamic-pattern opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Guidelines -->
+                <div class="lg:col-span-6">
+                    <div class="inline-block bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-4 tracking-wider">
+                        Admissions Open 2026-2027
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 leading-tight">
+                        പുതിയ അധ്യയന വർഷത്തെ <br>
+                        <span class="text-amber-400 font-malayalam">പ്രവേശനം ആരംഭിച്ചിരിക്കുന്നു</span>
+                    </h2>
+                    <p class="text-emerald-100 mb-6 text-base font-malayalam leading-relaxed">
+                        മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസയിലേക്ക് 2026-2027 അധ്യയന വർഷത്തേക്കുള്ള LKG, UKG, സ്റ്റാൻഡേർഡ് 1 മുതൽ 10 വരെയുള്ള ക്ലാസുകളിലേക്ക് അഡ്മിഷൻ ആരംഭിച്ചിരിക്കുന്നു. സദാചാരബോധവും സംസ്കാരവുമുള്ള തലമുറയെ വളർത്താൻ നിങ്ങളുടെ കുട്ടികളെ ഇവിടെ ചേർക്കൂ.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">ആവശ്യമായ രേഖകൾ:</h4>
+                                <p class="text-sm text-emerald-200">ജനന സർട്ടിഫിക്കറ്റ് പകർപ്പ്, ആധാർ കാർഡ് പകർപ്പ്, പാസ്പോർട്ട് സൈസ് ഫോട്ടോകൾ, ടി.സി (മറ്റ് മദ്രസകളിൽ നിന്ന് വരുന്നവർക്ക്).</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">നേരിട്ടുള്ള അന്വേഷണങ്ങൾ:</h4>
+                                <p class="text-sm text-emerald-200">ഓഫീസ് സമയങ്ങളിൽ മദ്രസ സന്ദർശിക്കുകയോ പ്രധാനാധ്യാപകനുമായി വാട്സാപ്പിൽ ബന്ധപ്പെടുകയോ ചെയ്യാം.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://online.samastha.info/admission.php" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="bg-accent hover:bg-accentHover text-white px-7 py-3.5 rounded-full font-bold text-base transition shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 flex items-center gap-2.5">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                            <span>സമസ്ത ഓൺലൈൻ അഡ്മിഷൻ (Apply Online)</span>
+                            <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
+                        <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും%20സദർ%20മുഅല്ലിം,%20എന്റെ%20കുട്ടിയുടെ%20അഡ്മിഷനുമായി%20ബന്ധപ്പെട്ട്%20സംസാരിക്കാൻ%20ആഗ്രഹിക്കുന്നു." 
+                           target="_blank" 
+                           class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-full font-bold text-base transition shadow-lg flex items-center gap-2.5">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>സദർ മുഅല്ലിമിനോട് ചോദിക്കാം</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Quick Registration Card -->
+                <div class="lg:col-span-6" id="inquiry-form-card">
+                    <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl border border-emerald-800">
+                        <h3 class="text-2xl font-bold text-primary mb-2 flex items-center gap-2">
+                            <i class="fas fa-file-signature text-accent"></i> അഡ്മിഷൻ എൻക്വയറി ഫോം
+                        </h3>
+                        <p class="text-gray-500 text-sm mb-4">വിവരങ്ങൾ പൂരിപ്പിച്ചാൽ ഞങ്ങളുടെ ഓഫീസിൽ നിന്നോ സദർ മുഅല്ലിമിൽ നിന്നോ ഉടൻ ബന്ധപ്പെടുന്നതാണ്.</p>
+                        
+                        <!-- Direct Samastha Portal Callout -->
+                        <div class="mb-5 p-3.5 bg-amber-50 border border-amber-200 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                            <div class="text-xs text-amber-950 font-malayalam">
+                                <strong class="text-amber-800"><i class="fas fa-shield-alt mr-1"></i> സമസ്ത ഒഫീഷ്യൽ പോർട്ടൽ:</strong> നേരിട്ട് ഓൺലൈനായി അഡ്മിഷൻ ഫോം പൂരിപ്പിക്കാൻ:
+                            </div>
+                            <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentHover text-white px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap shadow transition flex items-center gap-1.5 flex-shrink-0">
+                                <span>പോർട്ടൽ തുറക്കാം</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                        
+                        <form id="admission-form" class="space-y-4" onsubmit="handleAdmissionSubmit(event)">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">വിദ്യാർത്ഥിയുടെ പേര് (Student's Name) *</label>
+                                <input type="text" id="adm-student" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm" placeholder="Student's Full Name">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">രക്ഷിതാവിന്റെ പേര് (Parent/Guardian) *</label>
+                                    <input type="text" id="adm-parent" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm" placeholder="Parent's Name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">ഫോൺ / വാട്സാപ്പ് നമ്പർ *</label>
+                                    <input type="tel" id="adm-phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm" placeholder="+91 XXXXXXXXXX">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">അഡ്മിഷൻ ആഗ്രഹിക്കുന്ന ക്ലാസ് *</label>
+                                    <select id="adm-class" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm bg-white">
+                                        <option value="LKG">LKG</option>
+                                        <option value="UKG">UKG</option>
+                                        <option value="Class 1">Class 1 (ഒന്നാം ക്ലാസ്)</option>
+                                        <option value="Class 2">Class 2</option>
+                                        <option value="Class 3">Class 3</option>
+                                        <option value="Class 4">Class 4</option>
+                                        <option value="Class 5">Class 5</option>
+                                        <option value="Class 6">Class 6</option>
+                                        <option value="Class 7">Class 7</option>
+                                        <option value="Class 8">Class 8</option>
+                                        <option value="Class 9">Class 9</option>
+                                        <option value="Class 10">Class 10 (പത്താം ക്ലാസ്)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">സ്ഥലം (Place / Address)</label>
+                                    <input type="text" id="adm-place" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm" placeholder="Moochikkal / Valanchery">
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                                <!-- Direct Send to WhatsApp button -->
+                                <button type="button" onclick="sendAdmissionViaWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-md flex items-center justify-center gap-2 text-sm">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                    <span>വാട്സാപ്പിലൂടെ അയക്കാം</span>
+                                </button>
+                                
+                                <button type="submit" class="bg-primary hover:bg-primaryLight text-white font-bold py-3 px-5 rounded-lg transition duration-200 shadow-md text-sm">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="adm-success" class="hidden mt-4 bg-emerald-50 border border-emerald-300 text-emerald-800 px-4 py-3 rounded-lg text-sm">
+                            <strong class="font-bold">അപേക്ഷ സ്വീകരിച്ചു!</strong> ഉടൻ തന്നെ താങ്കളുടെ നമ്പറിലേക്ക് മദ്രസയിൽ നിന്ന് ബന്ധപ്പെടും.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Filter Tabs -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <div class="inline-block bg-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-2">
+                        Photo Gallery
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+                        കാമ്പസ് കാഴ്ചകളും വിശേഷങ്ങളും
+                    </h2>
+                    <p class="text-gray-600 text-sm mt-1">Glimpses of life, events, celebrations, and achievements at Muhyissunna Madrasa.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Gallery Item 1: Campus Building -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/gallery-campus.jpg', 'Muhyissunna Madrasa Campus Complex')">
+                    <img src="images/gallery-campus.jpg" 
+                         alt="Madrasa Campus Complex" 
+                         onerror="this.src='images/hero_banner_1789984541854.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Campus</span>
+                        <h4 class="text-white font-bold text-lg">വിദ്യാഭ്യാസ സമുച്ചയം (Educational Complex)</h4>
+                        <p class="text-gray-300 text-xs">വളാഞ്ചേരി മൂച്ചിക്കലിലെ പ്രധാന മദ്രസാ കാമ്പസ് കെട്ടിടം.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Classrooms / Learning -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/gallery-classroom.jpg', 'Students in Classroom')">
+                    <img src="images/gallery-classroom.jpg" 
+                         alt="Students Studying" 
+                         onerror="this.src='images/students_classroom_1789984554126.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Academics</span>
+                        <h4 class="text-white font-bold text-lg">ക്ലാസ്സ് മുറികൾ & പഠനം</h4>
+                        <p class="text-gray-300 text-xs">വിശുദ്ധ ഖുർആൻ പഠനത്തിലും ദീനീ പാഠങ്ങളിലും മുഴുകിയ വിദ്യാർത്ഥികൾ.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Meelad / Festo Celebrations -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/gallery-event.jpg', 'Meelad & Festo Celebration')">
+                    <img src="images/gallery-event.jpg" 
+                         alt="Meelad Celebration" 
+                         onerror="this.src='images/gallery_event_1789984585933.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Events & Festo</span>
+                        <h4 class="text-white font-bold text-lg">മീലാദ് ഫെസ്റ്റോ & വാർഷികം</h4>
+                        <p class="text-gray-300 text-xs">വിദ്യാർത്ഥികളുടെ മനോഹരമായ കലാപരിപാടികളും വേദികളും.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Prize Distribution -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/gallery-prize.jpg', 'Prize Distribution Ceremony')">
+                    <img src="images/gallery-prize.jpg" 
+                         alt="Prize Distribution" 
+                         onerror="this.src='images/gallery-campus.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Achievement</span>
+                        <h4 class="text-white font-bold text-lg">സമ്മാനദാന ചടങ്ങ്</h4>
+                        <p class="text-gray-300 text-xs">പൊതുപരീക്ഷയിലും മത്സരങ്ങളിലും വിജയിച്ച പ്രതിഭകൾക്ക് ആദരം.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5: Rally / Awareness -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/gallery-event.jpg', 'Awareness Rally & Students Union')">
+                    <img src="images/gallery-event.jpg" 
+                         alt="Students Event" 
+                         onerror="this.src='images/gallery_event_1789984585933.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Social</span>
+                        <h4 class="text-white font-bold text-lg">ബോധവൽക്കരണ റാലി</h4>
+                        <p class="text-gray-300 text-xs">സാമൂഹിക പ്രതിബദ്ധത തെളിയിക്കുന്ന വിദ്യാർത്ഥി സംഗമം.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6: Historic Legacy -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 cursor-pointer bg-gray-200" onclick="openLightbox('images/hero.jpg', 'Historic Legacy Since 1957')">
+                    <img src="images/hero.jpg" 
+                         alt="Historic Legacy" 
+                         onerror="this.src='images/hero_banner_1789984541854.jpg'" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-xs font-bold uppercase tracking-wider">Heritage</span>
+                        <h4 class="text-white font-bold text-lg">പൈതൃക വഴിത്താരകൾ (Since 1957)</h4>
+                        <p class="text-gray-300 text-xs">മൂച്ചിക്കലിലെ ദീനീ നന്മയുടെ തലമുറകൾ പണിതുയർത്തിയ സ്ഥാപനം.</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/40 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Gallery Images -->
+    <div id="lightbox-modal" class="modal hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-accent text-3xl focus:outline-none z-10" aria-label="Close Lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="max-w-4xl max-h-[90vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Full view" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl">
+            <p id="lightbox-caption" class="text-white text-center mt-3 text-base font-semibold"></p>
+        </div>
+    </div>
+
+    <!-- Contact Us & Location Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block bg-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-2">
+                    Connect With Us
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+                    ബന്ധപ്പെടുക (Contact & Helpdesk)
+                </h2>
+                <p class="text-gray-600 text-base mt-2">
+                    അഡ്മിഷൻ വിവരങ്ങൾക്കും മറ്റ് പൊതു അന്വേഷണങ്ങൾക്കുമായി ഓഫീസുമായോ സദർ മുഅല്ലിമുമായോ ബന്ധപ്പെടാം.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Details (5 cols) -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Headmaster Highlight Card with Direct WhatsApp -->
+                    <div class="bg-gradient-to-br from-emerald-900 to-primary text-white p-6 rounded-2xl shadow-xl border border-emerald-700">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/30 border-2 border-emerald-300 flex items-center justify-center text-2xl text-amber-300 flex-shrink-0">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <span class="bg-amber-400 text-gray-900 text-[11px] font-bold px-2 py-0.5 rounded uppercase">സദർ മുഅല്ലിം (Headmaster)</span>
+                                <h3 class="text-xl font-bold mt-1 text-white">പ്രധാനാധ്യാപകന്റെ ഓഫീസ്</h3>
+                                <p class="text-emerald-200 text-sm font-semibold">+91 9633090637</p>
+                            </div>
+                        </div>
+                        <p class="text-emerald-100 text-xs mb-5 leading-relaxed font-malayalam">
+                            വിദ്യാർത്ഥികളുടെ അഡ്മിഷൻ, ലീവ്, സർട്ടിഫിക്കറ്റുകൾ, സിലബസ് എന്നിവയെക്കുറിച്ചുള്ള ഏത് അന്വേഷണങ്ങൾക്കും സദർ മുഅല്ലിമിനെ വാട്സാപ്പിൽ ബന്ധപ്പെടാം.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <!-- Direct Call Button -->
+                            <a href="tel:+919633090637" class="flex-1 bg-white/20 hover:bg-white text-white hover:text-primary px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2">
+                                <i class="fas fa-phone-alt"></i> വിളിക്കാം
+                            </a>
+                            <!-- WhatsApp Chat Button (Exact requirement!) -->
+                            <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും%20സദർ%20മുഅല്ലിം,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയുമായി%20ബന്ധപ്പെട്ട%20വിവരങ്ങൾക്കായി%20മെസ്സേജ്%20അയക്കുന്നു." 
+                               target="_blank" 
+                               class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2.5 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-2 shadow-md">
+                                <i class="fab fa-whatsapp text-base"></i> വാട്സാപ്പ് ചാറ്റ്
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Address Card -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">വിലാസം (Address)</h4>
+                            <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                                മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ<br>
+                                വളാഞ്ചേരി മൂച്ചിക്കൽ, മലപ്പുറം ജില്ല<br>
+                                കേരളം, ഇന്ത്യ - 676552
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Registration Card -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent flex-shrink-0 text-xl">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">രജിസ്ട്രേഷൻ വിവരങ്ങൾ</h4>
+                            <p class="text-gray-700 text-sm mt-1">
+                                <strong>W.A.K.F No:</strong> 2048/1961<br>
+                                <strong>SKIMVB Reg No:</strong> 171/1957<br>
+                                <span class="text-emerald-700 font-semibold">സ്ഥാപിതം: 1957 (Established 1957)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Contact Form & Google Map (7 cols) -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Quick Message Form with WhatsApp Send option -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                            <i class="fas fa-envelope-open-text text-primary"></i> സന്ദേശമയക്കാം (Send Message)
+                        </h4>
+                        <p class="text-gray-500 text-xs mb-6">നിങ്ങളുടെ സന്ദേശം നേരിട്ട് പ്രധാനാധ്യാപകന്റെ വാട്സാപ്പിലേക്കോ ഇമെയിലിലേക്കോ അയക്കാവുന്നതാണ്.</p>
+                        
+                        <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">താങ്കളുടെ പേര് (Your Name) *</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm bg-white" placeholder="Name">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">ഫോൺ നമ്പർ (Phone / WhatsApp) *</label>
+                                    <input type="tel" id="contact-phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm bg-white" placeholder="+91 XXXXXXXXXX">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">വിഷയം (Inquiry Subject)</label>
+                                    <select id="contact-subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm bg-white">
+                                        <option value="Admission Inquiry">അഡ്മിഷൻ കാര്യങ്ങൾ (Admission)</option>
+                                        <option value="General Information">പൊതു വിവരങ്ങൾ (General Info)</option>
+                                        <option value="Exam Results">പരീക്ഷാ ഫലങ്ങൾ (Exam Results)</option>
+                                        <option value="PTA Meeting">പി.ടി.എ / മറ്റ് വിവരങ്ങൾ (PTA)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">സന്ദേശം (Your Message) *</label>
+                                <textarea id="contact-message" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none transition text-sm bg-white" placeholder="നിങ്ങളുടെ സന്ദേശം ഇവിടെ ടൈപ്പ് ചെയ്യുക..."></textarea>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <!-- Send via WhatsApp directly to +919633090637 -->
+                                <button type="button" onclick="sendContactViaWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow flex items-center justify-center gap-2 text-sm">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                    <span>വാട്സാപ്പിലൂടെ അയക്കാം (+91 9633090637)</span>
+                                </button>
+                                
+                                <button type="submit" class="bg-primary hover:bg-primaryLight text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow text-sm">
+                                    വെബ്‌സൈറ്റിൽ സമർപ്പിക്കാം
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="contact-success" class="hidden mt-4 bg-emerald-50 border border-emerald-300 text-emerald-800 px-4 py-3 rounded-lg text-sm">
+                            <strong class="font-bold">നന്ദി!</strong> താങ്കളുടെ സന്ദേശം ലഭിച്ചിരിക്കുന്നു. ഉടൻ തന്നെ ബന്ധപ്പെടുന്നതാണ്.
+                        </div>
+                    </div>
+
+                    <!-- Embedded Interactive Map -->
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-gray-200 h-64 bg-gray-100 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.423719859424!2d76.0463!3d10.8554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b69c4c1a7c0f%3A0x6b4b4b4b4b4b4b4b!2sValanchery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Moochikkal Valanchery Location Map">
+                        </iframe>
+                        <div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-bold text-gray-800 shadow">
+                            <i class="fas fa-map-pin text-red-500 mr-1"></i> വളാഞ്ചേരി മൂച്ചിക്കൽ (Valanchery Moochikkal)
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primaryDark text-gray-300 pt-16 pb-8 border-t-4 border-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand & Description -->
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.jpg" 
+                             alt="Footer Logo" 
+                             onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
+                             class="h-16 w-16 bg-white rounded-full p-1 object-contain shadow-md border-2 border-accent">
+                        <div>
+                            <span class="font-arabic text-amber-400 text-sm block" dir="rtl">المدرسة محي السنة الثانوية</span>
+                            <span class="font-extrabold text-white text-base block leading-tight">MUHYISSUNNA</span>
+                            <span class="text-xs text-gray-400 block font-malayalam">സെക്കണ്ടറി മദ്രസ</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-5 leading-relaxed font-malayalam">
+                        1957 മുതൽ വളാഞ്ചേരി മൂച്ചിക്കലിൽ ഇസ്ലാമിക ദീനീ മൂല്യങ്ങളും സന്മാർഗ്ഗിക ശിക്ഷണവും പകർന്നു നൽകുന്ന പവിത്രമായ അറിവിൻ്റെ കേന്ദ്രം.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://wa.me/919633090637" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation Links -->
+                <div>
+                    <h4 class="text-white text-base font-bold mb-5 border-b border-white/10 pb-2 flex items-center gap-2">
+                        <i class="fas fa-link text-accent"></i> പ്രധാന ലിങ്കുകൾ (Quick Links)
+                    </h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#home" class="hover:text-accent transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> ഹോം (Home)</a></li>
+                        <li><a href="#about" class="hover:text-accent transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> മദ്രസയെക്കുറിച്ച് (About Us)</a></li>
+                        <li><a href="#academics" class="hover:text-accent transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> സിലബസ് & ക്ലാസുകൾ (Academics)</a></li>
+                        <li><a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition flex items-center font-bold text-amber-300"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> ഓൺലൈൻ പ്രവേശനം (Samastha Admission)</a></li>
+                        <li><a href="#gallery" class="hover:text-accent transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> ഫോട്ടോ ഗാലറി (Gallery)</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2 text-accent"></i> ബന്ധപ്പെടുക (Contact Us)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Institutional Recognition -->
+                <div>
+                    <h4 class="text-white text-base font-bold mb-5 border-b border-white/10 pb-2 flex items-center gap-2">
+                        <i class="fas fa-certificate text-accent"></i> അംഗീകാരങ്ങൾ (Registration)
+                    </h4>
+                    <ul class="space-y-3 text-xs sm:text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-landmark mt-1 mr-2.5 text-accent"></i>
+                            <div>
+                                <span class="text-gray-400 block text-xs">വഖഫ് രജിസ്ട്രേഷൻ നമ്പർ:</span>
+                                <strong class="text-white font-mono">W.A.K.F No: 2048/1961</strong>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-signature mt-1 mr-2.5 text-accent"></i>
+                            <div>
+                                <span class="text-gray-400 block text-xs">സമസ്ത ബോർഡ് രജിസ്ട്രേഷൻ:</span>
+                                <strong class="text-white font-mono">SKIMVB Reg: 171/1957</strong>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-calendar-alt mt-1 mr-2.5 text-accent"></i>
+                            <div>
+                                <span class="text-gray-400 block text-xs">സ്ഥാപിതം (Established):</span>
+                                <strong class="text-amber-400">1957 (69+ വർഷങ്ങൾ)</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact Information -->
+                <div>
+                    <h4 class="text-white text-base font-bold mb-5 border-b border-white/10 pb-2 flex items-center gap-2">
+                        <i class="fas fa-phone-volume text-accent"></i> ബന്ധപ്പെടാൻ (Helpdesk)
+                    </h4>
+                    <p class="text-xs text-gray-300 mb-3 leading-relaxed">
+                        <i class="fas fa-map-marker-alt mr-2 text-accent"></i> വളാഞ്ചേരി മൂച്ചിക്കൽ, മലപ്പുറം ജില്ല, കേരളം.
+                    </p>
+                    <div class="bg-white/5 p-3 rounded-lg border border-white/10 mb-4">
+                        <p class="text-xs text-amber-300 font-bold mb-1">സദർ മുഅല്ലിം (Headmaster):</p>
+                        <a href="tel:+919633090637" class="text-sm font-bold text-white hover:text-accent transition flex items-center gap-1.5">
+                            <i class="fas fa-phone-alt text-xs text-accent"></i> +91 9633090637
+                        </a>
+                        <a href="https://wa.me/919633090637" target="_blank" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 mt-1">
+                            <i class="fab fa-whatsapp"></i> വാട്സാപ്പിൽ ചാറ്റ് ചെയ്യുക
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-3">
+                <p>&copy; 1957 - <script>document.write(new Date().getFullYear())</script> മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ (Muhyissunna Secondary Madrasa), Valanchery Moochikkal. All Rights Reserved.</p>
+                <p class="text-gray-400 flex items-center gap-1">
+                    Affiliated to <span class="text-emerald-400 font-semibold">SKIMVB (171/1957)</span> | WAKF (2048/1961)
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button (Connects directly to Headmaster: +91 9633090637) -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- Floating Tooltip / Label -->
+        <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും%20സദർ%20മുഅല്ലിം,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയുമായി%20ബന്ധപ്പെട്ട%20വിവരങ്ങൾക്കായി%20മെസ്സേജ്%20അയക്കുന്നു." 
+           target="_blank" 
+           id="whatsapp-badge"
+           class="hidden sm:flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-full shadow-2xl border border-gray-200 text-xs font-bold hover:text-emerald-700 transition transform hover:scale-105">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>സദർ മുഅല്ലിമിനോട് ചാറ്റ് ചെയ്യാം (+91 9633090637)</span>
+        </a>
+
+        <!-- Main WhatsApp Circular Action Button -->
+        <a href="https://wa.me/919633090637?text=അസ്സലാമു%20അലൈക്കും%20സദർ%20മുഅല്ലിം,%20മുഹ്യിസ്സുന്ന%20സെക്കണ്ടറി%20മദ്രസയുമായി%20ബന്ധപ്പെട്ട%20വിവരങ്ങൾക്കായി%20മെസ്സേജ്%20അയക്കുന്നു." 
+           target="_blank" 
+           aria-label="Chat on WhatsApp with Headmaster" 
+           class="w-16 h-16 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl whatsapp-pulse transition transform hover:scale-110">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactive Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile navigation on clicking any link
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Lightbox functionality for Gallery
+        function openLightbox(imgSrc, caption) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            
+            img.src = imgSrc;
+            cap.innerText = caption;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close Lightbox when clicking outside image
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // WhatsApp Direct Sender for Admission Form
+        function sendAdmissionViaWhatsApp() {
+            const student = document.getElementById('adm-student').value.trim() || 'Not specified';
+            const parent = document.getElementById('adm-parent').value.trim() || 'Not specified';
+            const phone = document.getElementById('adm-phone').value.trim() || 'Not specified';
+            const admClass = document.getElementById('adm-class').value;
+            const place = document.getElementById('adm-place').value.trim() || 'Not specified';
+
+            const message = `*മുഹ്യിസ്സുന്ന സെക്കണ്ടറി മദ്രസ - അഡ്മിഷൻ അന്വേഷണം*%0A%0A` +
+                            `*വിദ്യാർത്ഥിയുടെ പേര്:* ${encodeURIComponent(student)}%0A` +
+                            `*ക്ലാസ്:* ${encodeURIComponent(admClass)}%0A` +
+                            `*രക്ഷിതാവ്:* ${encodeURIComponent(parent)}%0A` +
+                            `*ഫോൺ നമ്പർ:* ${encodeURIComponent(phone)}%0A` +
+                            `*സ്ഥലം:* ${encodeURIComponent(place)}%0A%0A` +
+                            `അഡ്മിഷൻ വിവരങ്ങൾ ദയവായി അറിയിക്കുമല്ലോ.`;
+
+            const whatsappUrl = `https://wa.me/919633090637?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Regular Admission Form Submit Handler
+        function handleAdmissionSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('adm-success');
+            successBox.classList.remove('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('admission-form').reset();
+                setTimeout(() => {
+                    successBox.classList.add('hidden');
+                }, 5000);
+            }, 500);
+        }
+
+        // WhatsApp Direct Sender for Contact Form
+        function sendContactViaWhatsApp() {
+            const name = document.getElementById('contact-name').value.trim() || 'Visitor';
+            const phone = document.getElementById('contact-phone').value.trim() || 'Not specified';
+            const subject = document.getElementById('contact-subject').value;
+            const note = document.getElementById('contact-message').value.trim() || 'Inquiry';
+
+            const message = `*മുഹ്യിസ്സുന്ന മദ്രസ വെബ്‌സൈറ്റ് സന്ദേശം*%0A%0A` +
+                            `*പേര്:* ${encodeURIComponent(name)}%0A` +
+                            `*ഫോൺ:* ${encodeURIComponent(phone)}%0A` +
+                            `*വിഷയം:* ${encodeURIComponent(subject)}%0A` +
+                            `*സന്ദേശം:* ${encodeURIComponent(note)}`;
+
+            const whatsappUrl = `https://wa.me/919633090637?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Regular Contact Form Submit Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const msgBox = document.getElementById('contact-success');
+            msgBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('contact-form').reset();
+                setTimeout(() => {
+                    msgBox.classList.add('hidden');
+                }, 5000);
+            }, 500);
+        }
+    </script>
+</body>
+</html>
