@@ -1054,6 +1054,9 @@
                     <button id="tab-btn-logo" onclick="switchAdminTab('logo')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                         <i class="fas fa-camera text-blue-500"></i> Logo
                     </button>
+                    <button id="tab-btn-cloud" onclick="switchAdminTab('cloud')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fab fa-google-drive text-emerald-600"></i> Cloud Sync
+                    </button>
                 </div>
 
                 <!-- Tab 1: Gallery Upload -->
@@ -1189,6 +1192,58 @@
                             </button>
                         </div>
                     </form>
+                </div>
+
+                <!-- Tab 6: Google Drive Cloud Synchronization -->
+                <div id="admin-tab-cloud" class="hidden space-y-4">
+                    <div class="bg-gradient-to-r from-emerald-900 to-primary text-white p-4 rounded-xl shadow">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl text-amber-300 flex-shrink-0">
+                                <i class="fab fa-google-drive"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Google Drive Cloud Database</h4>
+                                <p class="text-xs text-emerald-200">Synchronizes photos, logo, management, and faculty across all visitors worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-gray-50 border border-gray-200 rounded-xl space-y-2.5 text-xs">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-gray-700">Cloud Status:</span>
+                            <span id="admin-cloud-status-badge" class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded border border-emerald-300">
+                                Connected (Ready)
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500">Last Synced with Google Drive:</span>
+                            <span id="admin-cloud-last-sync" class="font-semibold text-gray-800">Never / Initial</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button type="button" onclick="pushAllToCloud(true)" id="btn-push-cloud" class="bg-primary hover:bg-primaryLight text-white font-bold py-2.5 px-4 rounded-lg text-xs transition shadow flex items-center justify-center gap-2">
+                            <i class="fas fa-cloud-upload-alt text-amber-400"></i>
+                            <span>Push All to Google Drive</span>
+                        </button>
+                        <button type="button" onclick="fetchCloudData(true)" id="btn-pull-cloud" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-lg text-xs transition shadow flex items-center justify-center gap-2">
+                            <i class="fas fa-cloud-download-alt text-white"></i>
+                            <span>Pull Latest from Google Drive</span>
+                        </button>
+                    </div>
+
+                    <div class="pt-3 border-t border-gray-200">
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Google Apps Script Web App URL</label>
+                        <div class="flex gap-2">
+                            <input type="url" id="admin-script-url-input" class="flex-1 px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="https://script.google.com/macros/s/.../exec">
+                            <button type="button" onclick="saveCustomScriptUrl()" class="bg-gray-800 hover:bg-black text-white font-bold px-3 py-2 rounded-lg text-xs transition shadow whitespace-nowrap">
+                                Save URL
+                            </button>
+                        </div>
+                        <p class="text-[11px] text-gray-500 mt-1">
+                            Deploy the code from <code class="bg-gray-100 text-emerald-800 px-1 py-0.5 rounded font-mono">google_apps_script_code.js</code> in Google Apps Script and enter the Web App URL here.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -1562,7 +1617,8 @@
                 manage: { el: document.getElementById('admin-tab-manage'), btn: document.getElementById('tab-btn-manage') },
                 management: { el: document.getElementById('admin-tab-management'), btn: document.getElementById('tab-btn-management') },
                 faculty: { el: document.getElementById('admin-tab-faculty'), btn: document.getElementById('tab-btn-faculty') },
-                logo: { el: document.getElementById('admin-tab-logo'), btn: document.getElementById('tab-btn-logo') }
+                logo: { el: document.getElementById('admin-tab-logo'), btn: document.getElementById('tab-btn-logo') },
+                cloud: { el: document.getElementById('admin-tab-cloud'), btn: document.getElementById('tab-btn-cloud') }
             };
 
             const activeClass = "py-2.5 px-3 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5 whitespace-nowrap";
@@ -1584,6 +1640,8 @@
                 renderAdminManagementList();
             } else if(tab === 'faculty') {
                 renderAdminFacultyList();
+            } else if(tab === 'cloud') {
+                updateCloudSyncUI();
             }
         }
 
@@ -1651,6 +1709,7 @@
 
                 renderGallery();
                 document.getElementById('admin-gallery-form').reset();
+                syncToCloud('saveGallery', { customGallery: current, deletedDefaultPhotos: getRemovedDefaultPhotoIds() });
                 alert("Photo uploaded successfully! It is now projected at the top of the gallery.");
             } catch(err) {
                 console.error("Upload error:", err);
@@ -1746,6 +1805,7 @@
 
             renderGallery();
             renderAdminPhotoList();
+            syncToCloud('saveGallery', { customGallery: getCustomGallery(), deletedDefaultPhotos: getRemovedDefaultPhotoIds() });
         }
 
         // Restore all default photos
@@ -1754,6 +1814,7 @@
             localStorage.removeItem('madrasa_deleted_default_photos');
             renderGallery();
             renderAdminPhotoList();
+            syncToCloud('saveGallery', { customGallery: getCustomGallery(), deletedDefaultPhotos: [] });
             alert("All original gallery photos have been restored!");
         }
 
@@ -1781,6 +1842,7 @@
                 const base64Logo = await compressImage(fileInput.files[0], 400, 0.9);
                 localStorage.setItem('madrasa_custom_logo', base64Logo);
                 applyCustomLogo(base64Logo);
+                syncToCloud('saveLogo', { logo: base64Logo });
                 alert("Madrasa Logo updated successfully across the website!");
             } catch(err) {
                 console.error("Logo error:", err);
@@ -1793,6 +1855,7 @@
             localStorage.removeItem('madrasa_custom_logo');
             applyCustomLogo('images/logo.jpg');
             document.getElementById('admin-logo-preview').src = 'images/logo.jpg';
+            syncToCloud('resetCategory', { category: 'logo' });
             alert("Default logo restored.");
         }
 
@@ -2241,6 +2304,7 @@
                 members[index].photo = base64Img;
                 saveManagementData(members);
                 renderManagement();
+                syncToCloud('saveManagement', { management: members });
                 alert(`Photo updated for Management Member #${index + 1}!`);
             } catch(e) {
                 console.error("Photo upload error:", e);
@@ -2267,6 +2331,7 @@
 
             saveManagementData(members);
             renderManagement();
+            syncToCloud('saveManagement', { management: members });
             alert(`Management Member #${index + 1} (${name}) saved successfully!`);
         }
 
@@ -2275,6 +2340,7 @@
             localStorage.removeItem('madrasa_management_data');
             renderManagement();
             renderAdminManagementList();
+            syncToCloud('resetCategory', { category: 'management' });
             alert("Default Management Committee members restored.");
         }
 
@@ -2382,6 +2448,7 @@
                 if(index === 0) {
                     syncHeadmasterData(faculty[0]);
                 }
+                syncToCloud('saveFaculty', { faculty: faculty });
                 alert(`Photo updated for Teacher #${index + 1}!`);
             } catch(e) {
                 console.error("Photo upload error:", e);
@@ -2417,6 +2484,7 @@
             } else {
                 alert(`Teacher #${index + 1} (${name}) saved successfully!`);
             }
+            syncToCloud('saveFaculty', { faculty: faculty });
         }
 
         function resetFacultyToDefaults() {
@@ -2425,7 +2493,157 @@
             renderFaculty();
             renderAdminFacultyList();
             syncHeadmasterData(DEFAULT_FACULTY[0]);
+            syncToCloud('resetCategory', { category: 'faculty' });
             alert("Default Faculty Muallims restored and Sadr Muallim synchronized.");
+        }
+
+        // ==================== GOOGLE DRIVE CLOUD SYNC LOGIC ====================
+        function getScriptUrl() {
+            return localStorage.getItem('madrasa_apps_script_url') || "https://script.google.com/macros/s/AKfycbxIFabYyNe7mglcCq_4hNim3ZTRkPXTYTiz974iiZm96me2o10ggAEtbWolzts_Nkzc/exec";
+        }
+
+        function saveCustomScriptUrl() {
+            const input = document.getElementById('admin-script-url-input');
+            if(!input || !input.value.trim()) return;
+            const url = input.value.trim();
+            localStorage.setItem('madrasa_apps_script_url', url);
+            alert("Google Apps Script Web App URL saved successfully!");
+            fetchCloudData(true);
+        }
+
+        function updateCloudSyncUI() {
+            const lastSync = localStorage.getItem('madrasa_cloud_last_sync') || 'Never / Initial';
+            const lastEl = document.getElementById('admin-cloud-last-sync');
+            const input = document.getElementById('admin-script-url-input');
+            if(lastEl) lastEl.textContent = lastSync;
+            if(input) input.value = getScriptUrl();
+        }
+
+        async function syncToCloud(action, payload = {}) {
+            const url = getScriptUrl();
+            if(!url || url.includes("YOUR_WEB_APP_URL")) return;
+
+            try {
+                const bodyData = Object.assign({ action: action }, payload);
+                const res = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify(bodyData)
+                });
+                const result = await res.json();
+                localStorage.setItem('madrasa_cloud_last_sync', new Date().toLocaleString());
+                updateCloudSyncUI();
+                return result;
+            } catch(err) {
+                console.warn("Cloud sync deferred / offline:", err);
+            }
+        }
+
+        async function pushAllToCloud(isManual = false) {
+            const url = getScriptUrl();
+            if(!url || url.includes("YOUR_WEB_APP_URL")) {
+                if(isManual) alert("Please specify a valid Google Apps Script Web App URL first.");
+                return;
+            }
+
+            const pushBtn = document.getElementById('btn-push-cloud');
+            if(isManual && pushBtn) {
+                pushBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-1"></i> Uploading to Drive...`;
+                pushBtn.disabled = true;
+            }
+
+            try {
+                const fullData = {
+                    logo: localStorage.getItem('madrasa_custom_logo') || null,
+                    customGallery: getCustomGallery(),
+                    deletedDefaultPhotos: getRemovedDefaultPhotoIds(),
+                    management: getManagementData(),
+                    faculty: getFacultyData()
+                };
+
+                const res = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        action: 'syncAll',
+                        data: fullData
+                    })
+                });
+                const result = await res.json();
+                localStorage.setItem('madrasa_cloud_last_sync', new Date().toLocaleString());
+                updateCloudSyncUI();
+                if(isManual) alert("All photos, logo, management, and faculty pushed to Google Drive successfully! Any user on any device will now see these changes.");
+            } catch(err) {
+                console.error("Push to Google Drive failed:", err);
+                if(isManual) alert("Failed to push data to Google Drive. Please verify the Web App deployment.");
+            } finally {
+                if(isManual && pushBtn) {
+                    pushBtn.innerHTML = `<i class="fas fa-cloud-upload-alt text-amber-400 mr-1"></i> Push All to Google Drive`;
+                    pushBtn.disabled = false;
+                }
+            }
+        }
+
+        async function fetchCloudData(isManual = false) {
+            const url = getScriptUrl();
+            if(!url || url.includes("YOUR_WEB_APP_URL")) return;
+
+            const pullBtn = document.getElementById('btn-pull-cloud');
+            if(isManual && pullBtn) {
+                pullBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-1"></i> Pulling from Drive...`;
+                pullBtn.disabled = true;
+            }
+
+            try {
+                const res = await fetch(url + (url.includes('?') ? '&' : '?') + 'action=getData');
+                const json = await res.json();
+                if(json && json.status === 'success' && json.data) {
+                    const data = json.data;
+                    let hasUpdated = false;
+
+                    if(data.logo) {
+                        localStorage.setItem('madrasa_custom_logo', data.logo);
+                        applyCustomLogo(data.logo);
+                        hasUpdated = true;
+                    }
+                    if(data.customGallery && Array.isArray(data.customGallery)) {
+                        localStorage.setItem('madrasa_custom_gallery', JSON.stringify(data.customGallery));
+                        hasUpdated = true;
+                    }
+                    if(data.deletedDefaultPhotos && Array.isArray(data.deletedDefaultPhotos)) {
+                        localStorage.setItem('madrasa_deleted_default_photos', JSON.stringify(data.deletedDefaultPhotos));
+                        hasUpdated = true;
+                    }
+                    if(data.management && Array.isArray(data.management) && data.management.length === 5) {
+                        localStorage.setItem('madrasa_management_data', JSON.stringify(data.management));
+                        hasUpdated = true;
+                    }
+                    if(data.faculty && Array.isArray(data.faculty) && data.faculty.length === 6) {
+                        localStorage.setItem('madrasa_faculty_data', JSON.stringify(data.faculty));
+                        hasUpdated = true;
+                    }
+
+                    if(hasUpdated) {
+                        renderGallery();
+                        renderManagement();
+                        renderFaculty();
+                        const faculty = getFacultyData();
+                        if(faculty && faculty[0]) {
+                            syncHeadmasterData(faculty[0]);
+                        }
+                    }
+
+                    localStorage.setItem('madrasa_cloud_last_sync', new Date().toLocaleString());
+                    updateCloudSyncUI();
+                    if(isManual) alert("Successfully fetched latest data from Google Drive cloud!");
+                }
+            } catch(err) {
+                console.warn("Fetch from Google Drive error:", err);
+                if(isManual) alert("Could not fetch from Google Apps Script. Please verify the Web App deployment.");
+            } finally {
+                if(isManual && pullBtn) {
+                    pullBtn.innerHTML = `<i class="fas fa-cloud-download-alt text-white mr-1"></i> Pull Latest from Google Drive`;
+                    pullBtn.disabled = false;
+                }
+            }
         }
 
         // Initial Page Boot
@@ -2438,6 +2656,8 @@
             if(faculty && faculty[0]) {
                 syncHeadmasterData(faculty[0]);
             }
+            // Asynchronously fetch latest updates from Google Drive cloud
+            fetchCloudData(false);
         });
     </script>
 </body>
