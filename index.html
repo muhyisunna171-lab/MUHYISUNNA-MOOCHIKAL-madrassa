@@ -162,11 +162,6 @@
                 <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum,%20I%20am%20contacting%20from%20Muhyissunna%20Madrasa%20Website." target="_blank" class="hover:text-green-400 transition flex items-center gap-1.5 text-green-300 font-semibold sync-hm-wa-link">
                     <i class="fab fa-whatsapp text-green-400 text-sm"></i> WhatsApp Desk
                 </a>
-                <span class="text-gray-600">|</span>
-                <!-- Top Bar Admin Login Button -->
-                <button onclick="openAdminModal()" class="text-amber-300 hover:text-white transition flex items-center gap-1.5 font-bold bg-amber-500/20 hover:bg-amber-500/30 px-2.5 py-0.5 rounded border border-amber-400/40 text-[11px]">
-                    <i class="fas fa-user-shield text-amber-400"></i> Admin Login
-                </button>
             </div>
         </div>
     </div>
@@ -195,7 +190,8 @@
                              src="images/logo.jpg" 
                              alt="Muhyissunna Madrasa Logo" 
                              onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
-                             class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full shadow-md border-2 border-primary/20 bg-white">
+                             ondblclick="openAdminModal()" 
+                             class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full shadow-md border-2 border-primary/20 bg-white cursor-pointer select-none">
                         <span class="absolute -bottom-1 -right-1 bg-accent text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded-full border border-white">ESTD 1956</span>
                     </div>
                     <div class="flex flex-col justify-center">
@@ -230,22 +226,10 @@
                         <i class="fas fa-graduation-cap text-accent"></i>
                         <span>Apply Online</span>
                     </a>
-
-                    <!-- Prominent Admin Portal Login Button -->
-                    <button onclick="openAdminModal()" 
-                            class="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 hover:border-amber-400 px-3 py-2 rounded-full font-bold text-xs transition shadow-sm flex items-center gap-1.5 group"
-                            title="Administrator Login Portal">
-                        <i class="fas fa-user-shield text-amber-600 group-hover:text-amber-700"></i>
-                        <span>Admin</span>
-                    </button>
                 </nav>
 
-                <!-- Mobile Menu Hamburger & Quick Admin -->
+                <!-- Mobile Menu Hamburger & Quick Contact -->
                 <div class="lg:hidden flex items-center gap-2">
-                    <button onclick="openAdminModal()" class="text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm" title="Admin Login">
-                        <i class="fas fa-user-shield text-amber-600"></i>
-                        <span>Admin</span>
-                    </button>
                     <a href="https://wa.me/919633090637?text=Assalamu%20Alaikum" target="_blank" class="text-emerald-600 p-2 text-xl sync-hm-wa-link" title="Chat on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -304,12 +288,6 @@
                         <i class="fab fa-whatsapp text-lg"></i>
                         <span>Chat with Headmaster: <span class="sync-hm-name">Sadr Muallim</span> (<span class="sync-hm-phone">+91 9633090637</span>)</span>
                     </a>
-                    <!-- Admin Login in Mobile Drawer -->
-                    <button onclick="openAdminModal(); document.getElementById('mobile-menu').classList.remove('open');" 
-                            class="w-full text-center bg-gray-900 hover:bg-black text-amber-300 px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow border border-amber-400/40 mt-1">
-                        <i class="fas fa-user-shield text-amber-400 text-base"></i>
-                        <span>Admin Portal (Login / Upload)</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -1064,34 +1042,40 @@
 
             </div>
 
-            <!-- Copyright & Bottom Admin Access -->
+            <!-- Copyright & Stealth Admin Access -->
             <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-3">
-                <p>&copy; 1956 - <script>document.write(new Date().getFullYear())</script> Muhyissunna Secondary Madrasa, Valanchery Moochikkal. All Rights Reserved.</p>
+                <p>
+                    &copy; 1956 - <script>document.write(new Date().getFullYear())</script> 
+                    <span onclick="triggerAdminAccess()" class="cursor-default select-none" title="Muhyissunna Secondary Madrasa">Muhyissunna Secondary Madrasa</span>, Valanchery Moochikkal. All Rights Reserved.
+                </p>
                 <div class="flex items-center gap-4">
                     <p class="text-gray-400 flex items-center gap-1">
                         Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (171/1957)</span> | WAKF (2048/1961)
                     </p>
-                    <span class="text-gray-600">|</span>
-                    <!-- Admin Login Button at the end of the site -->
-                    <button onclick="openAdminModal()" class="bg-amber-400 hover:bg-amber-300 text-gray-950 transition flex items-center gap-1.5 font-bold py-1.5 px-3.5 rounded-full shadow hover:shadow-md text-xs">
-                        <i class="fas fa-user-shield text-xs text-gray-900"></i>
-                        <span>Admin Portal (Login)</span>
+                    <!-- Inconspicuous subtle lock trigger for admin -->
+                    <button type="button" onclick="openAdminModal()" class="text-gray-600 hover:text-gray-400 transition cursor-pointer text-[10px] p-1" title="Staff Portal Access">
+                        <i class="fas fa-lock"></i>
                     </button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Admin Quick Access (Bottom-Left) -->
-    <div class="fixed bottom-6 left-6 z-40">
-        <button onclick="openAdminModal()" 
-                aria-label="Admin Login Portal" 
-                class="bg-gray-950/90 hover:bg-black text-amber-300 hover:text-white px-3.5 py-2.5 rounded-full shadow-2xl border border-amber-400/50 text-xs font-bold transition-all flex items-center gap-2 backdrop-blur-md group hover:scale-105">
-            <span class="w-6 h-6 rounded-full bg-amber-400 text-gray-950 flex items-center justify-center text-xs font-extrabold group-hover:rotate-12 transition shadow">
-                <i class="fas fa-user-shield"></i>
+    <!-- Floating Admin Indicator (Only visible when Admin is logged in) -->
+    <div id="admin-floating-badge" class="fixed bottom-6 left-6 z-40 hidden">
+        <div class="bg-gray-950/95 text-amber-300 px-3.5 py-2 rounded-full shadow-2xl border border-amber-400/50 text-xs font-bold flex items-center gap-2.5 backdrop-blur-md">
+            <span class="flex items-center gap-1.5 text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                Admin Active
             </span>
-            <span class="hidden sm:inline">Admin Login</span>
-        </button>
+            <button type="button" onclick="openAdminModal()" class="hover:text-white underline cursor-pointer text-xs">
+                Portal
+            </button>
+            <span class="text-gray-600">|</span>
+            <button type="button" onclick="handleAdminLogout()" class="hover:text-red-400 cursor-pointer text-xs" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Floating WhatsApp Button -->
@@ -1860,6 +1844,7 @@
                 document.getElementById('admin-login-form').reset();
                 renderGallery(); // Show admin delete buttons on page
                 updateCampusAdminUI(); // Show quick change badge on campus image
+                updateAdminFloatingBadge(); // Show active badge
                 showDashboard();
             } else {
                 errBox.classList.remove('hidden');
@@ -1870,8 +1855,54 @@
             sessionStorage.removeItem('madrasa_admin_auth');
             renderGallery(); // Hide admin delete buttons from page
             updateCampusAdminUI(); // Hide quick change badge on campus image
+            updateAdminFloatingBadge(); // Hide active badge
             showLoginForm();
         }
+
+        function updateAdminFloatingBadge() {
+            const badge = document.getElementById('admin-floating-badge');
+            if(badge) {
+                if(sessionStorage.getItem('madrasa_admin_auth') === 'true') {
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
+                }
+            }
+        }
+
+        // ------------------ Stealth Admin Access Triggers ------------------
+        // 1. Keyboard Shortcut: Ctrl + Shift + A or Alt + A
+        window.addEventListener('keydown', (e) => {
+            if((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') || (e.altKey && e.key.toLowerCase() === 'a')) {
+                e.preventDefault();
+                openAdminModal();
+            }
+        });
+
+        // 2. Secret Triple-Click on Footer Copyright text
+        let copyrightClickCount = 0;
+        let copyrightClickTimer = null;
+        function triggerAdminAccess() {
+            copyrightClickCount++;
+            clearTimeout(copyrightClickTimer);
+            if(copyrightClickCount >= 3) {
+                copyrightClickCount = 0;
+                openAdminModal();
+            } else {
+                copyrightClickTimer = setTimeout(() => { copyrightClickCount = 0; }, 1500);
+            }
+        }
+
+        // 3. URL Hash or Query trigger (e.g. yoursite.com/#admin, #login, ?admin)
+        function checkAdminUrlTrigger() {
+            const hash = (window.location.hash || '').toLowerCase();
+            const search = (window.location.search || '').toLowerCase();
+            if(hash === '#admin' || hash === '#login' || search.includes('admin=1') || search.includes('admin')) {
+                openAdminModal();
+            }
+        }
+
+        window.addEventListener('hashchange', checkAdminUrlTrigger);
 
         function switchAdminTab(tab) {
             const tabs = {
@@ -3100,6 +3131,10 @@
             }
             // Check if URL loaded with dedicated section hash
             checkUrlHashForSections();
+            // Check if URL loaded with admin trigger (#admin or ?admin)
+            checkAdminUrlTrigger();
+            // Update admin floating indicator if logged in
+            updateAdminFloatingBadge();
             // Asynchronously fetch latest updates from Google Drive cloud
             fetchCloudData(false);
         });
