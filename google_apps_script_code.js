@@ -49,7 +49,8 @@ function getDatabaseFile() {
       customGallery: [],
       deletedDefaultPhotos: [],
       management: null,
-      faculty: null
+      faculty: null,
+      siteTexts: null
     };
     const file = folder.createFile(DB_FILE_NAME, JSON.stringify(initialData, null, 2), MimeType.PLAIN_TEXT);
     file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
@@ -71,7 +72,8 @@ function readDatabase() {
       customGallery: [],
       deletedDefaultPhotos: [],
       management: null,
-      faculty: null
+      faculty: null,
+      siteTexts: null
     };
   }
 }
@@ -210,6 +212,10 @@ function doPost(e) {
             return f;
           });
         }
+        // Process Site Texts
+        if (payload.data.siteTexts !== undefined) {
+          db.siteTexts = payload.data.siteTexts;
+        }
         writeDatabase(db);
       }
       return ContentService.createTextOutput(JSON.stringify({
@@ -302,6 +308,7 @@ function doPost(e) {
       if (cat === 'faculty') db.faculty = null;
       if (cat === 'logo') db.logo = null;
       if (cat === 'campus') db.campusPhoto = null;
+      if (cat === 'texts' || cat === 'siteTexts') db.siteTexts = null;
       if (cat === 'gallery') {
         db.customGallery = [];
         db.deletedDefaultPhotos = [];
@@ -322,6 +329,18 @@ function doPost(e) {
         status: 'success',
         message: 'Campus photo saved to Google Drive',
         campusPhoto: db.campusPhoto
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // 8. Save Site Texts
+    if (action === 'saveSiteTexts') {
+      const db = readDatabase();
+      db.siteTexts = payload.siteTexts;
+      writeDatabase(db);
+      return ContentService.createTextOutput(JSON.stringify({
+        status: 'success',
+        message: 'Site texts saved to Google Drive',
+        siteTexts: db.siteTexts
       })).setMimeType(ContentService.MimeType.JSON);
     }
 

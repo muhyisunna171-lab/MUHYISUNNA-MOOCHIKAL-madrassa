@@ -138,8 +138,8 @@
     <div class="bg-primaryDark text-gray-200 text-xs py-2 px-4 border-b border-primary/40 hidden sm:block">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-6">
-                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-accent"></i> Valanchery Moochikkal, Malappuram, Kerala</span>
-                <span class="flex items-center gap-1.5"><i class="fas fa-award text-accent"></i> SKIMVB Reg No: 171/1957 | WAKF No: 2048/1961</span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-accent"></i> <span id="txt-topbar-location">Valanchery Moochikkal, Malappuram, Kerala</span></span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-award text-accent"></i> <span id="txt-topbar-affil">SKIMVB Reg No: 171/1957 | WAKF No: 2048/1961</span></span>
             </div>
             <div class="flex items-center gap-4 lg:gap-5">
                 <!-- Official Social Links -->
@@ -170,9 +170,9 @@
     <div class="ticker-wrap text-sm border-b border-primaryLight shadow-inner">
         <div class="ticker-move">
             <span class="font-bold text-accent mx-3 bg-white/10 px-2.5 py-0.5 rounded uppercase tracking-wider text-xs"><i class="fas fa-bullhorn mr-1.5"></i> Notice:</span> 
-            Admissions open for Classes 1 to 10 for the Academic Year 2026-2027.
+            <span id="txt-ticker-notice">Admissions open for Classes 1 to 10 for the Academic Year 2026-2027.</span>
             <span class="mx-6 text-accent">★</span> 
-            Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) Public Examination Results Announced.
+            <span id="txt-ticker-exam">Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) Public Examination Results Announced.</span>
             <span class="mx-6 text-accent">★</span> 
             <span id="sync-hm-ticker">For admission assistance, directly contact Headmaster (<span class="sync-hm-name">Usthad K.V. Abdul Latheef Faizy</span>) at <span class="sync-hm-phone">+91 9633090637</span>.</span>
         </div>
@@ -192,11 +192,11 @@
                              onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
                              ondblclick="openAdminModal()" 
                              class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-full shadow-md border-2 border-primary/20 bg-white cursor-pointer select-none">
-                        <span class="absolute -bottom-1 -right-1 bg-accent text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded-full border border-white">ESTD 1956</span>
+                        <span id="txt-brand-estd" class="absolute -bottom-1 -right-1 bg-accent text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded-full border border-white">ESTD 1956</span>
                     </div>
                     <div class="flex flex-col justify-center">
-                        <span class="font-extrabold text-gray-900 text-base sm:text-lg md:text-xl tracking-tight uppercase leading-tight">Muhyissunna Secondary Madrasa</span>
-                        <span class="text-xs text-primaryLight font-semibold tracking-wide mt-1">Valanchery Moochikkal • Affiliated with SKIMVB</span>
+                        <span id="txt-brand-title" class="font-extrabold text-gray-900 text-base sm:text-lg md:text-xl tracking-tight uppercase leading-tight">Muhyissunna Secondary Madrasa</span>
+                        <span id="txt-brand-subtitle" class="text-xs text-primaryLight font-semibold tracking-wide mt-1">Valanchery Moochikkal • Affiliated with SKIMVB</span>
                     </div>
                 </a>
 
@@ -310,25 +310,25 @@
             
             <!-- Badges -->
             <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
-                <span class="bg-accent text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-extrabold tracking-wider uppercase shadow-md">
+                <span id="txt-hero-badge1" class="bg-accent text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-extrabold tracking-wider uppercase shadow-md">
                     ESTD 1956 • 70 YEARS OF EXCELLENCE
                 </span>
-                <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-emerald-100 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">
+                <span id="txt-hero-badge2" class="bg-white/20 backdrop-blur-sm border border-white/30 text-emerald-100 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">
                     SKIMVB Reg No: 171/1957
                 </span>
             </div>
 
             <!-- English Main Heading -->
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg mb-4">
-                MUHYISSUNNA <br class="hidden sm:inline">
-                <span class="text-amber-400">SECONDARY MADRASA</span>
+                <span id="txt-hero-title1">MUHYISSUNNA</span> <br class="hidden sm:inline">
+                <span id="txt-hero-title2" class="text-amber-400">SECONDARY MADRASA</span>
             </h1>
 
-            <p class="text-lg md:text-2xl text-emerald-100 font-semibold mb-2 drop-shadow">
+            <p id="txt-hero-tagline" class="text-lg md:text-2xl text-emerald-100 font-semibold mb-2 drop-shadow">
                 Nurturing Generations with Islamic Values & Authentic Knowledge
             </p>
             
-            <p class="text-xs sm:text-sm text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p id="txt-hero-desc" class="text-xs sm:text-sm text-gray-300 mb-8 max-w-2xl mx-auto">
                 Under Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) • W.A.K.F No: 2048/1961 • Valanchery Moochikkal, Malappuram
             </p>
             
@@ -367,36 +367,36 @@
                 <div class="w-14 h-14 mx-auto mb-3 bg-amber-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-inner">
                     <i class="fas fa-history"></i>
                 </div>
-                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">70</h3>
-                <p class="text-gray-800 font-bold text-sm mt-1">Years of Legacy</p>
-                <p class="text-xs text-gray-500 uppercase font-medium">Established in 1956</p>
+                <h3 id="txt-stat1-num" class="text-3xl lg:text-4xl font-extrabold text-gray-900">70</h3>
+                <p id="txt-stat1-lbl" class="text-gray-800 font-bold text-sm mt-1">Years of Legacy</p>
+                <p id="txt-stat1-sub" class="text-xs text-gray-500 uppercase font-medium">Established in 1956</p>
             </div>
             
             <div class="pt-4 md:pt-0">
                 <div class="w-14 h-14 mx-auto mb-3 bg-emerald-50 rounded-full flex items-center justify-center text-primaryLight text-2xl shadow-inner">
                     <i class="fas fa-layer-group"></i>
                 </div>
-                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">1 - 10</h3>
-                <p class="text-gray-800 font-bold text-sm mt-1">Classes Offered</p>
-                <p class="text-xs text-gray-500 uppercase font-medium">Standard 1 to Standard 10</p>
+                <h3 id="txt-stat2-num" class="text-3xl lg:text-4xl font-extrabold text-gray-900">1 - 10</h3>
+                <p id="txt-stat2-lbl" class="text-gray-800 font-bold text-sm mt-1">Classes Offered</p>
+                <p id="txt-stat2-sub" class="text-xs text-gray-500 uppercase font-medium">Standard 1 to Standard 10</p>
             </div>
             
             <div class="pt-4 md:pt-0">
                 <div class="w-14 h-14 mx-auto mb-3 bg-amber-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-inner">
                     <i class="fas fa-chalkboard-teacher"></i>
                 </div>
-                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">6</h3>
-                <p class="text-gray-800 font-bold text-sm mt-1">Dedicated Muallims</p>
-                <p class="text-xs text-gray-500 uppercase font-medium">Headmaster & 5 Teachers</p>
+                <h3 id="txt-stat3-num" class="text-3xl lg:text-4xl font-extrabold text-gray-900">6</h3>
+                <p id="txt-stat3-lbl" class="text-gray-800 font-bold text-sm mt-1">Dedicated Muallims</p>
+                <p id="txt-stat3-sub" class="text-xs text-gray-500 uppercase font-medium">Headmaster & 5 Teachers</p>
             </div>
             
             <div class="pt-4 md:pt-0">
                 <div class="w-14 h-14 mx-auto mb-3 bg-emerald-50 rounded-full flex items-center justify-center text-primaryLight text-2xl shadow-inner">
                     <i class="fas fa-book-open"></i>
                 </div>
-                <h3 class="text-3xl lg:text-4xl font-extrabold text-gray-900">100%</h3>
-                <p class="text-gray-800 font-bold text-sm mt-1">SKIMVB Curriculum</p>
-                <p class="text-xs text-gray-500 uppercase font-medium">Samastha Board Affiliated</p>
+                <h3 id="txt-stat4-num" class="text-3xl lg:text-4xl font-extrabold text-gray-900">100%</h3>
+                <p id="txt-stat4-lbl" class="text-gray-800 font-bold text-sm mt-1">SKIMVB Curriculum</p>
+                <p id="txt-stat4-sub" class="text-xs text-gray-500 uppercase font-medium">Samastha Board Affiliated</p>
             </div>
         </div>
     </section>
@@ -422,8 +422,8 @@
                         </button>
                         
                         <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl border-4 border-white">
-                            <h4 class="text-3xl md:text-4xl font-extrabold text-amber-400">1956</h4>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-100">Founding Year</p>
+                            <h4 id="txt-about-year" class="text-3xl md:text-4xl font-extrabold text-amber-400">1956</h4>
+                            <p id="txt-about-year-lbl" class="text-xs font-semibold uppercase tracking-wider text-emerald-100">Founding Year</p>
                         </div>
 
                         <div class="absolute -top-4 -left-4 bg-white text-gray-900 p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-3">
@@ -432,7 +432,7 @@
                             </div>
                             <div>
                                 <p class="text-[11px] text-gray-500 font-medium">Affiliation</p>
-                                <p class="text-sm font-bold text-gray-800">SKIMVB Reg: 171/1957</p>
+                                <p id="txt-about-affil" class="text-sm font-bold text-gray-800">SKIMVB Reg: 171/1957</p>
                             </div>
                         </div>
                     </div>
@@ -442,18 +442,18 @@
                 <div class="lg:col-span-7">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-12 h-1 bg-accent"></div>
-                        <h2 class="text-accent font-bold uppercase tracking-wider text-sm">About Our Institution</h2>
+                        <h2 id="txt-about-badge" class="text-accent font-bold uppercase tracking-wider text-sm">About Our Institution</h2>
                     </div>
                     
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    <h3 id="txt-about-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
                         Seven Decades of Spiritual Enlightenment & Educational Leadership
                     </h3>
                     
-                    <p class="text-gray-700 mb-5 leading-relaxed text-base md:text-lg text-justify">
+                    <p id="txt-about-p1" class="text-gray-700 mb-5 leading-relaxed text-base md:text-lg text-justify">
                         Founded in 1956 in Valanchery Moochikkal, <strong>Muhyissunna Secondary Madrasa</strong> has served as a center of authentic Islamic education for seven decades. Operating strictly under the guidance of the <strong>Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB)</strong>, our institution provides systematic Deeni instruction alongside strong moral formation.
                     </p>
                     
-                    <p class="text-gray-600 mb-8 leading-relaxed text-base text-justify">
+                    <p id="txt-about-p2" class="text-gray-600 mb-8 leading-relaxed text-base text-justify">
                         Our curriculum covers Holy Quran Recitation with Thajweed, Fiqh (Jurisprudence), Aqeedah (Theology), Islamic History (Thareekh), and Arabic Language. We nurture upright, knowledgeable, and socially responsible individuals grounded in noble Islamic traditions.
                     </p>
 
@@ -464,9 +464,9 @@
                                 <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">
                                     <i class="fas fa-eye"></i>
                                 </div>
-                                <h4 class="font-bold text-gray-900">Our Vision</h4>
+                                <h4 id="txt-about-vision-title" class="font-bold text-gray-900">Our Vision</h4>
                             </div>
-                            <p class="text-sm text-gray-600">To be an exemplary center of authentic Islamic learning and moral leadership.</p>
+                            <p id="txt-about-vision-desc" class="text-sm text-gray-600">To be an exemplary center of authentic Islamic learning and moral leadership.</p>
                         </div>
                         
                         <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-accent">
@@ -474,9 +474,9 @@
                                 <div class="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center text-accent font-bold">
                                     <i class="fas fa-bullseye"></i>
                                 </div>
-                                <h4 class="font-bold text-gray-900">Our Mission</h4>
+                                <h4 id="txt-about-mission-title" class="font-bold text-gray-900">Our Mission</h4>
                             </div>
-                            <p class="text-sm text-gray-600">Delivering structured Samastha curriculum with character-building Deeni values.</p>
+                            <p id="txt-about-mission-desc" class="text-sm text-gray-600">Delivering structured Samastha curriculum with character-building Deeni values.</p>
                         </div>
                     </div>
 
@@ -548,13 +548,13 @@
     <section id="academics" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
+                <div id="txt-academics-badge" class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
                     Curriculum & Classes
                 </div>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                <h2 id="txt-academics-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                     Comprehensive SKIMVB Syllabus (Classes 1 to 10)
                 </h2>
-                <p class="text-gray-600 text-base md:text-lg">
+                <p id="txt-academics-desc" class="text-gray-600 text-base md:text-lg">
                     Our Madrasa provides structured Deeni education strictly from Standard 1 to Standard 10 according to the prescribed Samastha syllabus.
                 </p>
             </div>
@@ -618,8 +618,8 @@
             <!-- Samastha Portal Direct Callout in Academics -->
             <div class="mt-12 bg-gradient-to-r from-primary to-primaryLight text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
-                    <h4 class="text-xl sm:text-2xl font-bold mb-2">Ready to Enroll Your Child in Classes 1 - 10?</h4>
-                    <p class="text-emerald-100 text-sm sm:text-base">Admissions are open online through the official Samastha Board Portal for the 2026-2027 academic year.</p>
+                    <h4 id="txt-academics-banner-title" class="text-xl sm:text-2xl font-bold mb-2">Ready to Enroll Your Child in Classes 1 - 10?</h4>
+                    <p id="txt-academics-banner-sub" class="text-emerald-100 text-sm sm:text-base">Admissions are open online through the official Samastha Board Portal for the 2026-2027 academic year.</p>
                 </div>
                 <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentHover text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base shadow-lg transition whitespace-nowrap flex items-center gap-2 flex-shrink-0">
                     <i class="fas fa-external-link-alt"></i>
@@ -732,13 +732,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
+                <div id="txt-contact-badge" class="inline-block bg-primary/10 text-primary font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-3">
                     Get in Touch
                 </div>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                <h2 id="txt-contact-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                     Contact & Admission Office
                 </h2>
-                <p class="text-gray-600 text-base">
+                <p id="txt-contact-sub" class="text-gray-600 text-base">
                     For admission inquiries for Classes 1 to 10 or general questions, connect with our Headmaster or submit the form below.
                 </p>
             </div>
@@ -761,7 +761,7 @@
                                 <p class="text-emerald-200 text-sm font-semibold sync-hm-phone">+91 9633090637</p>
                             </div>
                         </div>
-                        <p class="text-emerald-100 text-xs mb-6 leading-relaxed">
+                        <p id="txt-contact-hm-desc" class="text-emerald-100 text-xs mb-6 leading-relaxed">
                             Reach out to the Headmaster directly on WhatsApp or phone call for admission guidance, certificates, and student records.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3">
@@ -782,11 +782,11 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 text-base">Madrasa Address</h4>
+                            <h4 id="txt-contact-addr-title" class="font-bold text-gray-900 text-base">Madrasa Address</h4>
                             <p class="text-gray-600 text-sm mt-1 leading-relaxed">
-                                Muhyissunna Secondary Madrasa<br>
-                                Valanchery Moochikkal, Malappuram District<br>
-                                Kerala, India - 676552
+                                <span id="txt-contact-addr-1">Muhyissunna Secondary Madrasa</span><br>
+                                <span id="txt-contact-addr-2">Valanchery Moochikkal, Malappuram District</span><br>
+                                <span id="txt-contact-addr-3">Kerala, India - 676552</span>
                             </p>
                         </div>
                     </div>
@@ -797,11 +797,11 @@
                             <i class="fas fa-certificate"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 text-base">Government & Board Registrations</h4>
+                            <h4 id="txt-contact-reg-title" class="font-bold text-gray-900 text-base">Government & Board Registrations</h4>
                             <p class="text-gray-700 text-sm mt-1 space-y-1">
-                                <span class="block"><strong>SKIMVB Reg No:</strong> 171/1957</span>
-                                <span class="block"><strong>W.A.K.F Reg No:</strong> 2048/1961</span>
-                                <span class="text-emerald-700 font-semibold block text-xs">Established: 1956</span>
+                                <span class="block"><strong>SKIMVB Reg No:</strong> <span id="txt-contact-reg-skimvb">171/1957</span></span>
+                                <span class="block"><strong>W.A.K.F Reg No:</strong> <span id="txt-contact-reg-wakf">2048/1961</span></span>
+                                <span class="text-emerald-700 font-semibold block text-xs">Established: <span id="txt-contact-reg-estd">1956</span></span>
                             </p>
                         </div>
                     </div>
@@ -959,11 +959,11 @@
                              onerror="this.src='images/madrasa_logo_1789984529465.jpg'" 
                              class="h-16 w-16 bg-white rounded-full p-1 object-contain shadow-md border-2 border-accent">
                         <div>
-                            <span class="font-extrabold text-white text-base block leading-tight">MUHYISSUNNA</span>
-                            <span class="text-xs text-amber-400 font-semibold block">Secondary Madrasa • Estd 1956</span>
+                            <span id="txt-footer-brand-title" class="font-extrabold text-white text-base block leading-tight">MUHYISSUNNA</span>
+                            <span id="txt-footer-brand-sub" class="text-xs text-amber-400 font-semibold block">Secondary Madrasa • Estd 1956</span>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-400 mb-5 leading-relaxed">
+                    <p id="txt-footer-desc" class="text-xs text-gray-400 mb-5 leading-relaxed">
                         Imparting authentic Deeni education, Quranic values, and moral guidance to generations since 1956.
                     </p>
                     <div class="flex gap-3">
@@ -1000,21 +1000,21 @@
                             <i class="fas fa-landmark mt-1 mr-2.5 text-accent"></i>
                             <div>
                                 <span class="text-gray-400 block text-xs">WAKF Registration:</span>
-                                <strong class="text-white font-mono">W.A.K.F No: 2048/1961</strong>
+                                <strong class="text-white font-mono">W.A.K.F No: <span id="txt-footer-wakf">2048/1961</span></strong>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-file-signature mt-1 mr-2.5 text-accent"></i>
                             <div>
                                 <span class="text-gray-400 block text-xs">Board Registration:</span>
-                                <strong class="text-white font-mono">SKIMVB Reg: 171/1957</strong>
+                                <strong class="text-white font-mono">SKIMVB Reg: <span id="txt-footer-skimvb">171/1957</span></strong>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-calendar-alt mt-1 mr-2.5 text-accent"></i>
                             <div>
                                 <span class="text-gray-400 block text-xs">Established:</span>
-                                <strong class="text-amber-400">1956 (70 Years)</strong>
+                                <strong id="txt-footer-estd" class="text-amber-400">1956 (70 Years)</strong>
                             </div>
                         </li>
                     </ul>
@@ -1026,7 +1026,7 @@
                         <i class="fas fa-phone-volume text-accent"></i> Contact Desk
                     </h4>
                     <p class="text-xs text-gray-300 mb-3 leading-relaxed">
-                        <i class="fas fa-map-marker-alt mr-2 text-accent"></i> Valanchery Moochikkal, Malappuram, Kerala, India.
+                        <i class="fas fa-map-marker-alt mr-2 text-accent"></i> <span id="txt-footer-address">Valanchery Moochikkal, Malappuram, Kerala, India.</span>
                     </p>
                     <div class="bg-white/5 p-3.5 rounded-lg border border-white/10 mb-4">
                         <p class="text-xs text-amber-300 font-bold mb-1">Headmaster (Sadr Muallim):</p>
@@ -1046,10 +1046,10 @@
             <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-3">
                 <p>
                     &copy; 1956 - <script>document.write(new Date().getFullYear())</script> 
-                    <span onclick="triggerAdminAccess()" class="cursor-default select-none" title="Muhyissunna Secondary Madrasa">Muhyissunna Secondary Madrasa</span>, Valanchery Moochikkal. All Rights Reserved.
+                    <span id="txt-footer-institution" onclick="triggerAdminAccess()" class="cursor-default select-none" title="Muhyissunna Secondary Madrasa">Muhyissunna Secondary Madrasa</span>, Valanchery Moochikkal. All Rights Reserved.
                 </p>
                 <div class="flex items-center gap-4">
-                    <p class="text-gray-400 flex items-center gap-1">
+                    <p id="txt-footer-affil" class="text-gray-400 flex items-center gap-1">
                         Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (171/1957)</span> | WAKF (2048/1961)
                     </p>
                     <!-- Inconspicuous subtle lock trigger for admin -->
@@ -1098,7 +1098,7 @@
 
     <!-- ==================== ADMIN PORTAL MODAL ==================== -->
     <div id="admin-modal" class="modal hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden border border-gray-100 flex flex-col max-h-[90vh]">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden border border-gray-100 flex flex-col max-h-[90vh]">
             
             <!-- Modal Header -->
             <div class="bg-primaryDark text-white px-6 py-4 flex justify-between items-center border-b border-primary/40">
@@ -1164,9 +1164,12 @@
                     </button>
                 </div>
 
-                <!-- Tabs: Upload vs Manage/Delete vs Management vs Faculty vs Logo -->
+                <!-- Tabs: Site Texts vs Upload vs Manage/Delete vs Management vs Faculty vs Campus vs Logo vs Cloud -->
                 <div class="flex border-b border-gray-200 overflow-x-auto">
-                    <button id="tab-btn-gallery" onclick="switchAdminTab('gallery')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5 whitespace-nowrap">
+                    <button id="tab-btn-texts" onclick="switchAdminTab('texts')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-primary text-primary flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fas fa-edit text-purple-600"></i> Edit Site Texts
+                    </button>
+                    <button id="tab-btn-gallery" onclick="switchAdminTab('gallery')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                         <i class="fas fa-plus-circle text-emerald-600"></i> Add Photo
                     </button>
                     <button id="tab-btn-manage" onclick="switchAdminTab('manage')" class="py-2.5 px-3 text-xs font-bold border-b-2 border-transparent text-gray-500 hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
@@ -1189,8 +1192,331 @@
                     </button>
                 </div>
 
+                <!-- Tab: Site Texts Editor (CMS) -->
+                <div id="admin-tab-texts" class="space-y-6">
+                    <!-- Top Action / Instruction Banner -->
+                    <div class="bg-purple-50 border border-purple-200 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="flex items-start gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center flex-shrink-0 text-sm mt-0.5 shadow">
+                                <i class="fas fa-feather-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-purple-950 text-xs sm:text-sm">Website Live Text Editor (CMS)</h5>
+                                <p class="text-[11px] text-purple-800 mt-0.5">Edit any text, announcements, headings, story, statistics, or contact lines. Changes save to Google Drive & update instantly for all visitors worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 self-end sm:self-auto">
+                            <button type="button" onclick="restoreDefaultSiteTexts()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-3 py-1.5 rounded-lg text-xs transition border border-gray-300 flex items-center gap-1">
+                                <i class="fas fa-undo text-[10px]"></i> Reset Defaults
+                            </button>
+                            <button type="button" onclick="saveSiteTextsFromForm()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-1.5 rounded-lg text-xs transition shadow flex items-center gap-1.5">
+                                <i class="fas fa-save text-xs"></i> Save All Texts
+                            </button>
+                        </div>
+                    </div>
+
+                    <form id="admin-site-texts-form" onsubmit="event.preventDefault(); saveSiteTextsFromForm();" class="space-y-6">
+                        
+                        <!-- SECTION 1: Top Bar & Live Ticker Notice -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-bullhorn text-amber-500"></i>
+                                <span>1. Top Bar & Announcement Ticker</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Top Bar Location Text</label>
+                                    <input type="text" id="inp-txt-topbar-loc" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Top Bar Reg & WAKF</label>
+                                    <input type="text" id="inp-txt-topbar-affil" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Ticker Notice (Admissions / Latest News)</label>
+                                <textarea id="inp-txt-ticker-notice" rows="2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Ticker Board Exam Announcement</label>
+                                <input type="text" id="inp-txt-ticker-exam" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+                        </div>
+
+                        <!-- SECTION 2: Header Brand & Hero Section -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-heading text-emerald-600"></i>
+                                <span>2. Brand Name & Hero Banner Headings</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Header Institution Title</label>
+                                    <input type="text" id="inp-txt-brand-title" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Header ESTD Badge</label>
+                                    <input type="text" id="inp-txt-brand-estd" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Header Subtitle</label>
+                                <input type="text" id="inp-txt-brand-subtitle" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-gray-100">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Badge 1 (Amber Pill)</label>
+                                    <input type="text" id="inp-txt-hero-badge1" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Badge 2 (Glass Pill)</label>
+                                    <input type="text" id="inp-txt-hero-badge2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Main Title (Line 1 - White)</label>
+                                    <input type="text" id="inp-txt-hero-title1" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Main Title (Line 2 - Gold)</label>
+                                    <input type="text" id="inp-txt-hero-title2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Tagline / Slogan</label>
+                                <input type="text" id="inp-txt-hero-tagline" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Hero Description Line</label>
+                                <input type="text" id="inp-txt-hero-desc" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3: Key Statistics -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-chart-line text-blue-500"></i>
+                                <span>3. Key Statistics Numbers & Counters</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                <!-- Stat 1 -->
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 space-y-1.5">
+                                    <span class="text-[10px] font-extrabold uppercase text-gray-400">Stat Card 1</span>
+                                    <input type="text" id="inp-txt-stat1-num" placeholder="Number (e.g. 70)" class="w-full px-2 py-1 text-xs font-bold border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat1-lbl" placeholder="Label" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat1-sub" placeholder="Sub-text" class="w-full px-2 py-1 text-[11px] border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+
+                                <!-- Stat 2 -->
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 space-y-1.5">
+                                    <span class="text-[10px] font-extrabold uppercase text-gray-400">Stat Card 2</span>
+                                    <input type="text" id="inp-txt-stat2-num" placeholder="Number (e.g. 1 - 10)" class="w-full px-2 py-1 text-xs font-bold border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat2-lbl" placeholder="Label" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat2-sub" placeholder="Sub-text" class="w-full px-2 py-1 text-[11px] border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+
+                                <!-- Stat 3 -->
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 space-y-1.5">
+                                    <span class="text-[10px] font-extrabold uppercase text-gray-400">Stat Card 3</span>
+                                    <input type="text" id="inp-txt-stat3-num" placeholder="Number (e.g. 6)" class="w-full px-2 py-1 text-xs font-bold border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat3-lbl" placeholder="Label" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat3-sub" placeholder="Sub-text" class="w-full px-2 py-1 text-[11px] border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+
+                                <!-- Stat 4 -->
+                                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 space-y-1.5">
+                                    <span class="text-[10px] font-extrabold uppercase text-gray-400">Stat Card 4</span>
+                                    <input type="text" id="inp-txt-stat4-num" placeholder="Number (e.g. 100%)" class="w-full px-2 py-1 text-xs font-bold border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat4-lbl" placeholder="Label" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                    <input type="text" id="inp-txt-stat4-sub" placeholder="Sub-text" class="w-full px-2 py-1 text-[11px] border border-gray-300 rounded focus:ring-1 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 4: About Us Story & Pillars -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-landmark text-amber-600"></i>
+                                <span>4. About Our Institution & History</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Section Badge</label>
+                                    <input type="text" id="inp-txt-about-badge" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Founding Year Badge</label>
+                                    <input type="text" id="inp-txt-about-year" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Affiliation Pill Badge</label>
+                                    <input type="text" id="inp-txt-about-affil" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">About Section Main Heading</label>
+                                <input type="text" id="inp-txt-about-heading" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">About Paragraph 1 (Main Story)</label>
+                                <textarea id="inp-txt-about-p1" rows="3" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">About Paragraph 2 (Curriculum & Values)</label>
+                                <textarea id="inp-txt-about-p2" rows="3" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-gray-100">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Vision Card Text</label>
+                                    <textarea id="inp-txt-about-vision-desc" rows="2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Mission Card Text</label>
+                                    <textarea id="inp-txt-about-mission-desc" rows="2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 5: Academics & Admission CTA -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-graduation-cap text-purple-600"></i>
+                                <span>5. Academics (Classes 1 - 10) & Admission Banner</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Academics Heading</label>
+                                <input type="text" id="inp-txt-academics-heading" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Academics Description</label>
+                                <textarea id="inp-txt-academics-desc" rows="2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-gray-100">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Admission Callout Banner Title</label>
+                                    <input type="text" id="inp-txt-academics-banner-title" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Admission Callout Banner Subtitle</label>
+                                    <input type="text" id="inp-txt-academics-banner-sub" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 6: Contact & Address Office -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-map-marked-alt text-emerald-600"></i>
+                                <span>6. Contact Office, Address & Registrations</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Contact Section Heading</label>
+                                    <input type="text" id="inp-txt-contact-heading" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Contact Subtitle</label>
+                                    <input type="text" id="inp-txt-contact-sub" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Headmaster Contact Card Note</label>
+                                <input type="text" id="inp-txt-contact-hm-desc" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Address Line 1</label>
+                                    <input type="text" id="inp-txt-contact-addr-1" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Address Line 2</label>
+                                    <input type="text" id="inp-txt-contact-addr-2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Address Line 3</label>
+                                    <input type="text" id="inp-txt-contact-addr-3" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-gray-100">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">SKIMVB Reg Number</label>
+                                    <input type="text" id="inp-txt-contact-reg-skimvb" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">WAKF Reg Number</label>
+                                    <input type="text" id="inp-txt-contact-reg-wakf" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-gray-700 mb-1">Established Year</label>
+                                    <input type="text" id="inp-txt-contact-reg-estd" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 7: Footer & Tagline -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
+                            <div class="flex items-center gap-2 pb-2 border-b border-gray-100 text-primary font-bold text-xs uppercase tracking-wider">
+                                <i class="fas fa-shoe-prints text-amber-500"></i>
+                                <span>7. Footer & Copyright Tagline</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Footer Brand Subtitle</label>
+                                <input type="text" id="inp-txt-footer-brand-sub" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Footer Mission / Tagline Paragraph</label>
+                                <textarea id="inp-txt-footer-desc" rows="2" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold text-gray-700 mb-1">Footer Short Address</label>
+                                <input type="text" id="inp-txt-footer-address" class="w-full px-3 py-2 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Bottom Save Bar -->
+                        <div class="p-4 bg-gray-50 border border-gray-200 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <span class="text-xs text-gray-500 text-center sm:text-left">All updates immediately refresh the live page and synchronize with Google Drive.</span>
+                            <div class="flex gap-2 w-full sm:w-auto">
+                                <button type="button" onclick="restoreDefaultSiteTexts()" class="flex-1 sm:flex-none bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold px-4 py-2.5 rounded-lg text-xs transition">
+                                    Reset Defaults
+                                </button>
+                                <button type="submit" id="btn-save-site-texts" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-lg text-xs transition shadow flex items-center justify-center gap-2">
+                                    <i class="fas fa-save"></i> Save All Site Texts
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
                 <!-- Tab 1: Gallery Upload -->
-                <div id="admin-tab-gallery" class="space-y-5">
+                <div id="admin-tab-gallery" class="hidden space-y-5">
                     <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-900">
                         <i class="fas fa-star text-amber-600 mr-1"></i> <strong>Projection Feature:</strong> The most recently uploaded photo will automatically be featured and projected at the top/front of the <em>Life & Activities at Muhyissunna</em> gallery!
                     </div>
@@ -1824,7 +2150,7 @@
             document.getElementById('admin-login-error').classList.add('hidden');
         }
 
-        function showDashboard(defaultTab = 'manage') {
+        function showDashboard(defaultTab = 'texts') {
             document.getElementById('admin-login-view').classList.add('hidden');
             document.getElementById('admin-dashboard-view').classList.remove('hidden');
             switchAdminTab(defaultTab);
@@ -1906,6 +2232,7 @@
 
         function switchAdminTab(tab) {
             const tabs = {
+                texts: { el: document.getElementById('admin-tab-texts'), btn: document.getElementById('tab-btn-texts') },
                 gallery: { el: document.getElementById('admin-tab-gallery'), btn: document.getElementById('tab-btn-gallery') },
                 manage: { el: document.getElementById('admin-tab-manage'), btn: document.getElementById('tab-btn-manage') },
                 management: { el: document.getElementById('admin-tab-management'), btn: document.getElementById('tab-btn-management') },
@@ -1928,7 +2255,9 @@
                 if(tabs[tab].btn) tabs[tab].btn.className = activeClass;
             }
 
-            if(tab === 'manage') {
+            if(tab === 'texts') {
+                populateAdminTextForm();
+            } else if(tab === 'manage') {
                 renderAdminPhotoList();
             } else if(tab === 'management') {
                 renderAdminManagementList();
@@ -1941,6 +2270,330 @@
             } else if(tab === 'cloud') {
                 updateCloudSyncUI();
             }
+        }
+
+        // ==================== SITE TEXTS (CMS) ENGINE ====================
+        const DEFAULT_SITE_TEXTS = {
+            topbarLocation: "Valanchery Moochikkal, Malappuram, Kerala",
+            topbarAffiliation: "SKIMVB Reg No: 171/1957 | WAKF No: 2048/1961",
+            tickerNotice: "Admissions open for Classes 1 to 10 for the Academic Year 2026-2027.",
+            tickerExam: "Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) Public Examination Results Announced.",
+            brandTitle: "Muhyissunna Secondary Madrasa",
+            brandSubtitle: "Valanchery Moochikkal • Affiliated with SKIMVB",
+            brandEstdBadge: "ESTD 1956",
+            heroBadge1: "ESTD 1956 • 70 YEARS OF EXCELLENCE",
+            heroBadge2: "SKIMVB Reg No: 171/1957",
+            heroTitle1: "MUHYISSUNNA",
+            heroTitle2: "SECONDARY MADRASA",
+            heroTagline: "Nurturing Generations with Islamic Values & Authentic Knowledge",
+            heroDescription: "Under Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB) • W.A.K.F No: 2048/1961 • Valanchery Moochikkal, Malappuram",
+            stat1Number: "70",
+            stat1Label: "Years of Legacy",
+            stat1Sub: "Established in 1956",
+            stat2Number: "1 - 10",
+            stat2Label: "Classes Offered",
+            stat2Sub: "Standard 1 to Standard 10",
+            stat3Number: "6",
+            stat3Label: "Dedicated Muallims",
+            stat3Sub: "Headmaster & 5 Teachers",
+            stat4Number: "100%",
+            stat4Label: "SKIMVB Curriculum",
+            stat4Sub: "Samastha Board Affiliated",
+            aboutSectionBadge: "About Our Institution",
+            aboutHeading: "Seven Decades of Spiritual Enlightenment & Educational Leadership",
+            aboutParagraph1: "Founded in 1956 in Valanchery Moochikkal, <strong>Muhyissunna Secondary Madrasa</strong> has served as a center of authentic Islamic education for seven decades. Operating strictly under the guidance of the <strong>Samastha Kerala Islam Matha Vidyabhyasa Board (SKIMVB)</strong>, our institution provides systematic Deeni instruction alongside strong moral formation.",
+            aboutParagraph2: "Our curriculum covers Holy Quran Recitation with Thajweed, Fiqh (Jurisprudence), Aqeedah (Theology), Islamic History (Thareekh), and Arabic Language. We nurture upright, knowledgeable, and socially responsible individuals grounded in noble Islamic traditions.",
+            aboutFoundingYear: "1956",
+            aboutFoundingLabel: "Founding Year",
+            aboutAffilBadge: "SKIMVB Reg: 171/1957",
+            aboutVisionTitle: "Our Vision",
+            aboutVisionText: "To be an exemplary center of authentic Islamic learning and moral leadership.",
+            aboutMissionTitle: "Our Mission",
+            aboutMissionText: "Delivering structured Samastha curriculum with character-building Deeni values.",
+            academicsBadge: "Curriculum & Classes",
+            academicsHeading: "Comprehensive SKIMVB Syllabus (Classes 1 to 10)",
+            academicsDescription: "Our Madrasa provides structured Deeni education strictly from Standard 1 to Standard 10 according to the prescribed Samastha syllabus.",
+            academicsBannerTitle: "Ready to Enroll Your Child in Classes 1 - 10?",
+            academicsBannerSub: "Admissions are open online through the official Samastha Board Portal for the 2026-2027 academic year.",
+            contactBadge: "Get in Touch",
+            contactHeading: "Contact & Admission Office",
+            contactSub: "For admission inquiries for Classes 1 to 10 or general questions, connect with our Headmaster or submit the form below.",
+            contactHmDesc: "Reach out to the Headmaster directly on WhatsApp or phone call for admission guidance, certificates, and student records.",
+            contactAddressTitle: "Madrasa Address",
+            contactAddressLine1: "Muhyissunna Secondary Madrasa",
+            contactAddressLine2: "Valanchery Moochikkal, Malappuram District",
+            contactAddressLine3: "Kerala, India - 676552",
+            contactRegTitle: "Government & Board Registrations",
+            contactRegBoard: "171/1957",
+            contactRegWakf: "2048/1961",
+            contactRegEstd: "1956",
+            footerBrandTitle: "MUHYISSUNNA",
+            footerBrandSub: "Secondary Madrasa • Estd 1956",
+            footerDescription: "Imparting authentic Deeni education, Quranic values, and moral guidance to generations since 1956.",
+            footerAddress: "Valanchery Moochikkal, Malappuram, Kerala, India.",
+            footerWakf: "2048/1961",
+            footerSkimvb: "171/1957",
+            footerEstd: "1956 (70 Years)",
+            footerCopyrightInstitution: "Muhyissunna Secondary Madrasa",
+            footerAffilLine: 'Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (171/1957)</span> | WAKF (2048/1961)'
+        };
+
+        function getSiteTexts() {
+            try {
+                const stored = localStorage.getItem('madrasa_site_texts');
+                if(stored) {
+                    const parsed = JSON.parse(stored);
+                    if(parsed && typeof parsed === 'object') {
+                        return Object.assign({}, DEFAULT_SITE_TEXTS, parsed);
+                    }
+                }
+            } catch(e) {
+                console.error("Error loading site texts:", e);
+            }
+            return Object.assign({}, DEFAULT_SITE_TEXTS);
+        }
+
+        function saveSiteTexts(texts) {
+            localStorage.setItem('madrasa_site_texts', JSON.stringify(texts));
+        }
+
+        function applySiteTexts(texts) {
+            const t = Object.assign({}, DEFAULT_SITE_TEXTS, texts || {});
+            
+            const setTxt = (id, val) => {
+                const el = document.getElementById(id);
+                if(el && val !== undefined && val !== null) el.textContent = val;
+            };
+            const setHtml = (id, val) => {
+                const el = document.getElementById(id);
+                if(el && val !== undefined && val !== null) el.innerHTML = val;
+            };
+
+            setTxt('txt-topbar-location', t.topbarLocation);
+            setTxt('txt-topbar-affil', t.topbarAffiliation);
+            setTxt('txt-ticker-notice', t.tickerNotice);
+            setTxt('txt-ticker-exam', t.tickerExam);
+
+            setTxt('txt-brand-title', t.brandTitle);
+            setTxt('txt-brand-subtitle', t.brandSubtitle);
+            setTxt('txt-brand-estd', t.brandEstdBadge);
+
+            setTxt('txt-hero-badge1', t.heroBadge1);
+            setTxt('txt-hero-badge2', t.heroBadge2);
+            setTxt('txt-hero-title1', t.heroTitle1);
+            setTxt('txt-hero-title2', t.heroTitle2);
+            setTxt('txt-hero-tagline', t.heroTagline);
+            setTxt('txt-hero-desc', t.heroDescription);
+
+            setTxt('txt-stat1-num', t.stat1Number);
+            setTxt('txt-stat1-lbl', t.stat1Label);
+            setTxt('txt-stat1-sub', t.stat1Sub);
+            setTxt('txt-stat2-num', t.stat2Number);
+            setTxt('txt-stat2-lbl', t.stat2Label);
+            setTxt('txt-stat2-sub', t.stat2Sub);
+            setTxt('txt-stat3-num', t.stat3Number);
+            setTxt('txt-stat3-lbl', t.stat3Label);
+            setTxt('txt-stat3-sub', t.stat3Sub);
+            setTxt('txt-stat4-num', t.stat4Number);
+            setTxt('txt-stat4-lbl', t.stat4Label);
+            setTxt('txt-stat4-sub', t.stat4Sub);
+
+            setTxt('txt-about-badge', t.aboutSectionBadge);
+            setTxt('txt-about-heading', t.aboutHeading);
+            setHtml('txt-about-p1', t.aboutParagraph1);
+            setHtml('txt-about-p2', t.aboutParagraph2);
+            setTxt('txt-about-year', t.aboutFoundingYear);
+            setTxt('txt-about-year-lbl', t.aboutFoundingLabel);
+            setTxt('txt-about-affil', t.aboutAffilBadge);
+            setTxt('txt-about-vision-title', t.aboutVisionTitle);
+            setTxt('txt-about-vision-desc', t.aboutVisionText);
+            setTxt('txt-about-mission-title', t.aboutMissionTitle);
+            setTxt('txt-about-mission-desc', t.aboutMissionText);
+
+            setTxt('txt-academics-badge', t.academicsBadge);
+            setTxt('txt-academics-heading', t.academicsHeading);
+            setTxt('txt-academics-desc', t.academicsDescription);
+            setTxt('txt-academics-banner-title', t.academicsBannerTitle);
+            setTxt('txt-academics-banner-sub', t.academicsBannerSub);
+
+            setTxt('txt-contact-badge', t.contactBadge);
+            setTxt('txt-contact-heading', t.contactHeading);
+            setTxt('txt-contact-sub', t.contactSub);
+            setTxt('txt-contact-hm-desc', t.contactHmDesc);
+            setTxt('txt-contact-addr-title', t.contactAddressTitle);
+            setTxt('txt-contact-addr-1', t.contactAddressLine1);
+            setTxt('txt-contact-addr-2', t.contactAddressLine2);
+            setTxt('txt-contact-addr-3', t.contactAddressLine3);
+            setTxt('txt-contact-reg-title', t.contactRegTitle);
+            setTxt('txt-contact-reg-skimvb', t.contactRegBoard);
+            setTxt('txt-contact-reg-wakf', t.contactRegWakf);
+            setTxt('txt-contact-reg-estd', t.contactRegEstd);
+
+            setTxt('txt-footer-brand-title', t.footerBrandTitle);
+            setTxt('txt-footer-brand-sub', t.footerBrandSub);
+            setTxt('txt-footer-desc', t.footerDescription);
+            setTxt('txt-footer-address', t.footerAddress);
+            setTxt('txt-footer-wakf', t.footerWakf);
+            setTxt('txt-footer-skimvb', t.footerSkimvb);
+            setTxt('txt-footer-estd', t.footerEstd);
+            setTxt('txt-footer-institution', t.footerCopyrightInstitution);
+            setHtml('txt-footer-affil', t.footerAffilLine);
+        }
+
+        function populateAdminTextForm() {
+            const t = getSiteTexts();
+            const setVal = (id, val) => {
+                const el = document.getElementById(id);
+                if(el && val !== undefined && val !== null) el.value = val;
+            };
+
+            setVal('inp-txt-topbar-loc', t.topbarLocation);
+            setVal('inp-txt-topbar-affil', t.topbarAffiliation);
+            setVal('inp-txt-ticker-notice', t.tickerNotice);
+            setVal('inp-txt-ticker-exam', t.tickerExam);
+
+            setVal('inp-txt-brand-title', t.brandTitle);
+            setVal('inp-txt-brand-estd', t.brandEstdBadge);
+            setVal('inp-txt-brand-subtitle', t.brandSubtitle);
+
+            setVal('inp-txt-hero-badge1', t.heroBadge1);
+            setVal('inp-txt-hero-badge2', t.heroBadge2);
+            setVal('inp-txt-hero-title1', t.heroTitle1);
+            setVal('inp-txt-hero-title2', t.heroTitle2);
+            setVal('inp-txt-hero-tagline', t.heroTagline);
+            setVal('inp-txt-hero-desc', t.heroDescription);
+
+            setVal('inp-txt-stat1-num', t.stat1Number);
+            setVal('inp-txt-stat1-lbl', t.stat1Label);
+            setVal('inp-txt-stat1-sub', t.stat1Sub);
+            setVal('inp-txt-stat2-num', t.stat2Number);
+            setVal('inp-txt-stat2-lbl', t.stat2Label);
+            setVal('inp-txt-stat2-sub', t.stat2Sub);
+            setVal('inp-txt-stat3-num', t.stat3Number);
+            setVal('inp-txt-stat3-lbl', t.stat3Label);
+            setVal('inp-txt-stat3-sub', t.stat3Sub);
+            setVal('inp-txt-stat4-num', t.stat4Number);
+            setVal('inp-txt-stat4-lbl', t.stat4Label);
+            setVal('inp-txt-stat4-sub', t.stat4Sub);
+
+            setVal('inp-txt-about-badge', t.aboutSectionBadge);
+            setVal('inp-txt-about-year', t.aboutFoundingYear);
+            setVal('inp-txt-about-affil', t.aboutAffilBadge);
+            setVal('inp-txt-about-heading', t.aboutHeading);
+            setVal('inp-txt-about-p1', t.aboutParagraph1);
+            setVal('inp-txt-about-p2', t.aboutParagraph2);
+            setVal('inp-txt-about-vision-desc', t.aboutVisionText);
+            setVal('inp-txt-about-mission-desc', t.aboutMissionText);
+
+            setVal('inp-txt-academics-heading', t.academicsHeading);
+            setVal('inp-txt-academics-desc', t.academicsDescription);
+            setVal('inp-txt-academics-banner-title', t.academicsBannerTitle);
+            setVal('inp-txt-academics-banner-sub', t.academicsBannerSub);
+
+            setVal('inp-txt-contact-heading', t.contactHeading);
+            setVal('inp-txt-contact-sub', t.contactSub);
+            setVal('inp-txt-contact-hm-desc', t.contactHmDesc);
+            setVal('inp-txt-contact-addr-1', t.contactAddressLine1);
+            setVal('inp-txt-contact-addr-2', t.contactAddressLine2);
+            setVal('inp-txt-contact-addr-3', t.contactAddressLine3);
+            setVal('inp-txt-contact-reg-skimvb', t.contactRegBoard);
+            setVal('inp-txt-contact-reg-wakf', t.contactRegWakf);
+            setVal('inp-txt-contact-reg-estd', t.contactRegEstd);
+
+            setVal('inp-txt-footer-brand-sub', t.footerBrandSub);
+            setVal('inp-txt-footer-desc', t.footerDescription);
+            setVal('inp-txt-footer-address', t.footerAddress);
+        }
+
+        function saveSiteTextsFromForm() {
+            const current = getSiteTexts();
+            const getVal = (id, fallback) => {
+                const el = document.getElementById(id);
+                return (el && el.value !== undefined) ? el.value.trim() : fallback;
+            };
+
+            const regSkimvbVal = getVal('inp-txt-contact-reg-skimvb', current.contactRegBoard);
+            const regWakfVal = getVal('inp-txt-contact-reg-wakf', current.contactRegWakf);
+            const regEstdVal = getVal('inp-txt-contact-reg-estd', current.contactRegEstd);
+            const brandTitleVal = getVal('inp-txt-brand-title', current.brandTitle);
+
+            const updated = {
+                topbarLocation: getVal('inp-txt-topbar-loc', current.topbarLocation),
+                topbarAffiliation: getVal('inp-txt-topbar-affil', current.topbarAffiliation),
+                tickerNotice: getVal('inp-txt-ticker-notice', current.tickerNotice),
+                tickerExam: getVal('inp-txt-ticker-exam', current.tickerExam),
+                brandTitle: brandTitleVal,
+                brandEstdBadge: getVal('inp-txt-brand-estd', current.brandEstdBadge),
+                brandSubtitle: getVal('inp-txt-brand-subtitle', current.brandSubtitle),
+                heroBadge1: getVal('inp-txt-hero-badge1', current.heroBadge1),
+                heroBadge2: getVal('inp-txt-hero-badge2', current.heroBadge2),
+                heroTitle1: getVal('inp-txt-hero-title1', current.heroTitle1),
+                heroTitle2: getVal('inp-txt-hero-title2', current.heroTitle2),
+                heroTagline: getVal('inp-txt-hero-tagline', current.heroTagline),
+                heroDescription: getVal('inp-txt-hero-desc', current.heroDescription),
+                stat1Number: getVal('inp-txt-stat1-num', current.stat1Number),
+                stat1Label: getVal('inp-txt-stat1-lbl', current.stat1Label),
+                stat1Sub: getVal('inp-txt-stat1-sub', current.stat1Sub),
+                stat2Number: getVal('inp-txt-stat2-num', current.stat2Number),
+                stat2Label: getVal('inp-txt-stat2-lbl', current.stat2Label),
+                stat2Sub: getVal('inp-txt-stat2-sub', current.stat2Sub),
+                stat3Number: getVal('inp-txt-stat3-num', current.stat3Number),
+                stat3Label: getVal('inp-txt-stat3-lbl', current.stat3Label),
+                stat3Sub: getVal('inp-txt-stat3-sub', current.stat3Sub),
+                stat4Number: getVal('inp-txt-stat4-num', current.stat4Number),
+                stat4Label: getVal('inp-txt-stat4-lbl', current.stat4Label),
+                stat4Sub: getVal('inp-txt-stat4-sub', current.stat4Sub),
+                aboutSectionBadge: getVal('inp-txt-about-badge', current.aboutSectionBadge),
+                aboutFoundingYear: getVal('inp-txt-about-year', current.aboutFoundingYear),
+                aboutAffilBadge: getVal('inp-txt-about-affil', current.aboutAffilBadge),
+                aboutHeading: getVal('inp-txt-about-heading', current.aboutHeading),
+                aboutParagraph1: getVal('inp-txt-about-p1', current.aboutParagraph1),
+                aboutParagraph2: getVal('inp-txt-about-p2', current.aboutParagraph2),
+                aboutVisionTitle: current.aboutVisionTitle,
+                aboutVisionText: getVal('inp-txt-about-vision-desc', current.aboutVisionText),
+                aboutMissionTitle: current.aboutMissionTitle,
+                aboutMissionText: getVal('inp-txt-about-mission-desc', current.aboutMissionText),
+                academicsBadge: current.academicsBadge,
+                academicsHeading: getVal('inp-txt-academics-heading', current.academicsHeading),
+                academicsDescription: getVal('inp-txt-academics-desc', current.academicsDescription),
+                academicsBannerTitle: getVal('inp-txt-academics-banner-title', current.academicsBannerTitle),
+                academicsBannerSub: getVal('inp-txt-academics-banner-sub', current.academicsBannerSub),
+                contactBadge: current.contactBadge,
+                contactHeading: getVal('inp-txt-contact-heading', current.contactHeading),
+                contactSub: getVal('inp-txt-contact-sub', current.contactSub),
+                contactHmDesc: getVal('inp-txt-contact-hm-desc', current.contactHmDesc),
+                contactAddressTitle: current.contactAddressTitle,
+                contactAddressLine1: getVal('inp-txt-contact-addr-1', current.contactAddressLine1),
+                contactAddressLine2: getVal('inp-txt-contact-addr-2', current.contactAddressLine2),
+                contactAddressLine3: getVal('inp-txt-contact-addr-3', current.contactAddressLine3),
+                contactRegTitle: current.contactRegTitle,
+                contactRegBoard: regSkimvbVal,
+                contactRegWakf: regWakfVal,
+                contactRegEstd: regEstdVal,
+                footerBrandTitle: current.footerBrandTitle,
+                footerBrandSub: getVal('inp-txt-footer-brand-sub', current.footerBrandSub),
+                footerDescription: getVal('inp-txt-footer-desc', current.footerDescription),
+                footerAddress: getVal('inp-txt-footer-address', current.footerAddress),
+                footerWakf: regWakfVal,
+                footerSkimvb: regSkimvbVal,
+                footerEstd: `${regEstdVal} (70 Years)`,
+                footerCopyrightInstitution: brandTitleVal,
+                footerAffilLine: `Affiliated with <span class="text-emerald-400 font-semibold">SKIMVB (${regSkimvbVal})</span> | WAKF (${regWakfVal})`
+            };
+
+            saveSiteTexts(updated);
+            applySiteTexts(updated);
+            syncToCloud('saveSiteTexts', { siteTexts: updated });
+            alert("Website texts saved successfully! All updates are live and synchronized with Google Drive.");
+        }
+
+        function restoreDefaultSiteTexts() {
+            if(!confirm("Reset all website texts back to original default copy?")) return;
+            localStorage.removeItem('madrasa_site_texts');
+            applySiteTexts(DEFAULT_SITE_TEXTS);
+            populateAdminTextForm();
+            syncToCloud('resetCategory', { category: 'siteTexts' });
+            alert("Default website texts restored successfully.");
         }
 
         // Image compression helper (keeps localStorage lightweight & fast)
@@ -2985,7 +3638,8 @@
                     customGallery: getCustomGallery(),
                     deletedDefaultPhotos: getRemovedDefaultPhotoIds(),
                     management: getManagementData(),
-                    faculty: getFacultyData()
+                    faculty: getFacultyData(),
+                    siteTexts: getSiteTexts()
                 };
 
                 const res = await fetch(url, {
@@ -2998,7 +3652,7 @@
                 const result = await res.json();
                 localStorage.setItem('madrasa_cloud_last_sync', new Date().toLocaleString());
                 updateCloudSyncUI();
-                if(isManual) alert("All photos, logo, management, and faculty pushed to Google Drive successfully! Any user on any device will now see these changes.");
+                if(isManual) alert("All photos, texts, logo, management, and faculty pushed to Google Drive successfully! Any user on any device will now see these changes.");
             } catch(err) {
                 console.error("Push to Google Drive failed:", err);
                 if(isManual) alert("Failed to push data to Google Drive. Please verify the Web App deployment.");
@@ -3092,6 +3746,11 @@
                         localStorage.setItem('madrasa_faculty_data', JSON.stringify(data.faculty));
                         hasUpdated = true;
                     }
+                    if(data.siteTexts && typeof data.siteTexts === 'object') {
+                        saveSiteTexts(data.siteTexts);
+                        applySiteTexts(data.siteTexts);
+                        hasUpdated = true;
+                    }
 
                     if(hasUpdated) {
                         renderGallery();
@@ -3120,6 +3779,7 @@
 
         // Initial Page Boot
         window.addEventListener('DOMContentLoaded', () => {
+            applySiteTexts(getSiteTexts());
             initCustomLogo();
             initCampusPhoto();
             renderGallery();
