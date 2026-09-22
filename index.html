@@ -90,7 +90,7 @@
             overflow: hidden;
         }
         #mobile-menu.open {
-            max-height: 500px;
+            max-height: 800px;
             opacity: 1;
         }
 
@@ -141,7 +141,20 @@
                 <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-accent"></i> Valanchery Moochikkal, Malappuram, Kerala</span>
                 <span class="flex items-center gap-1.5"><i class="fas fa-award text-accent"></i> SKIMVB Reg No: 171/1957 | WAKF No: 2048/1961</span>
             </div>
-            <div class="flex items-center gap-5">
+            <div class="flex items-center gap-4 lg:gap-5">
+                <!-- Official Social Links -->
+                <div class="flex items-center gap-2">
+                    <a href="https://www.youtube.com/@MUHYISUNNAMOOCHIKALmadrassa" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center text-gray-200 hover:text-white transition" title="YouTube: @MUHYISUNNAMOOCHIKALmadrassa">
+                        <i class="fab fa-youtube text-[11px]"></i>
+                    </a>
+                    <a href="https://www.instagram.com/muhyisunnasecondarymadrasa?stkn=a3Y0NnI4emFndGtk" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/10 hover:bg-pink-600 flex items-center justify-center text-gray-200 hover:text-white transition" title="Instagram: @muhyisunnasecondarymadrasa">
+                        <i class="fab fa-instagram text-[11px]"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1JtZ1PGK5p/" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-gray-200 hover:text-white transition" title="Facebook Page">
+                        <i class="fab fa-facebook-f text-[11px]"></i>
+                    </a>
+                </div>
+                <span class="text-gray-600">|</span>
                 <a href="tel:+919633090637" class="hover:text-accent transition flex items-center gap-1.5 sync-hm-phone-link">
                     <i class="fas fa-phone-alt text-accent"></i> <span class="sync-hm-phone">+91 9633090637</span> (<span class="sync-hm-name">Headmaster</span>)
                 </a>
@@ -262,6 +275,23 @@
                     <span class="text-xs bg-emerald-100 text-emerald-900 font-bold px-2 py-0.5 rounded">View</span>
                 </a>
                 <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open');" class="block px-4 py-2.5 text-base font-semibold text-gray-700 hover:text-primary hover:bg-emerald-50 rounded-lg">Contact Us</a>
+                <!-- Official Social Links in Mobile Menu -->
+                <div class="py-2.5 px-3 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fas fa-share-nodes text-primary"></i> Follow Us
+                    </span>
+                    <div class="flex items-center gap-2">
+                        <a href="https://www.youtube.com/@MUHYISUNNAMOOCHIKALmadrassa" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-red-100 hover:bg-red-600 text-red-600 hover:text-white flex items-center justify-center transition shadow-sm" title="YouTube">
+                            <i class="fab fa-youtube text-sm"></i>
+                        </a>
+                        <a href="https://www.instagram.com/muhyisunnasecondarymadrasa?stkn=a3Y0NnI4emFndGtk" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-pink-100 hover:bg-pink-600 text-pink-600 hover:text-white flex items-center justify-center transition shadow-sm" title="Instagram">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1JtZ1PGK5p/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-blue-100 hover:bg-blue-600 text-blue-600 hover:text-white flex items-center justify-center transition shadow-sm" title="Facebook">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                    </div>
+                </div>
                 
                 <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
                     <a href="https://online.samastha.info/admission.php" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-primary text-white px-5 py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow">
@@ -798,6 +828,48 @@
                         </div>
                     </div>
 
+                    <!-- Official Social Media Channels -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 text-lg">
+                                <i class="fas fa-share-nodes"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base">Official Social Media</h4>
+                                <p class="text-[11px] text-gray-500">Subscribe & follow our official channels</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/@MUHYISUNNAMOOCHIKALmadrassa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 p-2 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 transition group">
+                                <span class="w-7 h-7 rounded-lg bg-red-600 text-white flex items-center justify-center text-xs shadow group-hover:scale-110 transition flex-shrink-0"><i class="fab fa-youtube"></i></span>
+                                <div class="overflow-hidden">
+                                    <span class="block text-xs font-bold leading-tight truncate">YouTube</span>
+                                    <span class="text-[9px] text-gray-500 block leading-tight">Official</span>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/muhyisunnasecondarymadrasa?stkn=a3Y0NnI4emFndGtk" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 p-2 rounded-xl bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 transition group">
+                                <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-xs shadow group-hover:scale-110 transition flex-shrink-0"><i class="fab fa-instagram"></i></span>
+                                <div class="overflow-hidden">
+                                    <span class="block text-xs font-bold leading-tight truncate">Instagram</span>
+                                    <span class="text-[9px] text-gray-500 block leading-tight">@muhyisunna</span>
+                                </div>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/share/1JtZ1PGK5p/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 p-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 transition group">
+                                <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xs shadow group-hover:scale-110 transition flex-shrink-0"><i class="fab fa-facebook-f"></i></span>
+                                <div class="overflow-hidden">
+                                    <span class="block text-xs font-bold leading-tight truncate">Facebook</span>
+                                    <span class="text-[9px] text-gray-500 block leading-tight">Official Page</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Inquiry Form with File Upload & Map (7 cols) -->
@@ -917,10 +989,10 @@
                         Imparting authentic Deeni education, Quranic values, and moral guidance to generations since 1956.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://wa.me/919633090637" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/919633090637" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition" title="WhatsApp Desk"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@MUHYISUNNAMOOCHIKALmadrassa" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-600 hover:text-white transition" title="YouTube Channel"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/muhyisunnasecondarymadrasa?stkn=a3Y0NnI4emFndGtk" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 hover:text-white transition" title="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1JtZ1PGK5p/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition" title="Facebook Page"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
@@ -2045,13 +2117,17 @@
             }
         }
 
+        const OFFICIAL_DEFAULT_LOGO = 'images/logo.jpg';
+        const OFFICIAL_DRIVE_LOGO = 'https://lh3.googleusercontent.com/d/1Ghb7YcuH-gCFy8tris5k1WgVjXtco6n_';
+
         function restoreDefaultLogo() {
-            if(!confirm("Reset logo back to default?")) return;
+            if(!confirm("Reset logo back to official default?")) return;
             localStorage.removeItem('madrasa_custom_logo');
-            applyCustomLogo('images/logo.jpg');
-            document.getElementById('admin-logo-preview').src = 'images/logo.jpg';
-            syncToCloud('resetCategory', { category: 'logo' });
-            alert("Default logo restored.");
+            applyCustomLogo(OFFICIAL_DEFAULT_LOGO);
+            const pLogo = document.getElementById('admin-logo-preview');
+            if(pLogo) pLogo.src = OFFICIAL_DEFAULT_LOGO;
+            syncToCloud('saveLogo', { logo: OFFICIAL_DRIVE_LOGO });
+            alert("Official default logo restored.");
         }
 
         function applyCustomLogo(src) {
@@ -2065,10 +2141,12 @@
 
         function initCustomLogo() {
             const savedLogo = localStorage.getItem('madrasa_custom_logo');
-            if(savedLogo) {
+            // If previous saved logo was old default ID, upgrade to new official logo
+            if(savedLogo && !savedLogo.includes('1ybMi9VQvEAxzG2lplxKfgKxbWLRNR4_f')) {
                 applyCustomLogo(savedLogo);
             } else {
-                applyCustomLogo('https://lh3.googleusercontent.com/d/1ybMi9VQvEAxzG2lplxKfgKxbWLRNR4_f');
+                localStorage.removeItem('madrasa_custom_logo');
+                applyCustomLogo(OFFICIAL_DEFAULT_LOGO);
             }
         }
 
